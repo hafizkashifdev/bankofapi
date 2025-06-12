@@ -1,0 +1,650 @@
+<html>
+ <head>
+  <meta content="light dark" name="color-scheme"/>
+ </head>
+ <body>
+  <pre style="word-wrap: break-word; white-space: pre-wrap;"># Create a payment
+
+Build an API call to initiate a payment in GBP or EUR.
+
+&lt;AccordionFormatting /&gt;
+
+Use this guide to configure a payment into an account that you choose. We recommend using a [merchant account](/docs/merchant-accounts) to receive payments, but you can also set an external account as the beneficiary.
+
+Payments into a merchant account are also known as closed-loop pay-ins.
+
+## Payment overview
+
+At a basic level, the process of creating, and then completing, a payment involves:
+
+1. [**Payment authentication**](/docs/create-a-payment#1-authenticate-a-payment): passing an access token and headers for signing and idempotency
+2. [**Payment configuration**](/docs/create-a-payment#2-configure-a-payment): setting up an API request with the details of the payment
+3. [**End-user authorisation**](https://docs.truelayer.com/docs/create-a-payment#3-end-user-payment-authorisation): having your user give consent for the payment to be made
+4. [**Payment monitoring**](/docs/create-a-payment#4-monitor-the-status-of-a-payment): using webhooks, alongside other tools, to track the progress of a payment
+
+## 1\. Authenticate a payment
+
+[block:html]
+{
+  "html": "&lt;div class=\"container\"&gt;\n      &lt;div class=\"card\" id=\"highlighted\"&gt;\n          &lt;h3&gt;1. Payment authentication&lt;/h3&gt;\n       \t \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#11-generate-an-access_token\"&gt;Access token&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#12-include-headers-for-signing-and-idempotency\"&gt;Request signing&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#12-include-headers-for-signing-and-idempotency\"&gt;Idempotency key&lt;/a&gt;&lt;/p&gt;\n        \t\t&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"card\"&gt;\n          &lt;h3&gt;2.Payment configuration&lt;/h3&gt;\n        \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#21-request-parameters\"&gt;Request parameters&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#22-provider-selection\"&gt;Provider selection&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#23-scheme-selection\"&gt;Scheme selection&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#24-user-information\"&gt;User information&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#25-optional-metadata\"&gt;Optional metadata&lt;/a&gt;&lt;/p&gt;\n        \t\t&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"card\"&gt;\n          &lt;h3&gt;3. End-user authorisation&lt;/h3&gt;\n        \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#31-select-a-ui\"&gt;Select an authorisation UI&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#32-customise-and-integrate-your-ui\"&gt;Customise and integrate your UI&lt;/a&gt;&lt;/p&gt;\n       \t\t\t &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"card\"&gt;\n          &lt;h3&gt;4. Payment monitoring&lt;/h3&gt;\n        \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#payment-webhooks\"&gt;Set up webhooks&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#v3paymentsid-endpoint\"&gt;Use the GET endpoints&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#check-payments-in-console\"&gt;Use Console&lt;/a&gt;&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;style&gt;\n  \n  .container {\n    display: grid;\n  \tgrid-template-columns:\n    repeat(\n      auto-fit,minmax(184px,1fr)\n    );\n    gap: 1rem;\n}\n\n.card {\n    flex: 1;\n    border-radius: 1rem;\n    padding: 16px;\n    background-color: #FBFAF9;\n  \tborder:1px solid transparent;\n}\n  .card#highlighted {\n    background-color: #FFF;\n    border-color:#F33B92;\n  }\n\n.card h3 {\n  margin-top:0;\n  margin-bottom: .5rem;\n  line-height: 24px;\n}\n\n.card .content p {\n  margin-bottom: .75rem;\n }\n&lt;/style&gt;"
+}
+[/block]
+
+
+To create a payment, you must first set up authentication. This ensures only you can create payments for your integration.
+
+### 1.1 Generate an `access_token`
+
+[Generate an `access_token`](/docs/generate-a-payments-access-token) with the `payments` scope. Include this as a bearer header with your request.
+
+### 1.2 Include headers for signing and idempotency
+
+Generate public and private keys and [set up request signing](/docs/sign-your-payments-requests), so you can include a `Tl-Signature` header with your requests.
+
+Your requests to the payments API should also include an [idempotency key](/docs/add-idempotency-to-your-payments-requests), which you provide as a `Idempotency-Key` header. This ensures that you can safely retry requests without creating duplicate payments.
+
+&gt; 📘 Integration options
+&gt; 
+&gt; The examples on this page use HTTP. However, we also offer complete &lt;a href= "https://github.com/TrueLayer/truelayer-dotnet" target= "_blank"&gt;.NET&lt;/a&gt; and &lt;a href= "https://github.com/TrueLayer/truelayer-java" target= "_blank"&gt;Java&lt;/a&gt; libraries you can use to integrate payment creation.
+
+For more on authenticating a payment, see our section on [request authentication](/docs/request-authentication).
+
+## 2\. Configure a payment
+
+[block:html]
+{
+  "html": "&lt;div class=\"container\"&gt;\n      &lt;div class=\"card\"&gt;\n          &lt;h3&gt;1. Payment authentication&lt;/h3&gt;\n       \t \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#11-generate-an-access_token\"&gt;Access token&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#12-include-headers-for-signing-and-idempotency\"&gt;Request signing&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#12-include-headers-for-signing-and-idempotency\"&gt;Idempotency key&lt;/a&gt;&lt;/p&gt;\n        \t\t&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"card\" id=\"highlighted\"&gt;\n          &lt;h3&gt;2.Payment configuration&lt;/h3&gt;\n        \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#21-request-parameters\"&gt;Request parameters&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#22-provider-selection\"&gt;Provider selection&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#23-scheme-selection\"&gt;Scheme selection&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#24-user-information\"&gt;User information&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#25-optional-metadata\"&gt;Optional metadata&lt;/a&gt;&lt;/p&gt;\n        \t\t&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"card\"&gt;\n          &lt;h3&gt;3. End-user authorisation&lt;/h3&gt;\n        \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#31-select-a-ui\"&gt;Select an authorisation UI&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#32-customise-and-integrate-your-ui\"&gt;Customise and integrate your UI&lt;/a&gt;&lt;/p&gt;\n       \t\t\t &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"card\"&gt;\n          &lt;h3&gt;4. Payment monitoring&lt;/h3&gt;\n        \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#payment-webhooks\"&gt;Set up webhooks&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#v3paymentsid-endpoint\"&gt;Use the GET endpoints&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#check-payments-in-console\"&gt;Use Console&lt;/a&gt;&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n&lt;/div&gt;"
+}
+[/block]
+
+
+To create a payment, make a POST request to the &lt;a href="https://docs.truelayer.com/reference/create-payment" target="_blank"&gt;`/v3/payments` endpoint&lt;/a&gt;, providing values for the parameters below. See the full [API reference](/reference/create-payment) for more details.
+
+### 2.1 Request parameters
+
+This table contains an overview of all the parameters to specify to create a payment.
+
+[block:parameters]
+{
+  "data": {
+    "h-0": "Parameter",
+    "h-1": "Description",
+    "0-0": "`amount_in_minor`",
+    "0-1": "The amount in minor units.  \n  \nMinor units are the smallest units of a currency, depending on the number of decimals. For example: 1 GBP = 100 pence.",
+    "1-0": "`currency`",
+    "1-1": "The currency of the payment as an ISO 4217 code. TrueLayer supports GBP and EUR.  \n  \nYou cannot make a payment from GBP currency to a EUR account, specified in the `payment_method.beneficiary.account_identifier` object.",
+    "2-0": "`payment_method.type`",
+    "2-1": "The payment method for the payment.  \n  \nFor a single payment, use `bank_transfer`.  \n  \nFor a [VRPs](/docs/variable-recurring-payments), use `mandate` as the type.",
+    "3-0": "`payment_method.provider_selection.type`",
+    "3-1": "Use this parameter to choose how users can choose a provider. There are two methods you can choose between:  \n  \n- `user_selected`: Enables the user to select a provider as part of the authorisation flow.\n- `preselected`: Enables you to prepopulate the provide for the payment you create with a `provider_id`.[Learn more about how to configure provider selection in a payment](/docs/select-a-banking-provider-for-payments).",
+    "4-0": "`payment_method.provider_selection.filter`",
+    "4-1": "This parameter provides a variety of filters you can apply to a payment with `user_selected` provider selection. These filters change the banks available for the remitter to choose from.  \n  \nThe available filters include country, maturity of the bank's integration, segment that the bank serves, and provider ID.  \n  \n[Learn more about filtering provider selection](/docs/select-a-banking-provider-for-payments#filter-the-list-of-providers).",
+    "5-0": "`payment_method.provider_selection.filter.release_channel`",
+    "5-1": "The maturity of providers to return for provider selection.  \n  \nBy default, the API returns `general_availability` providers only. You must specify `public_beta` or `private_beta` to return more, including most European providers.  \n  \n[Learn more about the `release_channel` filter](/docs/select-a-banking-provider-for-payments#the-release_channel-filter-for-providers).",
+    "6-0": "`payment_method.provider_selection.filter.customer_segment`",
+    "6-1": "What type of clients the providers to return cater to.  \n  \nBy default, the API returns `retail` providers only. You must specify `business` or `corporate` to return banks that serve such clients.  \n  \n[Learn more about the `customer_segment` filter](/docs/select-a-banking-provider-for-payments#the-customer_segments-filter-for-providers).",
+    "7-0": "`payment_method.provider_selection.scheme_selection`",
+    "7-1": "Use this parameter to choose how users can choose a [payment scheme](/docs/select-a-scheme-for-payments) .  \n  \nThere are four values you can choose from, which change in behaviour based on the accompanying type of provider selection you choose:  \n  \n- `instant_only`: Only displays providers that support instant payment schemes.\n- `instant_preferred`: Displays providers that support instant payment schemes, but allows a fall back to a non-instant scheme.\n- `user_selected`: Enables the user to select the payment scheme if a provider supports both instant and non-instant payments.\n- `preselected`: You provide the `scheme_id` for the required payment scheme so the user can't choose one. Only available in combination with preselected provider selection.[Learn more about how to configure scheme selection in a payment](/docs/select-a-scheme-for-payments) .",
+    "8-0": "`payment_method.provider_selection.remitter`",
+    "8-1": "Use this parameter to provide a remitter's banking details as part of a payment with preselected provider selection.  \n  \nThis simplifies the payment authorisation flow by ensuring the remitter's bank account is preselected when they authorise the payment with their bank.",
+    "9-0": "&lt;span id=\"merchant-account-beneficiary\"&gt;`payment_method.beneficiary.type`&lt;/span&gt;",
+    "9-1": "This parameter lets you specify who the payment will be sent to, the beneficiary.  \n  \n\\- `merchant_account`: Pay into your merchant account. This is required for [closed-loop payments](/docs/make-a-payout-to-an-account-that-paid-in).  \n  \n- `external_account`: Pay to an external account by providing an account identifier such as &lt;&lt;glossary:SCAN&gt;&gt; or &lt;&lt;glossary:IBAN&gt;&gt;.",
+    "10-0": "`payment_method.beneficiary.account_holder_name`",
+    "10-1": "The name of the beneficiary. If included, this is what always displays as the beneficiary on the remitter's bank statement.  \n  \nIn a pay-in to a merchant account, this takes priority as the name the user sees on their statement. However, if omitted in a pay-in to a merchant account, the name associated with the merchant account is used by default.  \n  \nSome providers have upper limits for this field. If you need to shorten a name to fit these limits, we recommend removing middle names first, then initialising the first name. For example:  \n  \n`Jonathan Alexander Doe` &gt; `Jonathan Doe` &gt; `J Doe`",
+    "11-0": "`payment_method.beneficiary.account_identifier`",
+    "11-1": "The bank details that identify the beneficiary's account.  \n  \nThis can be `sort_code_account_number`, `iban`, `bban` or `nrb`.  \n  \nNote that you cannot make payments from a GBP account to a EUR account, or the other way round.  \n  \nIf a payment is made into your merchant account's sort code and account number or IBAN instead of its merchant account `id`, you received the [`external_payment_received`](/docs/payment-webhooks#external_payment_received) webhook.",
+    "12-0": "`payment_method.beneficiary.reference`",
+    "12-1": "A reference for the payment. This field is available for regulated customers only.  \n  \nIf not specified, a reference is generated based on the remitter's name.  \n  \n**This field is now deprecated. Use `statement_reference` instead.**",
+    "13-0": "`payment_method.beneficiary.statement_reference`",
+    "13-1": "A reference for the payment. This field is available for regulated customers only.  \n  \nIf not specified, a reference is generated based on the remitter's name.",
+    "14-0": "`metadata`",
+    "14-1": "An optional field to add custom data to a payment. This is saved on payment creation and returned on every payment retrieve.",
+    "15-0": "`related_products`",
+    "15-1": "Enables you to enable a related product for a payment. Currently, you can only enable SignUp+ by including an empty `signup_plus` object.",
+    "16-0": "`authorization_flow`",
+    "16-1": "Enables you to start the authorisation flow as part of a direct API integration, where you [build your own UI](/docs/build-your-own-ui) .  \n  \nProviding this parameter removes the need for a subsequent request to the `/v3/payments/{id}/authorization-flow` endpoint&lt;/a&gt; after you create a payment.  \n  \nThe available [authorisation actions](/docs/authorisation-flow-actions)  you can provide in this parameter are provider selection, scheme selection, redirect, form, consent, and user account selection.  \n  \nYou don't need to use the `authorization_flow` parameter if you're using a TrueLayer [web](/docs/web-payment-authorisation-uis)  or [mobile](/docs/mobile-payment-authorisation-uis)  UI to authorise your payment.",
+    "17-0": "`risk_assessment.segment`",
+    "17-1": "You can contact us to enable multiple behaviours for the [`payment_creditable` webhook](/docs/payment-webhooks#payment_creditable) for each country. [Learn more about payment risk and credit notifications](/docs/payment-risk-and-credit-notifications).  \n  \nWhen you define your desired behaviours, you specify a name for them. Provide this name as the value of `risk_assessment.segment` to use that behaviour for a payment.  \n  \nIf you don't provide a value for this, or provide an invalid value, the payment uses the default behaviour for the `payment_creditable` webhook in the payment country.",
+    "18-0": "`sub_merchants`",
+    "18-1": "Optional. Contains the `ultimate_counterparty` object. For merchants with multiple subdivisions, or PSPs who accept payments on behalf of multiple merchants."
+  },
+  "cols": 2,
+  "rows": 19,
+  "align": [
+    "left",
+    "left"
+  ]
+}
+[/block]
+
+
+### 2.2 Provider selection
+
+Configure provider selection through the `payment_method.bank_transfer.provider_selection` parameter. There are two types of provider selection:
+
+- `user_selected`, where the user selects the banking provider to pay through.
+- `preselected`, where you include a `provider_id` in your payment request.  
+  This is usually only used to simplify returning user payment flows.
+
+Learn more about how to [select a banking provider for a payment](/docs/select-a-banking-provider-for-payments) , and also more about [returning user flows].
+
+### 2.3 Scheme selection
+
+Configure scheme selection through the `payment_method.bank_transfer.provider_selection.scheme_selection` parameter. This object controls which [payment schemes](/docs/select-a-scheme-for-payments) payments move on, which are the infrastructure over which banks complete payments.
+
+Behaviours for scheme selection vary, depending on the combination of provider and scheme selection you specify. 
+
+Learn more about how to [select a scheme for a payment](/docs/select-a-scheme-for-payments) .
+
+### 2.4 User information
+
+You must [provide user information](/docs/provide-user-information-for-payments) in the `user` parameter as part of your payment creation requests. Some user information is mandatory in order to create a request, and other information is optional. However, we recommend that you include the optional information also in order to reduce the chance of us having to raise a &lt;&lt;glossary:RFI&gt;&gt;.
+
+Using the user `id` in your payments is also useful as enables you to associate multiple payments with a single user so they can be retrieved easily. The user information you provide also enables better returning user experiences.
+
+&lt;details&gt;
+  &lt;summary&gt;&lt;b&gt;See what user information is needed for each payment type&lt;/b&gt;&lt;/summary&gt;&lt;hr&gt;
+
+[block:parameters]
+{
+  "data": {
+    "h-0": "Payment type",
+    "h-1": "Mandatory user information",
+    "h-2": "Recommended user information to reduce number of &lt;&lt;glossary:RFIs&gt;&gt;",
+    "0-0": "Merchant account pay-in",
+    "0-1": "\\- Name  \nAt least one of:  \n  \n- Email address\n- Phone number",
+    "0-2": "\\- Date of birth  \n  \n- Address",
+    "1-0": "External account payment",
+    "1-1": "\\- Name  \nAt least one of:  \n  \n- Email address\n- Phone number",
+    "1-2": "",
+    "2-0": "VRP mandate (merchant account beneficiary)",
+    "2-1": "\\- Name  \nAt least one of:  \n  \n- Email address\n- Phone number",
+    "2-2": "\\- Date of birth  \n  \n- Address",
+    "3-0": "VRP mandate (external account beneficiary)",
+    "3-1": "\\- Name  \nAt least one of:  \n  \n- Email address\n- Phone number",
+    "3-2": "",
+    "4-0": "Closed-loop payout",
+    "4-1": "None",
+    "4-2": "",
+    "5-0": "Open-loop payout",
+    "5-1": "None (already collected by default)",
+    "5-2": "\\- Date of birth  \n  \n- Address",
+    "6-0": "Refunds",
+    "6-1": "None",
+    "6-2": ""
+  },
+  "cols": 3,
+  "rows": 7,
+  "align": [
+    "left",
+    "left",
+    "left"
+  ]
+}
+[/block]
+
+
+&lt;/details&gt;
+
+### 2.5 Optional metadata
+
+You don't need to include any values for the `metadata` object. However, if your business needs to include extra metadata in your payments requests (for internal processes for example), you can choose to include up to 10 key value pairs.
+
+To include metadata, provide key value pairs in the object in the format below:
+
+```json
+{
+//...
+  "metadata": {
+    "Metadata_key_1": "Metadata_value_1",
+    "Metadata_key_2": "Metadata_value_2",
+    "Metadata_key_3": "Metadata_value_3"
+  }
+}
+```
+
+### 2.6 Optional `ultimate_counterparty` object
+
+This object, which exists inside the `sub_merchants` object, can be useful for:
+
+- PSPs
+- merchants who own multiple different brands, or brands across multiple geographies.
+
+Within this object, you can set the `type` to `business_division` or `business_client`.
+
+The object has different functionalities depending on your use case. For PSPs, we recommend `business_client`. For merchants with multiple divisions, brands or geographies, we recommend `business_division`. 
+
+#### Business_division
+
+If you are a merchant who operates under multiple different names (for example, if you have multiple different brands to sell different types of product), you may want to use the `business_division` object to help with reconciliation.
+
+| Field  | Required? | Description                                 |
+| ------ | --------- | ------------------------------------------- |
+| `type` | Yes       | Will be `business_division`.                |
+| `id`   | Yes       | The UUID that you generate for the division |
+| `name` | Yes       | The name of the division                    |
+
+#### Business_client
+
+This `type` of `ultimate_counterparty` is best used by PSPs who take payments on behalf of multiple merchants.
+
+We recommend that you provide as many details as possible, including in optional fields — this detailed data will help us to improve your experience in the future.
+
+| Field                 | Required?                                 | Description                                                                   |
+| --------------------- | ----------------------------------------- | ----------------------------------------------------------------------------- |
+| `type`                | Yes                                       | Will be `business_client`.                                                    |
+| `trading_name`        | Yes                                       | The trading name of the merchant                                              |
+| `commercial_name`     | No                                        | The commercial name of the merchant, if it’s different from the trading name. |
+| `url`                 | No                                        | The URL of the business’s website.                                            |
+| `mcc`                 | No                                        | The merchant category code of the business.                                   |
+| `registration_number` | No (if `address` is provided)             | The registration number of the business.                                      |
+| `address`             | No (if `registration_number` is provided) | The address of the business.                                                  |
+
+Contains:
+
+- `address_line1`
+- `address_line2`
+- `city`
+- `state`
+- `zip`
+- `country_code` \|
+
+Below are examples of the `sub_merchants` object for `business_division` and `business_client`.
+
+### Example payment requests
+
+These are examples of payment creation requests in the [sandbox environment](/docs/test-payments-in-sandbox). They include payments in the UK and France with a variety of user-selected and preselected provider and scheme selection options.
+
+Note also that the `preselected` payment examples for the UK and France include the `remitter` parameter with &lt;&lt;glossary:SCAN&gt;&gt;and &lt;&lt;glossary:IBAN&gt;&gt;details respectively. This ensures that 
+
+```json UK user selected payment example
+POST /v3/payments HTTP/1.1
+Content-Type: application/json
+Idempotency-Key: {RANDOM_UUID}
+Tl-Signature: {SIGNATURE}
+Authorization: Bearer {ACCESS_TOKEN}
+Host: api.truelayer-sandbox.com
+{
+    "amount_in_minor": 30000,
+    "currency": "GBP",
+    "payment_method": {
+        "provider_selection": {
+            "type": "user_selected",
+            "scheme_selection": {
+                "type": "user_selected",
+                "allow_remitter_fee": false
+            }
+        },
+        "type": "bank_transfer",
+        "beneficiary": {
+            "type": "merchant_account",
+            "merchant_account_id": "200552da-13da-43c5-a9ba-04ee1502ac57"
+        }
+    },
+    "user": {
+        "id": "f61c0ec7-0f83-414e-8e5f-aace86e0ed35",
+        "name": "Jonathan Sandbridge",
+        "email": "john@sandbridge.com",
+        "phone": "+447809123456",
+        "date_of_birth": "1992-11-28",
+        "address": {
+            "address_line1": "40 Finsbury Square",
+            "city": "London",
+            "state": "London",
+            "zip": "EC2a 1PX",
+            "country_code": "GB"
+        }
+    }
+}
+```
+```json UK preselected payment example
+POST /v3/payments HTTP/1.1
+Content-Type: application/json
+Idempotency-Key: {RANDOM_UUID}
+Tl-Signature: {SIGNATURE}
+Authorization: Bearer {ACCESS_TOKEN}
+Host: api.truelayer-sandbox.com
+{
+    "amount_in_minor": 30000,
+    "currency": "GBP",
+    "payment_method": {
+        "provider_selection": {
+            "type": "preselected",
+            "scheme_selection": {
+                "type": "instant_preferred",
+                "allow_remitter_fee": false
+            },
+            "provider_id": "mock-payments-gb-redirect",
+            "remitter": {
+                "account_holder_name": "John Sandbridge",
+                "account_identifier": {
+                    "type": "sort_code_account_number",
+                    "sort_code": "040668",
+                    "account_number": "00000871"
+                }
+            }
+        },
+        "type": "bank_transfer",
+        "beneficiary": {
+            "type": "merchant_account",
+            "merchant_account_id": "200552da-13da-43c5-a9ba-04ee1502ac57"
+        }
+    },
+    "user": {
+        "id": "f61c0ec7-0f83-414e-8e5f-aace86e0ed35",
+        "name": "Jonathan Sandbridge",
+        "email": "john@sandbridge.com",
+        "phone": "+447809123456",
+        "date_of_birth": "1992-11-28",
+        "address": {
+            "address_line1": "40 Finsbury Square",
+            "city": "London",
+            "state": "London",
+            "zip": "EC2a 1PX",
+            "country_code": "GB"
+        }
+    }
+}
+```
+```json FR user selected payment example
+POST /v3/payments HTTP/1.1
+Content-Type: application/json
+Idempotency-Key: {RANDOM_UUID}
+Tl-Signature: {SIGNATURE}
+Authorization: Bearer {ACCESS_TOKEN}
+Host: api.truelayer-sandbox.com
+{
+    "amount_in_minor": 30000,
+    "currency": "EUR",
+    "payment_method": {
+        "provider_selection": {
+            "type": "user_selected",
+            "scheme_selection": {
+                "type": "user_selected",
+                "allow_remitter_fee": false
+            }
+        },
+        "type": "bank_transfer",
+        "beneficiary": {
+            "type": "merchant_account",
+            "merchant_account_id": "2a485b0a-a29c-4aa2-bcef-b34d0f6f8d51"
+        }
+    },
+    "user": {
+        "id": "f61c0ec7-0f83-414e-8e5f-aace86e0ed35",
+        "name": "Jonathan Sandbridge",
+        "email": "john@sandbridge.com",
+        "phone": "+44123456789",
+        "date_of_birth": "1992-11-28",
+        "address": {
+            "address_line1": "1, Hardwick Street",
+            "city": "London",
+            "state": "London",
+            "zip": "EC1R 4RB",
+            "country_code": "GB"
+        }
+    }
+}
+```
+```json FR preselected payment example
+POST /v3/payments HTTP/1.1
+Content-Type: application/json
+Idempotency-Key: {RANDOM_UUID}
+Tl-Signature: {SIGNATURE}
+Authorization: Bearer {ACCESS_TOKEN}
+Host: api.truelayer-sandbox.com
+{
+    "amount_in_minor": 30000,
+    "currency": "EUR",
+    "payment_method": {
+        "provider_selection": {
+            "type": "preselected",
+            "provider_id": "mock-payments-fr-redirect",
+            "scheme_selection": {
+                "type": "instant_preferred"
+            },
+            "remitter": {
+                "account_holder_name": "John Sandbridge",
+                "account_identifier": {
+                    "type": "iban",
+                    "iban": "FR5217569000506231212211X69"
+                }
+            }
+        },
+        "type": "bank_transfer",
+        "beneficiary": {
+            "type": "merchant_account",
+            "merchant_account_id": "2a485b0a-a29c-4aa2-bcef-b34d0f6f8d51"
+        }
+    },
+    "user": {
+        "id": "f61c0ec7-0f83-414e-8e5f-aace86e0ed35",
+        "name": "Jonathan Sandbridge",
+        "email": "john@sandbridge.com",
+        "phone": "+447809123456",
+        "date_of_birth": "1992-11-28",
+        "address": {
+            "address_line1": "40 Finsbury Square",
+            "city": "London",
+            "state": "London",
+            "zip": "EC2a 1PX",
+            "country_code": "GB"
+        }
+    }
+}
+```
+
+If the payment request is successful, you receive a response that contains the following fields:
+
+[block:parameters]
+{
+  "data": {
+    "h-0": "Field",
+    "h-1": "Description",
+    "0-0": "`id`",
+    "0-1": "The ID for the created payment.",
+    "1-0": "`user.id` ",
+    "1-1": "An ID for the remitter.  \n  \nAn ID is generated automatically if you leave the user `id` blank when you create the payment.  \n  \nIf you use the same `id` as a previous payment, both payments will be associated with the ID.",
+    "2-0": "`resource_token` ",
+    "2-1": "A token used to authorise the created payment. Has a limited duration of 15 minutes.  \n  \nThe main purpose of this token is to authorise the frontend components of the authorisation flow, which must be completed for the payment to execute.  \n  \nWe recommend you authorise payments with TrueLayer's [web](/docs/web-payment-authorisation-uis) or [mobile](/docs/mobile-payment-authorisation-uis) UIs. However, you can use a [direct API integration and build your own UI](/docs/build-your-own-ui).",
+    "3-0": "`status` ",
+    "3-1": "The [status](/docs/payment-statuses) of the payment."
+  },
+  "cols": 2,
+  "rows": 4,
+  "align": [
+    null,
+    null
+  ]
+}
+[/block]
+
+
+&gt; 🚧 Transfer limits
+&gt; 
+&gt; Be aware that some banks have limits on the amount that you can transfer in one payment. These are usually very high, but speak to us if you plan on making very high-value transactions.
+&gt; 
+&gt; EUR transfer limits tend to be higher than limits in GBP.
+
+## 3\. End-user payment authorisation
+
+[block:html]
+{
+  "html": "&lt;div class=\"container\"&gt;\n      &lt;div class=\"card\"&gt;\n          &lt;h3&gt;1. Payment authentication&lt;/h3&gt;\n       \t \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#11-generate-an-access_token\"&gt;Access token&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#12-include-headers-for-signing-and-idempotency\"&gt;Request signing&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#12-include-headers-for-signing-and-idempotency\"&gt;Idempotency key&lt;/a&gt;&lt;/p&gt;\n        \t\t&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"card\"&gt;\n          &lt;h3&gt;2.Payment configuration&lt;/h3&gt;\n        \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#21-request-parameters\"&gt;Request parameters&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#22-provider-selection\"&gt;Provider selection&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#23-scheme-selection\"&gt;Scheme selection&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#24-user-information\"&gt;User information&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#25-optional-metadata\"&gt;Optional metadata&lt;/a&gt;&lt;/p&gt;\n        \t\t&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"card\" id=\"highlighted\"&gt;\n          &lt;h3&gt;3. End-user authorisation&lt;/h3&gt;\n        \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#31-select-a-ui\"&gt;Select an authorisation UI&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#32-customise-and-integrate-your-ui\"&gt;Customise and integrate your UI&lt;/a&gt;&lt;/p&gt;\n       \t\t\t &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"card\"&gt;\n          &lt;h3&gt;4. Payment monitoring&lt;/h3&gt;\n        \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#payment-webhooks\"&gt;Set up webhooks&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#v3paymentsid-endpoint\"&gt;Use the GET endpoints&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#check-payments-in-console\"&gt;Use Console&lt;/a&gt;&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n&lt;/div&gt;"
+}
+[/block]
+
+
+Your user must give consent for a payment to be made from their account successfully. They do this by choosing and confirming the bank, and sometimes the payment scheme, that the payment will use.
+
+### 3.1 Select a UI
+
+TrueLayer offers a range of out-of-the-box UIs which enable you to handle this immediately. These include the [hosted payment page (HPP)](/docs/hosted-payment-page), [Web SDK](https://docs.truelayer.com/docs/web-sdk) and [native mobile SDKs](/docs/mobile-payment-authorisation-uis).
+
+Learn more about the options in our [payment authorisation documentation](https://docs.truelayer.com/docs/choose-a-tl-ui).
+
+The authorisation flow differs depending on the parameters you set for provider selection and scheme selection, along with other factors including the country that the payment is being made in. This is an example of what a user's first payment might look like:
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/31db84d5e24e04826cec65baeb0011466daaf43e10ee6a33d08a4ca8330927f6-Frame_1000004672_1.png",
+        "",
+        ""
+      ],
+      "align": "center"
+    }
+  ]
+}
+[/block]
+
+
+### 3.2 Customise and integrate your UI
+
+The steps for integrating each payment authorisation UI vary. For example with the HPP, you generate a URL and redirect your user to it. For the Web SDK or mobile SDKs, you configure and use an SDK.
+
+Whatever solution you use, you can customise the look and feel of your UI. You can change aspects such as the primary, secondary, and tertiary colours. For some UIs, you can [customise and preview them in Console](/docs/payments-ui-customisation).
+
+For more information about how to integrate and customise your chosen UI, see our [payment authorisation documentation](/docs/payment-authorisation-basics).
+
+## 4\. Monitor the status of a payment
+
+[block:html]
+{
+  "html": "&lt;div class=\"container\"&gt;\n      &lt;div class=\"card\"&gt;\n          &lt;h3&gt;1. Payment authentication&lt;/h3&gt;\n       \t \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#11-generate-an-access_token\"&gt;Access token&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#12-include-headers-for-signing-and-idempotency\"&gt;Request signing&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#12-include-headers-for-signing-and-idempotency\"&gt;Idempotency key&lt;/a&gt;&lt;/p&gt;\n        \t\t&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"card\"&gt;\n          &lt;h3&gt;2.Payment configuration&lt;/h3&gt;\n        \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#21-request-parameters\"&gt;Request parameters&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#22-provider-selection\"&gt;Provider selection&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#23-scheme-selection\"&gt;Scheme selection&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#24-user-information\"&gt;User information&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#25-optional-metadata\"&gt;Optional metadata&lt;/a&gt;&lt;/p&gt;\n        \t\t&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"card\"&gt;\n          &lt;h3&gt;3. End-user authorisation&lt;/h3&gt;\n        \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#31-select-a-ui\"&gt;Select an authorisation UI&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#32-customise-and-integrate-your-ui\"&gt;Customise and integrate your UI&lt;/a&gt;&lt;/p&gt;\n       \t\t\t &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"card\" id=\"highlighted\"&gt;\n          &lt;h3&gt;4. Payment monitoring&lt;/h3&gt;\n        \t\t&lt;div class=\"content\"&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#payment-webhooks\"&gt;Set up webhooks&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#v3paymentsid-endpoint\"&gt;Use the GET endpoints&lt;/a&gt;&lt;/p&gt;\n              &lt;p&gt;&lt;a href=\"/docs/create-a-payment#check-payments-in-console\"&gt;Use Console&lt;/a&gt;&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n&lt;/div&gt;"
+}
+[/block]
+
+
+When you make a successful payment, you receive a webhook and a response which contains the `id` of the payment:
+
+```json Payment creation response example
+{
+	"id": "b2c0a992-298f-4caf-99ee-b9e1e29570e1",
+	"user": {
+		"id": "f61c0ec7-0f83-414e-8e5f-aace86e0ed35"
+	},
+	"resource_token": "eyJhbGciOiJSUzUxMiIsImtpZCI6IkRCejExcEFuUGNXVndqaFBNWERuckNyQ0ZrT1p0Y2FqYWtjU21GNmJiVk0iLCJ0eXAiOiJKV1QifQ.eyJzY29wZSI6InBheW1lbnQiLCJjbGllbnRfaWQiOiJzYW5kYm94LXRvbXRlc3QtYTRkNDMyIiwianRpIjoiYjJjMGE5OTItMjk4Zi00Y2FmLTk5ZWUtYjllMWUyOTU3MGUxIiwibmJmIjoxNzEwMzMwMjAxLCJleHAiOjE3MTAzMzExMDEsImlzcyI6Imh0dHBzOi8vYXBpLnRydWVsYXllci1zYW5kYm94LmNvbS9wYXltZW50cy1nYXRld2F5IiwiYXVkIjoiaHR0cHM6Ly9hcGkudHJ1ZWxheWVyLXNhbmRib3guY29tIn0.KoRduyI0sBatLGpCrjO8rd0QqIkOsp-j_QKemkVh6OVXdOHU4Oyg-Wk2IvgJhReOWMc7e8W6llWkmCU-TQtpet6LfEZ6V6v8ItzFB8yRKN49RtYuhTCaL7k0YSJO3b5okaj5mYURDhVGN7Vs8kp2NIDVhm7hmvOvuXPp4EgUsGB-rtdGzAy21VldZJQ95B9wCdPloOr1T8pOEX3eBTrNjLlb7vDgXSt6C0TMXLSGAiCxVzZduneM375PTwbZsZSmSbO8KKBPc5nSpF5VxLnGVg9LQpYmrSSf8hupin0G3pCnAFp81ci_7OXIAR167uLKas8FN1iygV66Mq_A2hgZEA",
+	"status": "authorization_required"
+}
+```
+
+You can use this webhook and `id` to confirm whether your payout was successful, and take action if appropriate.
+
+There are two ways that you can check the progress of your payout:
+
+- Check the webhooks sent to your webhook URI you have set in Console (recommended)
+- Make a GET request to the `/v3/payments/{id}` endpoint.
+
+If you have a merchant account, you can also use the [payments view](/docs/payments-view) in Console to see an overview of all transactions into and out of that account.
+
+### Payment webhooks
+
+We recommend that you use webhooks to monitor all of the requests you make with the Payments API v3. You receive webhooks for all events in your integration.
+
+Webhooks for your integration are sent to the Webhook URI you have set on the [**Payments &gt; Settings** page](/docs/payments-settings) in Console. Ensure that you have [set up request signing for your webhook notifications](/docs/configure-webhooks-for-your-integration#validate-the-signature-of-received-webhooks) to ensure that they are reliable.
+
+For a full list of payment webhooks, see [Payment webhooks](/docs/payment-webhooks).
+
+### `/v3/payments/{id}` endpoint
+
+You can use the payment `id` you received when you made the payment to get information about it.
+
+To do so, make a POST request to the &lt;a href="https://docs.truelayer.com/reference/get-payment-1" target="_blank"&gt;`/v3/payments/{id}` endpoint&lt;/a&gt;, including the payment `id` as a path parameter.
+
+You receive a response in this format:
+
+```json GET payment response example
+{
+  "id": "0afd1f6a-f611-48ce-9488-321129bb3a70",
+  "amount_in_minor": 0,
+  "currency": "GBP",
+  "user": {
+    "id": "f9b48c9d-176b-46dd-b2da-fe1a2b77350c"
+  },
+  "payment_method": {
+    "type": "bank_transfer",
+    "provider_selection": {
+      "type": "user_selected",
+      "filter": {
+        "countries": [
+          "GB"
+        ],
+        "release_channel": "general_availability",
+        "customer_segments": [
+          "retail"
+        ],
+        "provider_ids": [
+          "mock-payments-gb-redirect"
+        ],
+        "excludes": {
+          "provider_ids": [
+            "ob-exclude-this-bank"
+          ]
+        }
+      },
+      "scheme_selection": {
+        "type": "instant_only",
+        "allow_remitter_fee": false
+      },
+      "provider_id": "eg-provider",
+      "scheme_id": "payment_scheme"
+    },
+    "beneficiary": {
+      "type": "merchant_account",
+      "merchant_account_id": "string",
+      "account_holder_name": "string",
+      "verification": {
+        "type": "automated",
+        "remitter_name": true,
+        "remitter_date_of_birth": true
+      }
+    }
+  },
+  "created_at": "string",
+  "metadata": {
+    "prop1": "value1",
+    "prop2": "value2"
+  },
+  "status": "authorization_required"
+}
+```
+
+Learn more about [how to get payment data](/docs/get-data-about-a-payment) with this endpoint.
+
+### Check payments in Console
+
+In Console, you can see a list of recent transactions made to a merchant account on the [**Merchant account** dashboard](/docs/merchant-account-dashboard).
+
+Alternatively, you can access more detail in the Console [**Payments** view](/docs/payments-view). Here, you can:
+
+- filter payments by a range of criteria.
+- view transactions for a custom period within a given month.
+- Export reports of transactions, with customisable fields.
+- Refund payments to your merchant account if you have permission.
+
+## Payment lifecycle
+
+After you create a payment, it moves through a series of different states depending on its outcome. See the [full list of payment statuses](/docs/payment-statuses) for more information. 
+
+This is the journey a payment usually follows:
+
+1. When a payout is first made, it has a status of `authorization_required` before it's sent to the payment scheme for authorisation.
+2. Once the payment has been authorised and is with the payment scheme for execution, it has a status of `authorized`.  
+   It usually takes just a few seconds for a successful payment to transition through the `pending` and `authorized` statuses. 
+3. Depending on whether the payment scheme executes the payment, it transitions to:
+   1. `executed` if the payment has been submitted to the bank successfully
+   2. `settled` if the payment has arrived in your merchant account
+   3. `failed` if the payment couldn't be executed.
+
+&gt; 📘 `settled` only applies to payments into a merchant account
+&gt; 
+&gt; Because we can guarantee that money has arrived into your merchant account, the `settled` payment status and webhook notification only appear if a payment is made into a merchant account.
+&gt; 
+&gt; `executed` and `failed` are the only terminal statuses for payments into an external account.
+
+If a payment fails, the webhook contains a [`failure_reason` that you can use to identify why it failed](/docs/payment-statuses#failure-reasons).</pre>
+ </body>
+</html>

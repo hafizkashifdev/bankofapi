@@ -1,0 +1,311 @@
+<html>
+ <head>
+  <meta content="light dark" name="color-scheme"/>
+ </head>
+ <body>
+  <pre style="word-wrap: break-word; white-space: pre-wrap;"># TrueLayer Documentation
+
+## Guides
+- [Welcome](https://docs.truelayer.com/truelayer/docs/welcome.md): Welcome to the TrueLayer documentation.
+- [⚡️ Quickstart guides](https://docs.truelayer.com/truelayer/docs/quickstart-guides.md): Learn how to get started quickly.
+- [✅ Integration checklists](https://docs.truelayer.com/truelayer/docs/integration-checklists.md): Learn every step needed to implement common use cases.
+- [📂 Collections](https://docs.truelayer.com/truelayer/docs/collections.md): Download our Insomnia and Postman collections and start testing with our products.
+- [What is open banking?](https://docs.truelayer.com/truelayer/docs/what-is-open-banking.md): Learn about what open banking is and how whether you're regulated or not can affect your integration.
+- [Introduction to TrueLayer products](https://docs.truelayer.com/truelayer/docs/introduction-to-truelayer-products.md): Learn about TrueLayer's different products and how to get started with them.
+- [API Client-Libraries](https://docs.truelayer.com/truelayer/docs/client-libraries-welcome.md): TrueLayer's client libraries offer a quick way to build your integration with most popular languages.
+- [Glossary](https://docs.truelayer.com/truelayer/docs/glossary.md): Learn the different words and open banking terms commonly used across our documentation.
+- [Versioning](https://docs.truelayer.com/truelayer/docs/versioning.md): Our approach to API versioning and standards.
+- [TrueLayer MCP server for AI assistants](https://docs.truelayer.com/truelayer/docs/truelayer-mcp-integration-for-claude-ai.md): An experimental project connecting TrueLayer APIs and Claude AI
+- [Console basics](https://docs.truelayer.com/truelayer/docs/console-basics.md): Use Console to manage your different integrations and quickly access payments data.
+- [⚡️ Quickstart: Create a Console account](https://docs.truelayer.com/truelayer/docs/quickstart-create-a-console-account.md): Learn how to set up your TrueLayer Console account.
+- [Application settings](https://docs.truelayer.com/truelayer/docs/application-settings.md): Manage your client ID and secret and configure redirect URIs in Console.
+- [Console access management](https://docs.truelayer.com/truelayer/docs/console-access-management.md): Ensure that users in your organisation have appropriate permissions and enable multi-factor authentication.
+- [Organisations, apps and user roles](https://docs.truelayer.com/truelayer/docs/organisations-apps-and-user-roles.md): Organisations contain apps, the foundation of your integration. You can assign members of your apps different roles and permissions.
+- [Invite users to your application](https://docs.truelayer.com/truelayer/docs/invite-users-to-your-application.md): Invite users so they can retrieve your integration's client credentials, access the payments view, or issue refunds.
+- [Set up MFA in Console](https://docs.truelayer.com/truelayer/docs/set-up-mfa-in-console.md): After you create an account, add another layer of security with multi-factor authentication (MFA).
+- [Payments API in Console](https://docs.truelayer.com/truelayer/docs/payments-api-in-console.md): Set up everything you need in Console to use TrueLayer Payments products.
+- [Merchant account dashboard](https://docs.truelayer.com/truelayer/docs/merchant-account-dashboard.md): Quickly see your merchant account balances, access balance reports, and configure sweeping.
+- [Set up sweeping in Console](https://docs.truelayer.com/truelayer/docs/set-up-sweeping-in-console.md): Learn how to set up regular payments from your merchant account to your business account in Console without the API.
+- [Payments view](https://docs.truelayer.com/truelayer/docs/payments-view.md): Monitor payments and generate reports in Console.
+- [Refund payments in Console](https://docs.truelayer.com/truelayer/docs/refund-payments-in-console.md): Issue a refund to an end user straight from the Console UI.
+- [Payments UI customisation](https://docs.truelayer.com/truelayer/docs/payments-ui-customisation.md): You can customise your payments authorisation flow in Console.
+- [Payments settings](https://docs.truelayer.com/truelayer/docs/payments-settings.md): Manage the public key and webhook URIs for your payments integration in Console.
+- [Payments reporting in Console](https://docs.truelayer.com/truelayer/docs/reporting-in-console.md): All the reporting functionality for Payments API in Console.
+- [Data API in Console](https://docs.truelayer.com/truelayer/docs/data-api-in-console.md): Configure your auth link and user interface for the Data API in Console.
+- [Build a Data auth link](https://docs.truelayer.com/truelayer/docs/build-data-auth-links.md): Use the auth link builder in Console to test and build the authorisation flow for your users.
+- [Customise the auth dialog](https://docs.truelayer.com/truelayer/docs/customise-the-auth-dialog.md): You can customise your Data API user authentication flow in Console.
+- [Supported Providers table](https://docs.truelayer.com/truelayer/docs/supported-providers-table.md): See an overview of all the banking providers we support across all geographies.
+- [Reporting in Console](https://docs.truelayer.com/truelayer/docs/reporting-in-console-1.md): All the options for reporting in Console, and info about which one you should choose.
+- [SFTP in Console](https://docs.truelayer.com/truelayer/docs/sftp-in-console.md): Configure SFTP in Console.
+- [Merchant accounts](https://docs.truelayer.com/truelayer/docs/merchant-accounts.md): An introduction to TrueLayer merchant accounts.
+- [Create payments to your merchant account](https://docs.truelayer.com/truelayer/docs/create-payments-to-your-merchant-account.md): Pay in to your merchant account with a single payment, payment mandate or bank transfer.
+- [Get data about your merchant accounts](https://docs.truelayer.com/truelayer/docs/get-data-about-your-merchant-accounts.md): Learn how to retrieve your merchant account IDs through the API.
+- [Get your merchant account transactions or payment sources](https://docs.truelayer.com/truelayer/docs/get-your-merchant-account-transactions-or-payment-sources.md): Use merchant account endpoints to see a list of payments in and out of your merchant account.
+- [Sweep money from your merchant account](https://docs.truelayer.com/truelayer/docs/sweep-money-from-your-merchant-account.md): Learn how to automate withdrawals and ensure the funds in your merchant account don't exceed a certain value.
+- [Fund your merchant account](https://docs.truelayer.com/truelayer/docs/fund-your-eu-merchant-account.md): Learn best practices for topping up your merchant account.
+- [Low balance notifications](https://docs.truelayer.com/truelayer/docs/low-balance-notifications.md): Set up webhook notifications to know when the balance of your merchant account is running low.
+- [Merchant account webhooks](https://docs.truelayer.com/truelayer/docs/merchant-account-webhooks.md): Merchant account notifications are sent to your webhook URI registered in Console when certain merchant account-related events happen.
+- [Payments API basics](https://docs.truelayer.com/truelayer/docs/payments-api-basics.md): New to the Payments API v3? Start here.
+- [Request authentication](https://docs.truelayer.com/truelayer/docs/request-authentication.md): Learn how to authenticate Payments v3 API calls.
+- [Generate a payments access token](https://docs.truelayer.com/truelayer/docs/generate-a-payments-access-token.md): Create an access token to use to authenticate payments requests.
+- [Sign your payments requests](https://docs.truelayer.com/truelayer/docs/sign-your-payments-requests.md): Generate public and private keys  and use them to sign API   requests.
+- [Add idempotency to your payments requests](https://docs.truelayer.com/truelayer/docs/add-idempotency-to-your-payments-requests.md): Many Payments v3 API calls require idempotency.
+- [Payment configuration](https://docs.truelayer.com/truelayer/docs/payment-configuration-copy.md): All the requirements to initiate a payment, plus a guide to some of the options you have within payments requests.
+- [Test payments in sandbox](https://docs.truelayer.com/truelayer/docs/test-payments-in-sandbox.md): Resources for payments testing including collections, sandbox environment and mock providers.
+- [Provider selection for new and returning users](https://docs.truelayer.com/truelayer/docs/provider-selection-for-new-returning-users.md): Learn about the two types of provider selection and how to return a list of possible provider IDs. See also how to preselect a provider to simplify returning user journeys.
+- [Get information about banking providers](https://docs.truelayer.com/truelayer/docs/get-information-about-banking-providers.md): Use the payment providers endpoints to get information about what functionalities different banking providers support.
+- [Provider availability webhook](https://docs.truelayer.com/truelayer/docs/provider-availability-webhook.md): Use the information in this webhook to decide whether to display a bank as healthy at provider selection.
+- [Select a scheme for payments](https://docs.truelayer.com/truelayer/docs/select-a-scheme-for-payments.md): Payments must travel along payments rails. Select which schemes you want to enable users to pay with.
+- [Provide end user information for payments](https://docs.truelayer.com/truelayer/docs/end-user-information-payments.md): Include information about your remitter to comply with regulations and unlock new features.
+- [Settlement risk and the payment_creditable webhook](https://docs.truelayer.com/truelayer/docs/settlement-risk-and-the-payment_creditable-webhook.md): The payment_creditable webhook tells you when it's an acceptable risk to consider a payment complete.
+- [Name and age verification before payment](https://docs.truelayer.com/truelayer/docs/name-and-age-verification-before-payment.md): You can choose not to receive payments in your account if they don't meet certain age or name requirements.
+- [Automatically refund payments from external sources](https://docs.truelayer.com/truelayer/docs/automatically-refund-payments-from-external-sources.md): Learn how to set up automatic refunds, reducing the need for manual refunds and reconciliation.
+- [Character limitations in payments](https://docs.truelayer.com/truelayer/docs/character-limitations-in-payments.md): You must consider certain character limitations when creating payments.
+- [Configure a statement reference](https://docs.truelayer.com/truelayer/docs/configure-a-statement-reference.md): Set what appears on your customers' bank statements.
+- [Payments API webhook reference](https://docs.truelayer.com/truelayer/docs/payments-api-webhook-reference.md): Set up webhooks to get updates on payments or mandates in our Payments API v3.
+- [Configure webhooks for your integration](https://docs.truelayer.com/truelayer/docs/configure-webhooks-for-your-integration.md): Learn about the structure of Payments API webhooks, how to sign your requests to ensure they're valid, and the retry logic for webhooks.
+- [Develop and test a webhook endpoint locally](https://docs.truelayer.com/truelayer/docs/develop-and-test-a-webhook-endpoint-locally.md): All the tools you can use to test Payments v3 on your local app.
+- [Payments API errors](https://docs.truelayer.com/truelayer/docs/payments-api-errors.md): All Payments v3 error codes and types.
+- [Payment basics](https://docs.truelayer.com/truelayer/docs/payment-basics.md): Learn about the types of payments that you can accept using the Payments API.
+- [⚡️ Quickstart: Make a test payment](https://docs.truelayer.com/truelayer/docs/quickstart-make-a-test-payment.md): Learn how to prepare for and make a payment quickly in our sandbox environment.
+- [✅ Payments integration checklist](https://docs.truelayer.com/truelayer/docs/payments-integration-checklist.md): Every step you need to take to set up a closed-loop payments integration.
+- [Create a payment](https://docs.truelayer.com/truelayer/docs/create-a-payment.md): Build an API call to initiate a payment in GBP or EUR.
+- [Get data about a payment](https://docs.truelayer.com/truelayer/docs/get-data-about-a-payment.md): Learn how to get information about an individual payment, including its status.
+- [Cancel a payment](https://docs.truelayer.com/truelayer/docs/cancel-a-payment.md): Use webhooks to get notified when a payment is cancelled or expires.
+- [Payment statuses](https://docs.truelayer.com/truelayer/docs/payment-statuses.md): The stages in the lifecycle of a payment, and why payments fail.
+- [Payment webhooks](https://docs.truelayer.com/truelayer/docs/payment-webhooks.md): Payment webhooks are sent to your webhook URI registered in Console when a payment enters a new state.
+- [Payment links](https://docs.truelayer.com/truelayer/docs/payment-links-docs.md): Accept payments through a link that you share with customers.
+- [Create a payment link](https://docs.truelayer.com/truelayer/docs/create-a-payment-link.md): Learn how to create a payment link with the TrueLayer Payments API v3.
+- [Payment link user journey and customisation](https://docs.truelayer.com/truelayer/docs/payment-link-user-journey-and-customisation.md): Learn about what the user sees when they access a payment link, and how to customise the experience.
+- [Monitor payment links](https://docs.truelayer.com/truelayer/docs/monitor-payment-links.md): You can use webhooks or make an API call to check existing payment links.
+- [Payment link webhooks](https://docs.truelayer.com/truelayer/docs/payment-link-webhooks.md): Payment link notifications sent to your webhook URI registered in Console.
+- [Choose a TrueLayer UI](https://docs.truelayer.com/truelayer/docs/choose-a-tl-ui.md): Select from one of the TrueLayer UIs (user interfaces) for your payments frontend.
+- [Web SDK](https://docs.truelayer.com/truelayer/docs/web-sdk.md): Enable users to authorise payments using the web SDK.
+- [Customise the Web SDK](https://docs.truelayer.com/truelayer/docs/customise-the-web-sdk.md): Change elements of the Web SDK to suit your integration.
+- [EPP to Web SDK migration guide](https://docs.truelayer.com/truelayer/docs/epp-to-web-sdk-migration-guide.md): If you're using the embedded payment page in a country which supports the web SDK, we strongly recommend moving over to the new flow. Here's how.
+- [Web SDK v0 to v1 migration guide](https://docs.truelayer.com/truelayer/docs/web-sdk-v0-to-v1-migration-guide.md): Upgrade from Web SDK v0 to v1.
+- [Hosted page](https://docs.truelayer.com/truelayer/docs/hosted-payment-page.md): Learn the basics of the hosted payment page.
+- [Customise the HPP](https://docs.truelayer.com/truelayer/docs/customise-the-hpp.md): Change which countries and providers your user can choose from, and personalise the look of the HPP.
+- [Use the HPP in a mobile web view](https://docs.truelayer.com/truelayer/docs/use-the-hpp-in-a-mobile-web-view.md): Test and enable an app-to-app payment experience.
+- [Payment and mandate result screens for the HPP](https://docs.truelayer.com/truelayer/docs/payment-and-mandate-result-screens-for-the-hpp.md): The HPP includes compliant payment and mandate result screens to improve your UX and increase conversion.
+- [New: Hosted page](https://docs.truelayer.com/truelayer/docs/hosted-page.md): A new, improved, version of the hosted payment page. The hosted page includes an improved payment authorisation flow and other new features.
+- [Result screens for web](https://docs.truelayer.com/truelayer/docs/payment-result-screen-for-web.md): TrueLayer's web authorisation UIs feature a payment results screen that informs your customers about their payment.
+- [Mobile SDKs: Android, iOS, React](https://docs.truelayer.com/truelayer/docs/mobile-payment-authorisation-uis.md): TrueLayer's iOS, Android, and React Native SDKs enable native payment authorisation flows on mobile devices.
+- [Android SDK](https://docs.truelayer.com/truelayer/docs/android-sdk.md): Create a customised payment and mandate experience with TrueLayer's Android SDK.
+- [Customise the Android SDK](https://docs.truelayer.com/truelayer/docs/customise-the-android-sdk.md): Personalise the look and feel of your Android UI, and migrate to the latest version.
+- [App-to-app redirects for Android](https://docs.truelayer.com/truelayer/docs/app-to-app-redirects-for-android.md): Test app redirects in your Android payments integration with the TrueLayer mock bank app.
+- [Android SDK release history](https://docs.truelayer.com/truelayer/docs/android-sdk-release-history.md): A timeline of updates to the Android SDK. Check back for future release notes.
+- [iOS SDK](https://docs.truelayer.com/truelayer/docs/ios-sdk.md): Create a customised payment and mandate experience with TrueLayer's iOS SDK.
+- [Customise the iOS SDK](https://docs.truelayer.com/truelayer/docs/customise-the-ios-sdk.md): Customise the visual style of the iOS SDK to match the rest of your app.
+- [iOS SDK release history](https://docs.truelayer.com/truelayer/docs/ios-sdk-release-history.md): A timeline of updates to the iOS SDK. Check back for future release notes.
+- [React Native SDK](https://docs.truelayer.com/truelayer/docs/react-native-sdk.md): Learn how to integrate our mobile SDKs into your React Native app.
+- [Customise the React Native SDK](https://docs.truelayer.com/truelayer/docs/customise-the-react-native-sdk.md): Customise the visual style of the React Native SDK to match your brand.
+- [React Native SDK release history](https://docs.truelayer.com/truelayer/docs/react-native-sdk-release-history.md): A timeline of updates to the React Native SDK. Check back for future release notes.
+- [Result screens for mobile](https://docs.truelayer.com/truelayer/docs/payment-result-screen-for-mobile.md): TrueLayer's web authorisation UIs feature a payment results screen that informs your customers about their payment.
+- [Payout and refund basics](https://docs.truelayer.com/truelayer/docs/payout-and-refund-basics.md): An overview of Payouts features and use cases, plus info about the /refunds endpoint.
+- [✅ Payouts integration checklist](https://docs.truelayer.com/truelayer/docs/payouts-integration-checklist.md): Every step you need to take to set up an open-loop payouts integration.
+- [⚡ Quickstart: Make a test payout (closed-loop)](https://docs.truelayer.com/truelayer/docs/quickstart-make-a-test-payout-closed-loop.md): Simulate a payment out of your sandbox merchant account into a predefined payment source.
+- [⚡ Quickstart: Make a test payout (open-loop)](https://docs.truelayer.com/truelayer/docs/quickstart-make-a-test-payout-open-loop.md): Simulate a payment from your sandbox merchant account to an external account that you choose.
+- [Payout creation](https://docs.truelayer.com/truelayer/docs/payout-creation.md): Learn about the different types of payout that you can create.
+- [Make a payout to an account that paid in](https://docs.truelayer.com/truelayer/docs/make-a-payout-to-an-account-that-paid-in.md): Learn about closed-loop payouts and how to make one.
+- [Make a payout to an external account](https://docs.truelayer.com/truelayer/docs/make-a-payout-to-an-external-account.md): Learn about open-loop payouts and how to make one.
+- [Make a payout to your business account](https://docs.truelayer.com/truelayer/docs/make-a-payout-to-your-business-account.md): Make a secure payout to a preconfigured business account.
+- [Make a verified payout](https://docs.truelayer.com/truelayer/docs/make-a-verified-payout.md): Use verified payouts to ensure you know who you are paying, based on bank account data.
+- [Make a payout in Poland (PLN)](https://docs.truelayer.com/truelayer/docs/make-a-pln-payout.md): Create a payout in the PLN currency and send it to a beneficiary NRB.
+- [Payout retries](https://docs.truelayer.com/truelayer/docs/payout-retries.md): Payout retries increase the likelihood that your users with EUR accounts receive payouts instantly, with fallbacks in case instant payouts aren't available.
+- [Refund a payment](https://docs.truelayer.com/truelayer/docs/refund-a-payment.md): Create a refund and learn the differences between payouts and refunds.
+- [Payout and refund statuses](https://docs.truelayer.com/truelayer/docs/payout-and-refund-statuses.md): The stages in the lifecycle of a payout or refund, from creation to execution or failure.
+- [Payout and refund returns](https://docs.truelayer.com/truelayer/docs/payout-and-refund-returns.md): Handle payouts that are returned by a banking provider.
+- [Payout webhooks](https://docs.truelayer.com/truelayer/docs/payout-webhooks.md): Payout notifications sent to your webhook URI registered in Console, when a payout becomes executed or fails.
+- [Refund webhooks](https://docs.truelayer.com/truelayer/docs/refund-webhooks.md): Notifications sent to your webhook URI registered in Console, when a refund is executed or fails.
+- [Signup+ basics](https://docs.truelayer.com/truelayer/docs/signup-basics.md): The Signup+ API simplifies the onboarding process. Users can sign up for your service with a single payment, without entering data manually.
+- [⚡️ Quickstart: Use Signup+ with a payment](https://docs.truelayer.com/truelayer/docs/quickstart-use-signup-with-a-payment.md): Get started with Signup+ quickly and obtain a test name, date of birth and address from a sandbox payment.
+- [⚡️ Quickstart: Get user information through Signup+ with the Data API](https://docs.truelayer.com/truelayer/docs/quickstart-get-user-info-signup.md): Learn how to get started with Signup+ quickly using the data only flow.
+- [✅ [UK] Signup+ integration checklist](https://docs.truelayer.com/truelayer/docs/signup-integration-checklist.md): Every step you need to take to receive an age-verified payment, retrieve user details from it, and optimise your signup flow.
+- [✅ [Finland] Signup+ integration checklist](https://docs.truelayer.com/truelayer/docs/integrate-signup-in-finland.md): Learn how to configure and use Signup+ to collect user information in Finland.
+- [Data only integration](https://docs.truelayer.com/truelayer/docs/data-only-integration.md): Learn how to integrate Signup+ with the data only integration flow.
+- [Variable recurring payments integration](https://docs.truelayer.com/truelayer/docs/variable-recurring-payments-integration.md): Learn how to integrate Signup+ with the VRP flow.
+- [Signup+ errors](https://docs.truelayer.com/truelayer/docs/signup-errors.md): Learn about Signup+ errors.
+- [VRP basics](https://docs.truelayer.com/truelayer/docs/vrp-basics.md): Learn how to accept recurring payments with the Payments API v3.
+- [✅ VRP integration checklist](https://docs.truelayer.com/truelayer/docs/vrp-integration-checklist.md): Every step you need to take to set up a variable recurring payments integration.
+- [Create a payment mandate](https://docs.truelayer.com/truelayer/docs/create-a-payment-mandate.md): Learn how to create a new payment mandate to set up recurring payments
+- [Authorise a payment mandate](https://docs.truelayer.com/truelayer/docs/authorise-a-payment-mandate.md): Configure the authorisation flow so your users can authorise payment mandates.
+- [Create a payment on a mandate](https://docs.truelayer.com/truelayer/docs/create-a-payment-on-a-mandate.md): Learn how to create a payment on a mandate.
+- [Revoke a payment mandate](https://docs.truelayer.com/truelayer/docs/revoke-a-payment-mandate.md): Prevent your user making any new payments on a mandate.
+- [Recurring payment references and reconciliation](https://docs.truelayer.com/truelayer/docs/recurring-payment-references-and-reconciliation.md): Learn about recurring payment references and how to reconcile variable recurring payments.
+- [Mandate statuses](https://docs.truelayer.com/truelayer/docs/mandate-statuses.md): Learn how mandates progress through their lifecycle.
+- [Mandate webhooks](https://docs.truelayer.com/truelayer/docs/mandate-webhooks.md): Notifications sent to your webhook URI registered in the Console, when a mandate becomes authorized, fails, or is revoked.
+- [Plugins basics](https://docs.truelayer.com/truelayer/docs/plugins-basics.md)
+- [Set up your TrueLayer account for plugins](https://docs.truelayer.com/truelayer/docs/set-up-your-truelayer-account-for-plugins.md): Using any of our ecommerce plugins (Shopify, Magento or WooCommerce)? Start here to set up your account and configure the credentials you need.
+- [[Plugins] Track and refund payments in Console](https://docs.truelayer.com/truelayer/docs/plugins-track-and-refund-payments-in-console.md): Use Console tools to monitor payments, issue refunds and enable sweeping.
+- [[Plugins] Customise your payments UI](https://docs.truelayer.com/truelayer/docs/plugins-customise-your-payments-ui.md): Change the way that the authorisation flow looks when your customer chooses to pay you.
+- [[Plugins] Sample authorisation flow](https://docs.truelayer.com/truelayer/docs/plugins-sample-authorisation-flow.md): An example payment authorisation flow, with samples of screens.
+- [[Plugins] Sweep money between your business and merchant accounts](https://docs.truelayer.com/truelayer/docs/plugins-sweep-money-between-your-business-and-merchant-accounts.md): To move money between your TrueLayer merchant account and another business account that you own, set up sweeping in Console.
+- [WooCommerce](https://docs.truelayer.com/truelayer/docs/woocommerce.md): Get up and running with our WooCommerce plugin.
+- [[Sandbox] Configure WooCommerce settings](https://docs.truelayer.com/truelayer/docs/sandbox-configure-woocommerce-settings.md): Set up the WooCommerce plugin to start testing.
+- [[Live] Configure WooCommerce settings](https://docs.truelayer.com/truelayer/docs/live-configure-woocommerce-settings.md): Set up your WooCommerce plugin to work with live payments.
+- [Process refunds in WooCommerce](https://docs.truelayer.com/truelayer/docs/process-refunds-in-woocommerce.md): Use TrueLayer to refund a payment quickly.
+- [Test and go live with TrueLayer in WooCommerce](https://docs.truelayer.com/truelayer/docs/test-and-go-live-with-truelayer-in-woocommerce.md): Test the WooCommerce plugin in sandbox and production, and get ready to go live.
+- [[WooCommerce] Track orders made with TrueLayer](https://docs.truelayer.com/truelayer/docs/woocommerce-track-orders-made-with-truelayer.md): Monitor the status of your orders on the WooCommerce dashboard.
+- [Magento](https://docs.truelayer.com/truelayer/docs/magento.md): Enable TrueLayer payments for Magento.
+- [Enable TrueLayer for Magento](https://docs.truelayer.com/truelayer/docs/enable-truelayer-for-magento.md): Set up the TrueLayer plugin and configure your settings to enable you to start accepting payments.
+- [[Magento] Track orders made with TrueLayer](https://docs.truelayer.com/truelayer/docs/magento-track-orders-made-with-truelayer.md): Monitor the status of your orders on the Magento dashboard.
+- [Shopify](https://docs.truelayer.com/truelayer/docs/shopify.md): Enable TrueLayer payments for Shopify.
+- [Enable TrueLayer for Shopify](https://docs.truelayer.com/truelayer/docs/enable-truelayer-for-shopify.md): Get up and running with TrueLayer's Shopify app.
+- [[Shopify] Track orders made with TrueLayer](https://docs.truelayer.com/truelayer/docs/shopify-track-orders-made-with-truelayer.md): Monitor the lifecycle of payments made with TrueLayer.
+- [Data API basics](https://docs.truelayer.com/truelayer/docs/data-api-basics.md): Access identity, accounts, transactions and balance data for all integrated banks with a single interface.
+- [⚡️ Quickstart: Retrieve test bank data](https://docs.truelayer.com/truelayer/docs/quickstart-retrieve-bank-data.md): Learn how to connect with our Data API and retrieve bank data in a few quick steps.
+- [Connections](https://docs.truelayer.com/truelayer/docs/connections.md): A connection represents your user's consent for data access and authentication with their bank.
+- [Asynchronous calls and webhooks](https://docs.truelayer.com/truelayer/docs/asynchronous-calls-and-webhooks.md): Simplify error and retry logic with asynchronous calls through webhooks.
+- [HTTP Headers](https://docs.truelayer.com/truelayer/docs/http-headers.md): The request and response headers supported by our endpoints.
+- [Scopes](https://docs.truelayer.com/truelayer/docs/scopes.md): Control what access you have to your user's data using scopes.
+- [Create a connection](https://docs.truelayer.com/truelayer/docs/create-a-connection.md): Learn how to connect to your user's account with connections.
+- [Generate an auth link](https://docs.truelayer.com/truelayer/docs/generate-an-auth-link.md): Redirect your user to the TrueLayer auth dialog.
+- [Customise the auth journey](https://docs.truelayer.com/truelayer/docs/customise-the-auth-journey.md): Learn about the customisation options for TrueLayer's auth dialog.
+- [Full flow authentication](https://docs.truelayer.com/truelayer/docs/full-flow-authentication.md): From provider selection to payment confirmation, see an overview on this page.
+- [Generate a direct bank auth link](https://docs.truelayer.com/truelayer/docs/generate-a-direct-bank-auth-link.md): Create a link directly to your user's bank, where they can authenticate a payment.
+- [Collect user consent](https://docs.truelayer.com/truelayer/docs/collect-user-consent.md): Learn how to create your own consent collection screen to get user consent when you're using TrueLayer's licences.
+- [Sample integration guide](https://docs.truelayer.com/truelayer/docs/data-api-integration-guide.md): Follow the checklist to make sure you have correctly integrated with our Data API.
+- [Extend a connection](https://docs.truelayer.com/truelayer/docs/extend-a-connection.md): Get access to your user's account information for longer by allowing your user to reconfirm consent.
+- [Extensions request responses](https://docs.truelayer.com/truelayer/docs/extensions-request-responses.md): To extend a connection, you may need to direct your user to specific actions. Learn what these are.
+- [UX for reconfirmation of consent](https://docs.truelayer.com/truelayer/docs/ux-for-reconfirmation-of-consent.md): The information that you must include on reconfirmation of consent screens, plus design guidelines.
+- [Reconfirm consent through SMS or email](https://docs.truelayer.com/truelayer/docs/reconfirm-consent-through-sms-or-email.md): Alternative methods for collecting user consent for data processing.
+- [Extend endpoint integration guide](https://docs.truelayer.com/truelayer/docs/extend-endpoint-integration-guide.md): An overview of how to get started with the `/connections/extend` endpoint.
+- [Account and card data](https://docs.truelayer.com/truelayer/docs/account-and-card-data.md): Learn about the different types of data you can access with the Data API.
+- [Account data requests](https://docs.truelayer.com/truelayer/docs/account-data-requests.md): Learn about the different types of account data you can request with the Data API.
+- [Card data requests](https://docs.truelayer.com/truelayer/docs/card-data-requests.md): Learn about the different types of card data you can request with the Data API.
+- [Account data reference](https://docs.truelayer.com/truelayer/docs/account-data-reference.md): The four types of account we return, and all possible attributes of an account.
+- [Transaction data reference](https://docs.truelayer.com/truelayer/docs/transaction-data-reference.md): Transactions from all providers are categorised by type. Learn more about transaction categories and classifications.
+- [Access data in batch](https://docs.truelayer.com/truelayer/docs/accessing-data-in-batch.md): Get historical transactions and balances for all accounts and cards from a single provider.
+- [➡️ Batch endpoint migration guide](https://docs.truelayer.com/truelayer/docs/batch-endpoint-migration-guide.md)
+- [Mock users](https://docs.truelayer.com/truelayer/docs/mock-users.md): User credentials for testing. Use different credentials to test different responses.
+- [Data API errors](https://docs.truelayer.com/truelayer/docs/data-api-errors.md): Error codes for the Data API, and what to do if you receive them.
+- [Verification API basics](https://docs.truelayer.com/truelayer/docs/verification-api-basics.md): An overview of our Verification product.
+- [Connect an account](https://docs.truelayer.com/truelayer/docs/connect-an-account.md)
+- [Verify an account](https://docs.truelayer.com/truelayer/docs/verify-an-account.md): Learn how to verify an account and what data is returned in the response.
+- [Verification API errors](https://docs.truelayer.com/truelayer/docs/verification-api-errors.md)
+- [Migrating to the Payments API v3: introduction](https://docs.truelayer.com/truelayer/docs/migrating-to-the-payments-api-v3.md): An introduction to Payments v3, the latest version of our Payments API.
+- [Payments API v3: requirements](https://docs.truelayer.com/truelayer/docs/payments-v3-apis-requirements.md): New requirements for Payments v3, and new integration options for payment authorisation.
+- [Payments API v3: features](https://docs.truelayer.com/truelayer/docs/payments-v3-benefits-over-previous-versions.md): Migrate to the Payments v3 from older versions to unlock new features and capabilities.
+- [Migration guide: PayDirect to Payments v3 API](https://docs.truelayer.com/truelayer/docs/migrate-from-paydirect-to-v3.md): Learn about the key differences between PayDirect and Payments v3, and create a payment token.
+- [PayDirect to Payments v3 API: Pay-ins](https://docs.truelayer.com/truelayer/docs/migrate-to-payments-v3-pay-ins.md): Send a payment to your TrueLayer merchant account with v3.
+- [PayDirect to Payments v3 API: payouts and refunds](https://docs.truelayer.com/truelayer/docs/migrate-to-payments-v3-payouts-and-refunds.md): Send money out of your merchant account, and refund a specific pay-in.
+- [PayDirect to Payments v3 API: merchant account requests](https://docs.truelayer.com/truelayer/docs/migrate-to-payments-v3-merchant-account-requests.md): Track transactions to and from your merchant account, and set up sweeping.
+- [Migration guide: Payments v2 to v3](https://docs.truelayer.com/truelayer/docs/migrate-from-paymentsv2-to-paymentsv3.md): Learn about the key differences between Payments v2 (Single Immediate Payments) and Payments v3, and how to create a payment token.
+- [Payments v2 to v3: single immediate payments](https://docs.truelayer.com/truelayer/docs/migrate-from-v2-sip-to-v3.md): Learn how to migrate payments from v2, so you can create, authorise, and monitor payments.
+- [Migration guide: tools and resources](https://docs.truelayer.com/truelayer/docs/migration-tools-and-resources.md): Access a range of resources to help you migrate to the latest version of the Payments API.
+- [Payments V2](https://docs.truelayer.com/truelayer/docs/payments-v2.md): Learn about the Payments API v2 and how to integrate it.
+- [Single immediate payments [Payments V2]](https://docs.truelayer.com/truelayer/docs/single-immediate-payments-payments-v2.md): Learn how to set up, execute, and monitor the progress of a single immediate payment.
+- [Build a provider selection screen [Payments V2]](https://docs.truelayer.com/truelayer/docs/build-a-provider-selection-screen-payments-v2.md): Build the screen your users select a bank on.
+- [Use the single-immediate-payments-providers endpoint [Payments V2]](https://docs.truelayer.com/truelayer/docs/use-the-single-immediate-payments-providers-endpoint-payments-v2.md): Learn how to return a list of banking providers through an endpoint.
+- [Initiate a payment [Payments V2]](https://docs.truelayer.com/truelayer/docs/initiate-a-payment-payments-v2.md): Get an access token and initiate your payment.
+- [Handle the payment response [Payments V2]](https://docs.truelayer.com/truelayer/docs/handle-the-payment-response-payments-v2.md): Learn how to handle the response to the payment initiation request to let the user authorise their payment.
+- [Set up webhook notifications [Payments V2]](https://docs.truelayer.com/truelayer/docs/set-up-webhook-notifications-payments-v2.md): Learn how to set up webhooks and understand the notifications we send to you when you create a payment initiation request.
+- [Check payment status [Payments V2]](https://docs.truelayer.com/truelayer/docs/check-payment-status-payments-v2.md): Learn how to poll the payment resource to get the status of a payment.
+- [Test and go live [Payments V2]](https://docs.truelayer.com/truelayer/docs/test-and-go-live-payments-v2.md): Learn how to test your single immediate payments integration and go live.
+- [Mock providers [Payments V2]](https://docs.truelayer.com/truelayer/docs/mock-providers-payments-v2.md): Learn about the mock providers you can use to test a Payments API v2 integration in sandbox.
+- [Bank limits [Payments V2]](https://docs.truelayer.com/truelayer/docs/bank-limits-payments-v2.md): Learn about the limits different banks place on how much money is transferred through online banking.
+- [PayDirect](https://docs.truelayer.com/truelayer/docs/paydirect.md): Combine one-click registration with instant payments and withdrawals in one app with PayDirect.
+- [Integration guide [PayDirect]](https://docs.truelayer.com/truelayer/docs/integration-guide-paydirect.md): Learn each step to integrate the PayDirect API.
+- [Deposits [PayDirect]](https://docs.truelayer.com/truelayer/docs/deposits-paydirect.md): Learn how to set up, execute, and monitor the progress of a deposit with the PayDirect API.
+- [Withdrawals [PayDirect]](https://docs.truelayer.com/truelayer/docs/withdrawals-paydirect.md): Pay out to your users with PayDirect.
+- [Verified payouts [PayDirect]](https://docs.truelayer.com/truelayer/docs/verified-payouts-paydirect.md): Learn how to verify user accounts for withdrawals and make your first withdrawal to a verified account.
+- [Query account information [PayDirect]](https://docs.truelayer.com/truelayer/docs/query-account-information-paydirect.md): Get account information associated with a specific user `id`.
+- [Automated account sweeping [PayDirect]](https://docs.truelayer.com/truelayer/docs/automated-account-sweeping-paydirect.md): Learn how to set up and update automated account sweeping, get details of sweep account transactions, and disable automatic account sweeping.
+- [Sign your requests [PayDirect]](https://docs.truelayer.com/truelayer/docs/sign-your-requests-paydirect.md): Learn how to sign your POST requests to the PayDirect API.
+- [Webhook notifications [PayDirect]](https://docs.truelayer.com/truelayer/docs/webhook-notifications-paydirect.md): You can follow deposit and withdrawal events for PayDirect through webhook notifications.
+
+## API Reference
+- [Welcome](https://docs.truelayer.com/truelayer/reference/welcome-api-reference.md): Welcome to the TrueLayer API Reference.
+- [Generate or refresh an access token](https://docs.truelayer.com/truelayer/reference/generateaccesstoken.md): Generate an `access_token`you can use to make requests to our APIs. Choose:  * Option 1 to generate an `access_token` and `refresh_token` for the Data API. * Option 2 to generate a new `access_token` for the Data API using a `refresh_token`. * Option 3 to generate an `access_token` for the Payments API v3.
+- [Delete a credential](https://docs.truelayer.com/truelayer/reference/deletecredential.md): Delete a connection to a user's accounts
+- [Generate a debug ID](https://docs.truelayer.com/truelayer/reference/generatedebugid.md): This endpoint generates a `debug_id` that TrueLayer can use to debug issues. You should only generate a `debug_id` when you are actively experiencing a problem, or you may encounter rate limiting issues.
+- [Delete a debug ID](https://docs.truelayer.com/truelayer/reference/deletedebugid.md): Delete a debug ID
+- [Create payment](https://docs.truelayer.com/truelayer/reference/create-payment.md): Create a new payment   This API must be called using a backend bearer token.
+- [Start authorization flow](https://docs.truelayer.com/truelayer/reference/start-payment-authorization-flow.md): Start the authorization flow for a payment.  This API can be called: - using the `resource_token` associated with the payment you are trying to fetch; - using a backend bearer token.
+- [Submit provider selection](https://docs.truelayer.com/truelayer/reference/submit-provider-selection.md): Submit the provider details selected by the PSU  This API can be called: - using the `resource_token` associated with the payment you are trying to authorize; - using a backend bearer token.
+- [Submit scheme selection](https://docs.truelayer.com/truelayer/reference/submit-scheme-selection.md): Submit the scheme details selected by the PSU  This API can be called: - using the `resource_token` associated with the payment you are trying to authorize; - using a backend bearer token.
+- [Submit form](https://docs.truelayer.com/truelayer/reference/submit-form.md): Submit form details filled by the PSU.  This API can be called: - using the `resource_token` associated with the payment you are trying to authorize; - using a backend bearer token.
+- [Submit consent](https://docs.truelayer.com/truelayer/reference/submit-consent.md): Submit the consent given by the user  This API can be called: - using the `resource_token` associated with the payment you are trying to authorize; - using a backend bearer token.
+- [Cancel payment](https://docs.truelayer.com/truelayer/reference/cancel-payment.md): Cancel a payment   This API can be called: - using the `resource_token` associated with the payment you are trying to fetch; - using a backend bearer token.
+- [Get payment](https://docs.truelayer.com/truelayer/reference/get-payment-1.md): Returns payment details.  This API can be called: - using the `resource_token` associated with the payment you are trying to fetch; - using a backend bearer token.  _**Note:** Some fields are required when OAuth2 token is used._
+- [Create payment refund](https://docs.truelayer.com/truelayer/reference/create-payment-refund.md): Refund a merchant account payment.
+- [Get payment refunds](https://docs.truelayer.com/truelayer/reference/get-payment-refunds.md): Returns all refunds of a payment.
+- [Get payment refund](https://docs.truelayer.com/truelayer/reference/get-payment-refund.md): Returns refund details.
+- [Payment webhooks](https://docs.truelayer.com/truelayer/reference/webhook-payments.md): Sent to the webhook URI you registered in Console when: - a payment is authorised. - a payment is executed. - a payment fails. - a payment settles. - a payment is creditable, according to criteria you specified. - a payment that has been executed has not settled within a duration you specified. - an indemnity claim is made against a payment. - a payment is reversed.
+- [Refund webhooks](https://docs.truelayer.com/truelayer/reference/webhook-refunds.md): Sent to the webhook URI you registered in Console when a refund succeeds or fails.
+- [Create payment link](https://docs.truelayer.com/truelayer/reference/create-payment-link.md): Create a new payment link  This API must be called using a backend bearer token.
+- [Get payment link](https://docs.truelayer.com/truelayer/reference/get-payment-link.md): Retrieves payment link details.  This API must be called using a backend bearer token.
+- [Get payments](https://docs.truelayer.com/truelayer/reference/get-payment-link-payments.md): List all the payments associated with the payment link. This API must be called using a backend bearer token.
+- [Payment link webhooks](https://docs.truelayer.com/truelayer/reference/webhook-payment-links.md): Sent to the webhook URI you registered in Console when a payment is created from a payment link and when a payment link expires.
+- [Search Payments providers](https://docs.truelayer.com/truelayer/reference/search-payment-providers.md): Returns a list of payments providers.
+- [Get payments provider](https://docs.truelayer.com/truelayer/reference/get-payment-provider.md): Returns payments provider details.  This API can be called without the need for authentication.
+- [Create payout](https://docs.truelayer.com/truelayer/reference/create-payout.md): Pay out from one of your merchant accounts.
+- [Get payout](https://docs.truelayer.com/truelayer/reference/get-payout.md): Returns payout details.
+- [Payout webhooks](https://docs.truelayer.com/truelayer/reference/webhook-payouts.md): Sent to the webhook URI you registered in Console when a payout succeeds or fails.
+- [List merchant accounts](https://docs.truelayer.com/truelayer/reference/list-operating-accounts.md): List all your TrueLayer's merchant accounts. There might be more than one account per currency.
+- [Get merchant account](https://docs.truelayer.com/truelayer/reference/get-operating-account.md): Get the details of a single merchant account.
+- [Get transactions](https://docs.truelayer.com/truelayer/reference/merchant-account-get-transactions.md): Get the transactions of a single merchant account. &gt; 🚧 &gt; If the pagination object is missing, add a header `tl-enable-pagination: true` in the request to enable pagination (for more details click [here](https://docs.truelayer.com/docs/get-your-merchant-account-transactions-or-payment-sources#pagination-for-the-transactions-endpoint))
+- [Set up or update sweeping](https://docs.truelayer.com/truelayer/reference/merchant-account-setup-sweeping.md): Set the automatic sweeping settings for a merchant account.  At regular intervals, any available balance in excess of the configured `max_amount_in_minor` is withdrawn to a pre-configured IBAN.
+- [Disable sweeping](https://docs.truelayer.com/truelayer/reference/merchant-account-disable-sweeping.md): Disable automatic sweeping for a merchant account.
+- [Get sweeping settings](https://docs.truelayer.com/truelayer/reference/merchant-account-get-sweeping.md): Get the automatic sweeping settings for a merchant account.
+- [Get payment sources](https://docs.truelayer.com/truelayer/reference/get-merchant-account-payment-sources.md): Get the payment sources from which the merchant account has received payment
+- [Merchant account webhooks](https://docs.truelayer.com/truelayer/reference/webhook-merchant-accounts.md): Sent to the webhook URI you registered in Console when you receive a payment not initiated through TrueLayer to your merchant account.
+- [Create mandate](https://docs.truelayer.com/truelayer/reference/create-mandate.md): Create a new mandate  This API must be called using a backend bearer token.
+- [List mandates](https://docs.truelayer.com/truelayer/reference/list-mandate.md): List all the mandates associated to the client used. This API must be called using a backend bearer token.
+- [Get mandate](https://docs.truelayer.com/truelayer/reference/get-mandate.md): Returns a mandate with the stated ID.  This endpoint can be called either by the regular `backend token` or the `mandate token` for that mandate.
+- [Start authorization flow](https://docs.truelayer.com/truelayer/reference/start-mandate-authorization-flow.md): Start the authorization flow for a mandate.  This API can be called: - using the `mandate_token` associated with the Mandate you are trying to fetch; or - using a backend bearer token.
+- [Submit consent](https://docs.truelayer.com/truelayer/reference/submit-consent-mandate.md): Submit the consent given by the user  This API can be called: - using the `mandate_token` associated with the mandate you are trying to authorize; - using a backend bearer token.
+- [Submit provider selection](https://docs.truelayer.com/truelayer/reference/submit-mandate-provider-selection.md): Submit the provider details selected by the PSU  This API can be called: - using the `mandate_token` associated with the mandate you are trying to authorize; - using a backend bearer token.
+- [Revoke mandate](https://docs.truelayer.com/truelayer/reference/revoke-mandate.md): Revoke a mandate  This API must be called using a backend bearer token.
+- [Confirm funds](https://docs.truelayer.com/truelayer/reference/confirm-mandate-funds.md): Confirm that the PSU has the given funds.   This API can be called:   - using the `mandate_token` associated with the mandate;   - using a backend bearer token.
+- [Get mandate constraints](https://docs.truelayer.com/truelayer/reference/get-constraints.md): Retrieve the constriants defined on the mandate, as well as the current utilisation of those constraints within the periods.
+- [Mandate webhooks](https://docs.truelayer.com/truelayer/reference/webhook-mandates.md): Sent to the webhook URI you registered in Console when a mandate becomes authorized, fails, or is revoked.
+- [Submit payments return parameters](https://docs.truelayer.com/truelayer/reference/submit-payments-provider-return-parameters.md): Submit direct return query and fragment parameters returned from the provider.
+- [Get accounts](https://docs.truelayer.com/truelayer/reference/getaccounts.md): List all accounts
+- [Get account](https://docs.truelayer.com/truelayer/reference/getaccount.md): Get a specific account
+- [Get account balance](https://docs.truelayer.com/truelayer/reference/getaccountbalance.md): Get balance for specified account
+- [Get account transactions](https://docs.truelayer.com/truelayer/reference/getaccounttransactions.md): Get all settled transactions for an account
+- [Get account pending transactions](https://docs.truelayer.com/truelayer/reference/getaccountpendingtransactions.md): Get all pending transactions for an account
+- [Get standing orders](https://docs.truelayer.com/truelayer/reference/getaccountstandingorders.md): Get standing orders for specified account
+- [Get direct debits](https://docs.truelayer.com/truelayer/reference/getaccountdirectdebits.md): Get direct debits for specified account
+- [Generate a direct bank authentication link](https://docs.truelayer.com/truelayer/reference/generatedirectbankauthlink.md): Direct bank authentication allows you to generate a link directly to the bank.You can direct your user to this link where they can authorise access to their bank account.  Anyone can test direct bank authentication in our sandbox environment. To use it in production, we must first approve your consent screens. [Learn more about consent screen requirements here](https://docs.truelayer.com/docs/ais-collecting-user-consent).
+- [Generate a reauthentication link](https://docs.truelayer.com/truelayer/reference/generatereauthlink.md): Generate a link to initiate a reauthentication flow. The reauthentication flow provides a simple path for the user to follow to reconnect their account, providing a shorter user journey compared to setting up their account for the first time.  **UK only**: Reauthentication is currently only supported for UK providers. Ireland and other European providers are not supported.  Most European banks require that end-users who are sharing account details grant permission for data sharing every 90 days.  For these banks, access to your user’s bank accounts will no longer be available 90 days after they initially connect their account. When this happens, the TrueLayer `POST /connect/token` endpoint will return a 400 `invalid_grant` error when you try to refresh your tokens, and if you try to fetch data using an access_token TrueLayer will return a 403 `access_denied` error.  To initiate the reauthentication flow, call the reauth endpoint with a refresh token for the user you would like to re-authenticate. We will return a link to the bank for the user to follow. You can have the user go through this flow either before or after their original connection expires (for example, you may prefer to have users reconnect their accounts a week before the connection expires, which would reset the expiration to 90 days from the time of reauthentication).  Users can use the reauthentication flow for up to 90 days after their associated refresh token expires. (The expiration time varies based on the underlying bank but in general you will have at least 90 days after their connection has expired in which to use the reauthentication flow). After that time has elapsed, reauthentication is no longer possible and the user should go through the first-time authentication flow instead.
+- [Get cards](https://docs.truelayer.com/truelayer/reference/getcards.md): List all cards
+- [Get card](https://docs.truelayer.com/truelayer/reference/getcard.md): Get a specific card
+- [Get card balance](https://docs.truelayer.com/truelayer/reference/getcardbalance.md): Get balance for specified card
+- [Get card transactions](https://docs.truelayer.com/truelayer/reference/getcardtransactions.md): Get all settled transactions for a card
+- [Get card pending transactions](https://docs.truelayer.com/truelayer/reference/getcardpendingtransactions.md): Get all pending transactions for a card
+- [List providers](https://docs.truelayer.com/truelayer/reference/getproviders.md): Get a list of all providers, or just those enabled for your client_id.
+- [Extend a connection](https://docs.truelayer.com/truelayer/reference/extendconnection.md): Starts a process to extend a connection, by reconfirming consent and starting a new authentication if necessary. You can find out more on how to use this endpoint [here](https://docs.truelayer.com/docs/connections).
+- [Get tracked events from a specific authorization flow.](https://docs.truelayer.com/truelayer/reference/gettrackedevents.md): Get all tracked events that happened in a specific authorization flow/session associated with a `tracking_id`. The events are stored for a period of 60 days.
+- [Get user data by payment](https://docs.truelayer.com/truelayer/reference/getuserdatabypayment.md): Get user data from a completed payment.
+- [Get user data by connected account](https://docs.truelayer.com/truelayer/reference/getuserdatabyconnectedaccount-1.md): Get user data from a connected account.
+- [Get user data by mandate ID](https://docs.truelayer.com/truelayer/reference/getuserdatabymandateid.md): Get user data from a authorized mandate.
+- [Generate auth URI](https://docs.truelayer.com/truelayer/reference/generateauthuri.md): Generate auth URI by payment.
+- [Auth URI expired webhooks](https://docs.truelayer.com/truelayer/reference/webhook-identity-authorization-expired.md): Sent to the webhook URI you registered in Console when an auth URI has expired.
+- [Verify account holder name.](https://docs.truelayer.com/truelayer/reference/verification.md): Verify supplied name with account holder's name.  **Headers Required:** Authorization (JWT) Token with bearer scheme format is required to make a call to Verification API.
+- [Get providers](https://docs.truelayer.com/truelayer/reference/get-providers.md): Returns a list of providers supported. Various query parameters can be used to filter returned providers.
+- [Initiate a payment](https://docs.truelayer.com/truelayer/reference/initiate-payment.md): Initiate a payment
+- [Submit embedded auth flow steps](https://docs.truelayer.com/truelayer/reference/submit-embedded-step.md): Some of the European banks require the embedded authorisation flow, which consists of multiple steps provided by the banks. Each step can be submitted via this endpoint. The response will include the information for the step to follow.
+- [Get a payment](https://docs.truelayer.com/truelayer/reference/get-payment.md): Get the payment details
+- [Create open-loop withdrawal](https://docs.truelayer.com/truelayer/reference/post_v1-withdrawals.md): Enable paying out from merchant account to any beneficiary.  &gt; 🚧 Payments API v3 &gt; &gt; The [Payments API v3](https://docs.truelayer.com/reference/create-payment) is the latest version of the TrueLayer payments API. It includes all of the functionality of the PayDirect API, so we recommend you use it instead.
+- [Create closed-loop withdrawal](https://docs.truelayer.com/truelayer/reference/post_v1-users-withdrawals.md): Enable paying out from merchant account to one that has been used to pay-in.  &gt; 🚧 Payments API v3 &gt; &gt; The [Payments API v3](https://docs.truelayer.com/reference/create-payment) is the latest version of the TrueLayer payments API. It includes all of the functionality of the PayDirect API, so we recommend you use it instead.
+- [Get user withdrawal](https://docs.truelayer.com/truelayer/reference/get_v1-users-user-id-accounts-account-id-withdrawals-transaction-id.md): Fetch the details of a previously created closed-loop withdrawal.  &gt; 🚧 Payments API v3 &gt; &gt; The [Payments API v3](https://docs.truelayer.com/reference/create-payment) is the latest version of the TrueLayer payments API. It includes all of the functionality of the PayDirect API, so we recommend you use it instead.
+- [Get withdrawal](https://docs.truelayer.com/truelayer/reference/get_v1-withdrawals-transaction-id.md): Fetch the details of a previously created withdrawal.  &gt; 🚧 Payments API v3 &gt; &gt; The [Payments API v3](https://docs.truelayer.com/reference/create-payment) is the latest version of the TrueLayer payments API. It includes all of the functionality of the PayDirect API, so we recommend you use it instead.
+- [Create deposit](https://docs.truelayer.com/truelayer/reference/post_v1-users-deposits.md): Create a deposit into a merchant account from a users account.  &gt; 🚧 Payments API v3 &gt; &gt; The [Payments API v3](https://docs.truelayer.com/reference/create-payment) is the latest version of the TrueLayer payments API. It includes all of the functionality of the PayDirect API, so we recommend you use it instead.
+- [Get deposit for user](https://docs.truelayer.com/truelayer/reference/get_v1-users-user-id-deposits-deposit-id.md): Fetches details for a previously created deposit.  &gt; 🚧 Payments API v3 &gt; &gt; The [Payments API v3](https://docs.truelayer.com/reference/create-payment) is the latest version of the TrueLayer payments API. It includes all of the functionality of the PayDirect API, so we recommend you use it instead.
+- [Get user](https://docs.truelayer.com/truelayer/reference/get_v1-users-id.md): Returns 204 if this user exists for the authenticated client, and 404 if not.  &gt; 🚧 Payments API v3 &gt; &gt; The [Payments API v3](https://docs.truelayer.com/reference/create-payment) is the latest version of the TrueLayer payments API. It includes all of the functionality of the PayDirect API, so we recommend you use it instead.
+- [Get user accounts](https://docs.truelayer.com/truelayer/reference/get_v1-users-id-accounts.md): Fetches account identifiers associated with the supplied user id.  &gt; 🚧 Payments API v3 &gt; &gt; The [Payments API v3](https://docs.truelayer.com/reference/create-payment) is the latest version of the TrueLayer payments API. It includes all of the functionality of the PayDirect API, so we recommend you use it instead.
+- [Get account balances](https://docs.truelayer.com/truelayer/reference/get_v1-balances.md): Fetches balances of the merchant accounts belonging to the calling client.  &gt; 🚧 Payments API v3 &gt; &gt; The [Payments API v3](https://docs.truelayer.com/reference/create-payment) is the latest version of the TrueLayer payments API. It includes all of the functionality of the PayDirect API, so we recommend you use it instead.
+- [Get transactions](https://docs.truelayer.com/truelayer/reference/get_v1-transactions.md): Get list of merchant account transactions.  &gt; 🚧 Payments API v3 &gt; &gt; The [Payments API v3](https://docs.truelayer.com/reference/create-payment) is the latest version of the TrueLayer payments API. It includes all of the functionality of the PayDirect API, so we recommend you use it instead.
+
+## Changelog
+- [May 2025](https://docs.truelayer.com/truelayer/changelog/may-2025.md)
+- [April 2025](https://docs.truelayer.com/truelayer/changelog/april-2025.md)
+- [March 2025](https://docs.truelayer.com/truelayer/changelog/march-2025.md)
+- [February 2025](https://docs.truelayer.com/truelayer/changelog/february-2025.md)
+- [January 2025](https://docs.truelayer.com/truelayer/changelog/january-2025.md)
+</pre>
+ </body>
+</html>

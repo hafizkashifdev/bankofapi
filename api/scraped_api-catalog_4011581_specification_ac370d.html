@@ -1,0 +1,1387 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   NatWest – Developer Portal – Open Banking Sandbox
+  </title>
+  <meta content="index, follow" name="robots"/>
+  <meta content="Thanks to the comprehensive step-by-step documentation of our Sandbox Developer Portal, you can consume Open Banking APIs in less than 5 minutes." name="description"/>
+  <script>
+   var iVersion="2.6.6-build-108-03c3b2a";
+  </script>
+  <script>
+   var infoEnv;
+  </script>
+  <script>
+   var infoBrand;
+  </script>
+  <script>
+   var infoUsername;
+  </script>
+  <script>
+   var infoEmail;
+  </script>
+  <link href="/natwest-icon.png" rel="icon"/>
+  <link href="/febc265fb2cc455e1b85.css" rel="stylesheet"/>
+  <link href="/ec5fb73bff01905d82cd.css" rel="stylesheet"/>
+  <script defer="" src="https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad">
+  </script>
+  <link href="/externals/swaggerUI/swagger-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="/externals/swaggerUI/swagger-ui-bundle.js" type="application/javascript">
+  </script>
+  <script src="/externals/swaggerUI/swagger-ui-standalone-preset.js" type="application/javascript">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body>
+  <main id="app">
+   <div id="page">
+    <div class="notification">
+     <button type="button">
+      <span class="icon refuse-icon">
+      </span>
+     </button>
+     <p>
+      We have performed a brief maintenance operation this Thursday evening. During that time, some users may have experienced difficulties logging in and certain API endpoints may have been unavailable. Thank you for your patience and understanding.
+     </p>
+    </div>
+    <div class="cookienotification notification fixed">
+     <div>
+      We use cookies and similar technologies on our websites and mobile applications to help provide you with the best online experience.
+      <br/>
+      By using our sites and apps, you agree that we may store and access cookies and similar technologies on your device.
+      <br/>
+      You can
+      <a href="/api-catalog/4011581/privacy-policy">
+       <u>
+        find out more and set your preferences here
+       </u>
+      </a>
+      .
+     </div>
+     <br/>
+     <a class="btn btn-small btn-primary">
+      I accept
+     </a>
+    </div>
+    <header>
+     <nav class="navbar inverted">
+      <div class="container">
+       <div class="navbar-container">
+        <div class="menubar">
+         <a href="/">
+          <span class="logo">
+          </span>
+         </a>
+         <button class="menu-toggle" type="button">
+          <span class="icon menu-icon">
+          </span>
+          Menu
+         </button>
+        </div>
+        <div class="menu closed">
+         <ul>
+          <li>
+           <a href="/dashboard" scope="secure">
+            Dashboard
+           </a>
+          </li>
+          <li>
+           <a aria-current="page" class="active" href="/api-catalog" scope="all">
+            API Catalogue
+           </a>
+          </li>
+          <li>
+           <a href="/help" scope="all">
+            Help
+           </a>
+          </li>
+         </ul>
+         <div class="menu-right">
+          <div class="user-menu">
+           <a class="user">
+            <span class="icon user-icon">
+            </span>
+            Azam
+           </a>
+           <ul class="menu-links">
+            <li>
+             <a href="#">
+              My Profile
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              About
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              Logout
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="modal fade out" id="">
+           <div class="modal-dialog">
+            <button class="close-button" type="button">
+             <span class="icon close-icon">
+             </span>
+            </button>
+            <div class="modal-header">
+             <h6>
+              API Banking Accelerator
+             </h6>
+            </div>
+            <div class="modal-body">
+             <div class="about">
+              Oolys is a comprehensive multi-bank API Banking Sandbox.
+              <dl>
+               <dt>
+                Version
+               </dt>
+               <dd>
+                2.6.6-build-108-03c3b2a
+               </dd>
+              </dl>
+             </div>
+            </div>
+            <div class="modal-footer">
+             <small>
+              Copyright 2018-2021 UseInfinite
+             </small>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </nav>
+    </header>
+    <div class="page-content">
+     <div class="data-provider">
+      <div class="api-catalog-page">
+       <div class="container">
+        <header>
+         <div class="return-link">
+          <a aria-current="page" class="active" href="/api-catalog">
+           <span class="icon arrow-back">
+           </span>
+           Back
+          </a>
+         </div>
+         <h1>
+          E-Commerce Quick Checkout Specification
+         </h1>
+        </header>
+        <div id="swaggerContainer">
+         <div class="swagger-ui" data-reactroot="">
+          <div>
+           <svg class="svg-assets" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+             <symbol id="unlocked" viewbox="0 0 20 20">
+              <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z">
+              </path>
+             </symbol>
+             <symbol id="locked" viewbox="0 0 20 20">
+              <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z">
+              </path>
+             </symbol>
+             <symbol id="close" viewbox="0 0 20 20">
+              <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z">
+              </path>
+             </symbol>
+             <symbol id="large-arrow" viewbox="0 0 20 20">
+              <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z">
+              </path>
+             </symbol>
+             <symbol id="large-arrow-down" viewbox="0 0 20 20">
+              <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z">
+              </path>
+             </symbol>
+             <symbol id="jump-to" viewbox="0 0 24 24">
+              <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z">
+              </path>
+             </symbol>
+             <symbol id="expand" viewbox="0 0 24 24">
+              <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z">
+              </path>
+             </symbol>
+            </defs>
+           </svg>
+          </div>
+          <div>
+           <!-- react-empty: 25 -->
+           <div class="information-container wrapper">
+            <section class="block col-12">
+             <div>
+              <div class="info">
+               <hgroup class="main">
+                <h2 class="title">
+                 <!-- react-text: 46 -->
+                 Customer E-Commerce Checkout using Natwest Attributes
+                 <!-- /react-text -->
+                 <span>
+                  <small>
+                   <pre class="version"><!-- react-text: 50 --> <!-- /react-text --><!-- react-text: 51 -->V1<!-- /react-text --><!-- react-text: 52 --> <!-- /react-text --></pre>
+                  </small>
+                  <small class="version-stamp">
+                   <pre class="version">OAS3</pre>
+                  </small>
+                 </span>
+                </h2>
+                <a class="link" href="https://api.sandbox.natwest.com/devportal/products/4011581/assets/4a34a504-29a9-4115-b8bc-034a9e114ac5?jwt=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtaDlDNF90bC1yNVdCRFdNRGNQT0JkUXF5T001NWs1QmJ5cWRJLWJxcXZRIn0.eyJleHAiOjE3NDk3MjcyNjIsImlhdCI6MTc0OTcyNjk2MiwiYXV0aF90aW1lIjoxNzQ5NzI2NjQ3LCJqdGkiOiJhOTZiZDA2NC1mYThlLTQ3NjMtYjY2MC1jNjMyOGQ4OTI0MTMiLCJpc3MiOiJodHRwczovL2F1dGguc2FuZGJveC5uYXR3ZXN0LmNvbS9hdXRoL3JlYWxtcy9OYXRXZXN0UG9ydGFsIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImJmYjBmZmQ2LTRhMWEtNDU2Yy1hYmQzLWUyNDZmNzNmYWIyNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImRldnBvcnRhbCIsIm5vbmNlIjoiYjQ4OGVhMDItYzNhMS00ZWM1LTlhZTUtMTYyNmUwMjU2ZmI5Iiwic2Vzc2lvbl9zdGF0ZSI6IjgyYmY5ZDM2LWI5ODUtNDQ5OS1hZGI4LWZiN2E2MzA2YjMzNCIsImFjciI6IjAiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9kZXZlbG9wZXIuc2FuZGJveC5uYXR3ZXN0LmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIiwibmFtZSI6IkF6YW0gQWx0YWYiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtdWhhbW1hZGF6YW0uYWx0YWZAY29uc3VsdGFuY3lvdXRmaXQuY28udWsiLCJnaXZlbl9uYW1lIjoiQXphbSIsImZhbWlseV9uYW1lIjoiQWx0YWYiLCJlbWFpbCI6Im11aGFtbWFkYXphbS5hbHRhZkBjb25zdWx0YW5jeW91dGZpdC5jby51ayJ9.hsEpD9tbIftGIXvn6A-P26FDdc7GTSh3iKqfx_jODMQ5Ky7Ynxh09FNdb7VqfKQRp8iz4EUWkUcUknfsJaCto_atpOicrz03nXdGj5UGuVkvGGUr8I7d2gT-BG4DPuujRyk_4n6mXnHqtp_W87J8JJRpZQkaq4INrezq4A6G9u9hz-e2XDrfS5tGh7KDVrAJWSmi7VyWYKhQ-WoZbssy8nesodM21EYbnsQPiecZxU3VIzKw45_pJ7RvHWApt8kJ7OgqY7Cjli4w6rq9WG0099Ih5uuDwSK05AQnLs10xTERnydvRSWjpqyiinN6k6Fb7XOnyl3vjEFAUjvzvNF6Bw" rel="noopener noreferrer" target="_blank">
+                 <span class="url">
+                  <!-- react-text: 57 -->
+                  <!-- /react-text -->
+                  <!-- react-text: 58 -->
+                  https://api.sandbox.natwest.com/devportal/products/4011581/assets/4a34a504-29a9-4115-b8bc-034a9e114ac5?jwt=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtaDlDNF90bC1yNVdCRFdNRGNQT0JkUXF5T001NWs1QmJ5cWRJLWJxcXZRIn0.eyJleHAiOjE3NDk3MjcyNjIsImlhdCI6MTc0OTcyNjk2MiwiYXV0aF90aW1lIjoxNzQ5NzI2NjQ3LCJqdGkiOiJhOTZiZDA2NC1mYThlLTQ3NjMtYjY2MC1jNjMyOGQ4OTI0MTMiLCJpc3MiOiJodHRwczovL2F1dGguc2FuZGJveC5uYXR3ZXN0LmNvbS9hdXRoL3JlYWxtcy9OYXRXZXN0UG9ydGFsIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImJmYjBmZmQ2LTRhMWEtNDU2Yy1hYmQzLWUyNDZmNzNmYWIyNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImRldnBvcnRhbCIsIm5vbmNlIjoiYjQ4OGVhMDItYzNhMS00ZWM1LTlhZTUtMTYyNmUwMjU2ZmI5Iiwic2Vzc2lvbl9zdGF0ZSI6IjgyYmY5ZDM2LWI5ODUtNDQ5OS1hZGI4LWZiN2E2MzA2YjMzNCIsImFjciI6IjAiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9kZXZlbG9wZXIuc2FuZGJveC5uYXR3ZXN0LmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIiwibmFtZSI6IkF6YW0gQWx0YWYiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJtdWhhbW1hZGF6YW0uYWx0YWZAY29uc3VsdGFuY3lvdXRmaXQuY28udWsiLCJnaXZlbl9uYW1lIjoiQXphbSIsImZhbWlseV9uYW1lIjoiQWx0YWYiLCJlbWFpbCI6Im11aGFtbWFkYXphbS5hbHRhZkBjb25zdWx0YW5jeW91dGZpdC5jby51ayJ9.hsEpD9tbIftGIXvn6A-P26FDdc7GTSh3iKqfx_jODMQ5Ky7Ynxh09FNdb7VqfKQRp8iz4EUWkUcUknfsJaCto_atpOicrz03nXdGj5UGuVkvGGUr8I7d2gT-BG4DPuujRyk_4n6mXnHqtp_W87J8JJRpZQkaq4INrezq4A6G9u9hz-e2XDrfS5tGh7KDVrAJWSmi7VyWYKhQ-WoZbssy8nesodM21EYbnsQPiecZxU3VIzKw45_pJ7RvHWApt8kJ7OgqY7Cjli4w6rq9WG0099Ih5uuDwSK05AQnLs10xTERnydvRSWjpqyiinN6k6Fb7XOnyl3vjEFAUjvzvNF6Bw
+                  <!-- /react-text -->
+                 </span>
+                </a>
+               </hgroup>
+               <div class="description">
+                <!-- react-empty: 60 -->
+               </div>
+               <div class="info__tos">
+                <a class="link" href="https://openbanking.org.uk/terms" rel="noopener noreferrer" target="_blank">
+                 Terms of service
+                </a>
+               </div>
+               <div class="info__contact">
+                <div>
+                 <a class="link" href="https://rbsgroupapiservicedesk.spectrumhosting.net/servicedesk/customer/portal/1/user/login?destination=portal%2F1" rel="noopener noreferrer" target="_blank">
+                  <!-- react-text: 66 -->
+                  Service Desk
+                  <!-- /react-text -->
+                  <!-- react-text: 67 -->
+                  - Website
+                  <!-- /react-text -->
+                 </a>
+                </div>
+               </div>
+               <div class="info__license">
+                <a class="link" href="https://www.bankofapis.com/terms-and-conditions" rel="noopener noreferrer" target="_blank">
+                 National Westminster Bank Plc Portal Terms and Conditions
+                </a>
+               </div>
+              </div>
+             </div>
+            </section>
+           </div>
+           <div class="scheme-container">
+            <section class="schemes wrapper block col-12">
+             <div>
+              <span class="servers-title">
+               Servers
+              </span>
+              <div class="servers">
+               <label for="servers">
+                <select>
+                 <option value="https://api.natwest.com/customer/v3/attributes">
+                  https://api.natwest.com/customer/v3/attributes - Production
+                 </option>
+                 <option value="https://ob.sandbox.natwest.com/zerocode/bankofapis.com/customer-checkout/v3/attributes">
+                  https://ob.sandbox.natwest.com/zerocode/bankofapis.com/customer-checkout/v3/attributes - Sandbox
+                 </option>
+                </select>
+               </label>
+              </div>
+             </div>
+             <div class="auth-wrapper">
+              <button class="btn authorize unlocked">
+               <span>
+                Authorize
+               </span>
+               <svg height="20" width="20">
+                <use href="#unlocked" xlink:href="#unlocked">
+                </use>
+               </svg>
+              </button>
+             </div>
+            </section>
+           </div>
+           <div>
+           </div>
+           <div class="wrapper">
+            <section class="block col-12 block-desktop col-12-desktop">
+             <div>
+              <span>
+               <div class="opblock-tag-section is-open">
+                <h4 class="opblock-tag no-desc" data-is-open="true" data-tag="Customer Attributes" id="operations-tag-Customer_Attributes">
+                 <a class="nostyle">
+                  <span>
+                   Customer Attributes
+                  </span>
+                 </a>
+                 <small>
+                 </small>
+                 <div>
+                 </div>
+                 <button class="expand-operation" title="Collapse operation">
+                  <svg class="arrow" height="20" width="20">
+                   <use href="#large-arrow-down" xlink:href="#large-arrow-down">
+                   </use>
+                  </svg>
+                 </button>
+                </h4>
+                <div class="no-margin">
+                 <!-- react-text: 99 -->
+                 <!-- /react-text -->
+                 <div class="operation-tag-content">
+                  <span>
+                   <div class="opblock opblock-get is-open" id="operations-Customer_Attributes-get_ecommerce_checkout">
+                    <div class="opblock-summary opblock-summary-get">
+                     <span class="opblock-summary-method">
+                      GET
+                     </span>
+                     <span class="opblock-summary-path" data-path="/ecommerce-checkout">
+                      <a class="nostyle">
+                       <span>
+                        ​/ecommerce-checkout
+                       </span>
+                      </a>
+                     </span>
+                     <div class="opblock-summary-description">
+                      Retrieve personal data to pre-populate fields for authorised customers against a consent (referenced within the access_token)
+                     </div>
+                     <button aria-label="authorization button unlocked" class="authorization__btn unlocked">
+                      <svg height="20" width="20">
+                       <use href="#unlocked" xlink:href="#unlocked">
+                       </use>
+                      </svg>
+                     </button>
+                     <!-- react-empty: 112 -->
+                    </div>
+                    <div class="no-margin">
+                     <!-- react-text: 186 -->
+                     <!-- /react-text -->
+                     <div class="opblock-body">
+                      <div class="opblock-description-wrapper">
+                       <div class="opblock-description">
+                        <div class="renderedMarkdown">
+                         <p>
+                          Returns customer data based upon the provided access_token
+                         </p>
+                        </div>
+                       </div>
+                      </div>
+                      <div class="opblock-section">
+                       <div class="opblock-section-header">
+                        <div class="tab-header">
+                         <div class="tab-item active">
+                          <h4 class="opblock-title">
+                           <span>
+                            Parameters
+                           </span>
+                          </h4>
+                         </div>
+                        </div>
+                        <div class="try-out">
+                         <button class="btn try-out__btn">
+                          Try it out
+                         </button>
+                        </div>
+                       </div>
+                       <div class="parameters-container">
+                        <div class="opblock-description-wrapper">
+                         <p>
+                          No parameters
+                         </p>
+                        </div>
+                       </div>
+                      </div>
+                      <div class="execute-wrapper">
+                      </div>
+                      <div class="responses-wrapper">
+                       <div class="opblock-section-header">
+                        <h4>
+                         Responses
+                        </h4>
+                       </div>
+                       <div class="responses-inner">
+                        <table class="responses-table">
+                         <thead>
+                          <tr class="responses-header">
+                           <td class="col_header response-col_status">
+                            Code
+                           </td>
+                           <td class="col_header response-col_description">
+                            Description
+                           </td>
+                           <td class="col col_header response-col_links">
+                            Links
+                           </td>
+                          </tr>
+                         </thead>
+                         <tbody>
+                          <tr class="response" data-code="200">
+                           <td class="response-col_status">
+                            200
+                           </td>
+                           <td class="response-col_description">
+                            <div class="response-col_description__inner">
+                             <div class="renderedMarkdown">
+                              <p>
+                               Successful Request
+                              </p>
+                             </div>
+                            </div>
+                            <section class="response-controls">
+                             <div class="response-control-media-type response-control-media-type--accept-controller">
+                              <small class="response-control-media-type__title">
+                               Media type
+                              </small>
+                              <div class="content-type-wrapper">
+                               <select aria-label="Media Type" class="content-type">
+                                <option value="application/json">
+                                 application/json
+                                </option>
+                               </select>
+                              </div>
+                              <small class="response-control-media-type__accept-message">
+                               <!-- react-text: 228 -->
+                               Controls
+                               <!-- /react-text -->
+                               <code>
+                                Accept
+                               </code>
+                               <!-- react-text: 230 -->
+                               header.
+                               <!-- /react-text -->
+                              </small>
+                             </div>
+                            </section>
+                            <div class="model-example">
+                             <ul class="tab">
+                              <li class="tabitem active">
+                               <a class="tablinks" data-name="example">
+                                Example Value
+                               </a>
+                              </li>
+                              <li class="tabitem">
+                               <a class="tablinks" data-name="model">
+                                Schema
+                               </a>
+                              </li>
+                             </ul>
+                             <div>
+                              <div>
+                               <div class="highlight-code">
+                                <pre class="example microlight" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(51, 51, 51); color: white;"><code style="white-space: pre;"><span><!-- react-text: 243 -->{
+<!-- /react-text --></span><span><!-- react-text: 245 -->  <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 247 -->"data"<!-- /react-text --></span><span><!-- react-text: 249 -->: {
+<!-- /react-text --></span><span><!-- react-text: 251 -->    <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 253 -->"id"<!-- /react-text --></span><span><!-- react-text: 255 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 257 -->"dfacca12375936129385823213addf"<!-- /react-text --></span><span><!-- react-text: 259 -->,
+<!-- /react-text --></span><span><!-- react-text: 261 -->    <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 263 -->"name"<!-- /react-text --></span><span><!-- react-text: 265 -->: {
+<!-- /react-text --></span><span><!-- react-text: 267 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 269 -->"title"<!-- /react-text --></span><span><!-- react-text: 271 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 273 -->"miss"<!-- /react-text --></span><span><!-- react-text: 275 -->,
+<!-- /react-text --></span><span><!-- react-text: 277 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 279 -->"given_name"<!-- /react-text --></span><span><!-- react-text: 281 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 283 -->"Jane"<!-- /react-text --></span><span><!-- react-text: 285 -->,
+<!-- /react-text --></span><span><!-- react-text: 287 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 289 -->"family_name"<!-- /react-text --></span><span><!-- react-text: 291 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 293 -->"Doe"<!-- /react-text --></span><span><!-- react-text: 295 -->,
+<!-- /react-text --></span><span><!-- react-text: 297 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 299 -->"middle_names"<!-- /react-text --></span><span><!-- react-text: 301 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 303 -->"Diane Lily"<!-- /react-text --></span><span><!-- react-text: 305 -->,
+<!-- /react-text --></span><span><!-- react-text: 307 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 309 -->"salutation"<!-- /react-text --></span><span><!-- react-text: 311 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 313 -->"Miss Doe"<!-- /react-text --></span><span><!-- react-text: 315 -->,
+<!-- /react-text --></span><span><!-- react-text: 317 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 319 -->"full_name"<!-- /react-text --></span><span><!-- react-text: 321 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 323 -->"Miss Jane Diane Lily Doe"<!-- /react-text --></span><span><!-- react-text: 325 -->
+<!-- /react-text --></span><!-- react-text: 326 -->    },
+<!-- /react-text --><span><!-- react-text: 328 -->    <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 330 -->"contact_details"<!-- /react-text --></span><span><!-- react-text: 332 -->: {
+<!-- /react-text --></span><span><!-- react-text: 334 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 336 -->"email"<!-- /react-text --></span><span><!-- react-text: 338 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 340 -->"jane.doe@example.com"<!-- /react-text --></span><span><!-- react-text: 342 -->,
+<!-- /react-text --></span><span><!-- react-text: 344 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 346 -->"mobile_phone_number"<!-- /react-text --></span><span><!-- react-text: 348 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 350 -->"+447777777777"<!-- /react-text --></span><span><!-- react-text: 352 -->,
+<!-- /react-text --></span><span><!-- react-text: 354 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 356 -->"home_phone_number"<!-- /react-text --></span><span><!-- react-text: 358 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 360 -->"+441111111111"<!-- /react-text --></span><span><!-- react-text: 362 -->
+<!-- /react-text --></span><!-- react-text: 363 -->    },
+<!-- /react-text --><span><!-- react-text: 365 -->    <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 367 -->"address"<!-- /react-text --></span><span><!-- react-text: 369 -->: {
+<!-- /react-text --></span><span><!-- react-text: 371 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 373 -->"residence"<!-- /react-text --></span><span><!-- react-text: 375 -->: {
+<!-- /react-text --></span><span><!-- react-text: 377 -->        <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 379 -->"line1"<!-- /react-text --></span><span><!-- react-text: 381 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 383 -->"Apartment 20, Grainger Tower"<!-- /react-text --></span><span><!-- react-text: 385 -->,
+<!-- /react-text --></span><span><!-- react-text: 387 -->        <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 389 -->"line2"<!-- /react-text --></span><span><!-- react-text: 391 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 393 -->"Beige street"<!-- /react-text --></span><span><!-- react-text: 395 -->,
+<!-- /react-text --></span><span><!-- react-text: 397 -->        <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 399 -->"line3"<!-- /react-text --></span><span><!-- react-text: 401 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 403 -->"Newcastle upon Tyne"<!-- /react-text --></span><span><!-- react-text: 405 -->,
+<!-- /react-text --></span><span><!-- react-text: 407 -->        <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 409 -->"line4"<!-- /react-text --></span><span><!-- react-text: 411 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 413 -->"Tyne and Wear"<!-- /react-text --></span><span><!-- react-text: 415 -->,
+<!-- /react-text --></span><span><!-- react-text: 417 -->        <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 419 -->"line5"<!-- /react-text --></span><span><!-- react-text: 421 -->: <!-- /react-text --></span><span style="color: rgb(252, 194, 140);"><!-- react-text: 423 -->null<!-- /react-text --></span><span><!-- react-text: 425 -->,
+<!-- /react-text --></span><span><!-- react-text: 427 -->        <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 429 -->"postcode"<!-- /react-text --></span><span><!-- react-text: 431 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 433 -->"NE1 6ZZ"<!-- /react-text --></span><span><!-- react-text: 435 -->,
+<!-- /react-text --></span><span><!-- react-text: 437 -->        <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 439 -->"country"<!-- /react-text --></span><span><!-- react-text: 441 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 443 -->"GBR"<!-- /react-text --></span><span><!-- react-text: 445 -->
+<!-- /react-text --></span><!-- react-text: 446 -->      }
+<!-- /react-text --><!-- react-text: 447 -->    },
+<!-- /react-text --><span><!-- react-text: 449 -->    <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 451 -->"birthdate"<!-- /react-text --></span><span><!-- react-text: 453 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 455 -->"1970-01-01T00:00:00.000Z"<!-- /react-text --></span><span><!-- react-text: 457 -->
+<!-- /react-text --></span><!-- react-text: 458 -->  }
+<!-- /react-text --><!-- react-text: 459 -->}
+<!-- /react-text --></code></pre>
+                               </div>
+                              </div>
+                             </div>
+                            </div>
+                            <div class="headers-wrapper">
+                             <h4 class="headers__title">
+                              Headers:
+                             </h4>
+                             <table class="headers">
+                              <thead>
+                               <tr class="header-row">
+                                <th class="header-col">
+                                 Name
+                                </th>
+                                <th class="header-col">
+                                 Description
+                                </th>
+                                <th class="header-col">
+                                 Type
+                                </th>
+                               </tr>
+                              </thead>
+                              <tbody>
+                               <tr>
+                                <td class="header-col">
+                                 x-fapi-interaction-id
+                                </td>
+                                <td class="header-col">
+                                </td>
+                                <td class="header-col">
+                                 <!-- react-text: 473 -->
+                                 string
+                                 <!-- /react-text -->
+                                 <!-- react-text: 474 -->
+                                 <!-- /react-text -->
+                                </td>
+                               </tr>
+                              </tbody>
+                             </table>
+                            </div>
+                           </td>
+                           <td class="response-col_links">
+                            <i>
+                             No links
+                            </i>
+                           </td>
+                          </tr>
+                          <tr class="response" data-code="400">
+                           <td class="response-col_status">
+                            400
+                           </td>
+                           <td class="response-col_description">
+                            <div class="response-col_description__inner">
+                             <div class="renderedMarkdown">
+                              <p>
+                               Bad Request
+                              </p>
+                             </div>
+                            </div>
+                            <section class="response-controls">
+                             <div class="response-control-media-type">
+                              <small class="response-control-media-type__title">
+                               Media type
+                              </small>
+                              <div class="content-type-wrapper">
+                               <select aria-label="Media Type" class="content-type">
+                                <option value="application/json">
+                                 application/json
+                                </option>
+                               </select>
+                              </div>
+                             </div>
+                            </section>
+                            <div class="model-example">
+                             <ul class="tab">
+                              <li class="tabitem active">
+                               <a class="tablinks" data-name="example">
+                                Example Value
+                               </a>
+                              </li>
+                              <li class="tabitem">
+                               <a class="tablinks" data-name="model">
+                                Schema
+                               </a>
+                              </li>
+                             </ul>
+                             <div>
+                              <div>
+                               <div class="highlight-code">
+                                <pre class="example microlight" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(51, 51, 51); color: white;"><code style="white-space: pre;"><span><!-- react-text: 500 -->{
+<!-- /react-text --></span><span><!-- react-text: 502 -->  <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 504 -->"status"<!-- /react-text --></span><span><!-- react-text: 506 -->: <!-- /react-text --></span><span style="color: rgb(211, 99, 99);"><!-- react-text: 508 -->0<!-- /react-text --></span><span><!-- react-text: 510 -->,
+<!-- /react-text --></span><span><!-- react-text: 512 -->  <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 514 -->"title"<!-- /react-text --></span><span><!-- react-text: 516 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 518 -->"string"<!-- /react-text --></span><span><!-- react-text: 520 -->,
+<!-- /react-text --></span><span><!-- react-text: 522 -->  <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 524 -->"description"<!-- /react-text --></span><span><!-- react-text: 526 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 528 -->"string"<!-- /react-text --></span><span><!-- react-text: 530 -->,
+<!-- /react-text --></span><span><!-- react-text: 532 -->  <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 534 -->"errors"<!-- /react-text --></span><span><!-- react-text: 536 -->: [
+<!-- /react-text --></span><!-- react-text: 537 -->    {
+<!-- /react-text --><span><!-- react-text: 539 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 541 -->"title"<!-- /react-text --></span><span><!-- react-text: 543 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 545 -->"string"<!-- /react-text --></span><span><!-- react-text: 547 -->,
+<!-- /react-text --></span><span><!-- react-text: 549 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 551 -->"description"<!-- /react-text --></span><span><!-- react-text: 553 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 555 -->"string"<!-- /react-text --></span><span><!-- react-text: 557 -->,
+<!-- /react-text --></span><span><!-- react-text: 559 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 561 -->"path"<!-- /react-text --></span><span><!-- react-text: 563 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 565 -->"string"<!-- /react-text --></span><span><!-- react-text: 567 -->
+<!-- /react-text --></span><!-- react-text: 568 -->    }
+<!-- /react-text --><!-- react-text: 569 -->  ]
+<!-- /react-text --><!-- react-text: 570 -->}
+<!-- /react-text --></code></pre>
+                               </div>
+                              </div>
+                             </div>
+                            </div>
+                            <div class="headers-wrapper">
+                             <h4 class="headers__title">
+                              Headers:
+                             </h4>
+                             <table class="headers">
+                              <thead>
+                               <tr class="header-row">
+                                <th class="header-col">
+                                 Name
+                                </th>
+                                <th class="header-col">
+                                 Description
+                                </th>
+                                <th class="header-col">
+                                 Type
+                                </th>
+                               </tr>
+                              </thead>
+                              <tbody>
+                               <tr>
+                                <td class="header-col">
+                                 x-fapi-interaction-id
+                                </td>
+                                <td class="header-col">
+                                </td>
+                                <td class="header-col">
+                                 <!-- react-text: 584 -->
+                                 string
+                                 <!-- /react-text -->
+                                 <!-- react-text: 585 -->
+                                 <!-- /react-text -->
+                                </td>
+                               </tr>
+                              </tbody>
+                             </table>
+                            </div>
+                           </td>
+                           <td class="response-col_links">
+                            <i>
+                             No links
+                            </i>
+                           </td>
+                          </tr>
+                          <tr class="response" data-code="401">
+                           <td class="response-col_status">
+                            401
+                           </td>
+                           <td class="response-col_description">
+                            <div class="response-col_description__inner">
+                             <div class="renderedMarkdown">
+                              <p>
+                               Unauthorized
+                              </p>
+                             </div>
+                            </div>
+                            <section class="response-controls">
+                             <div class="response-control-media-type">
+                              <small class="response-control-media-type__title">
+                               Media type
+                              </small>
+                              <div class="content-type-wrapper">
+                               <select aria-label="Media Type" class="content-type">
+                                <option value="application/json">
+                                 application/json
+                                </option>
+                               </select>
+                              </div>
+                             </div>
+                            </section>
+                            <div class="model-example">
+                             <ul class="tab">
+                              <li class="tabitem active">
+                               <a class="tablinks" data-name="example">
+                                Example Value
+                               </a>
+                              </li>
+                              <li class="tabitem">
+                               <a class="tablinks" data-name="model">
+                                Schema
+                               </a>
+                              </li>
+                             </ul>
+                             <div>
+                              <div>
+                               <div class="highlight-code">
+                                <pre class="example microlight" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(51, 51, 51); color: white;"><code style="white-space: pre;"><span><!-- react-text: 611 -->{
+<!-- /react-text --></span><span><!-- react-text: 613 -->  <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 615 -->"status"<!-- /react-text --></span><span><!-- react-text: 617 -->: <!-- /react-text --></span><span style="color: rgb(211, 99, 99);"><!-- react-text: 619 -->0<!-- /react-text --></span><span><!-- react-text: 621 -->,
+<!-- /react-text --></span><span><!-- react-text: 623 -->  <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 625 -->"title"<!-- /react-text --></span><span><!-- react-text: 627 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 629 -->"string"<!-- /react-text --></span><span><!-- react-text: 631 -->,
+<!-- /react-text --></span><span><!-- react-text: 633 -->  <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 635 -->"description"<!-- /react-text --></span><span><!-- react-text: 637 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 639 -->"string"<!-- /react-text --></span><span><!-- react-text: 641 -->,
+<!-- /react-text --></span><span><!-- react-text: 643 -->  <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 645 -->"errors"<!-- /react-text --></span><span><!-- react-text: 647 -->: [
+<!-- /react-text --></span><!-- react-text: 648 -->    {
+<!-- /react-text --><span><!-- react-text: 650 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 652 -->"title"<!-- /react-text --></span><span><!-- react-text: 654 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 656 -->"string"<!-- /react-text --></span><span><!-- react-text: 658 -->,
+<!-- /react-text --></span><span><!-- react-text: 660 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 662 -->"description"<!-- /react-text --></span><span><!-- react-text: 664 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 666 -->"string"<!-- /react-text --></span><span><!-- react-text: 668 -->,
+<!-- /react-text --></span><span><!-- react-text: 670 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 672 -->"path"<!-- /react-text --></span><span><!-- react-text: 674 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 676 -->"string"<!-- /react-text --></span><span><!-- react-text: 678 -->
+<!-- /react-text --></span><!-- react-text: 679 -->    }
+<!-- /react-text --><!-- react-text: 680 -->  ]
+<!-- /react-text --><!-- react-text: 681 -->}
+<!-- /react-text --></code></pre>
+                               </div>
+                              </div>
+                             </div>
+                            </div>
+                            <div class="headers-wrapper">
+                             <h4 class="headers__title">
+                              Headers:
+                             </h4>
+                             <table class="headers">
+                              <thead>
+                               <tr class="header-row">
+                                <th class="header-col">
+                                 Name
+                                </th>
+                                <th class="header-col">
+                                 Description
+                                </th>
+                                <th class="header-col">
+                                 Type
+                                </th>
+                               </tr>
+                              </thead>
+                              <tbody>
+                               <tr>
+                                <td class="header-col">
+                                 x-fapi-interaction-id
+                                </td>
+                                <td class="header-col">
+                                </td>
+                                <td class="header-col">
+                                 <!-- react-text: 695 -->
+                                 string
+                                 <!-- /react-text -->
+                                 <!-- react-text: 696 -->
+                                 <!-- /react-text -->
+                                </td>
+                               </tr>
+                              </tbody>
+                             </table>
+                            </div>
+                           </td>
+                           <td class="response-col_links">
+                            <i>
+                             No links
+                            </i>
+                           </td>
+                          </tr>
+                          <tr class="response" data-code="403">
+                           <td class="response-col_status">
+                            403
+                           </td>
+                           <td class="response-col_description">
+                            <div class="response-col_description__inner">
+                             <div class="renderedMarkdown">
+                              <p>
+                               Forbidden
+                              </p>
+                             </div>
+                            </div>
+                            <div class="headers-wrapper">
+                             <h4 class="headers__title">
+                              Headers:
+                             </h4>
+                             <table class="headers">
+                              <thead>
+                               <tr class="header-row">
+                                <th class="header-col">
+                                 Name
+                                </th>
+                                <th class="header-col">
+                                 Description
+                                </th>
+                                <th class="header-col">
+                                 Type
+                                </th>
+                               </tr>
+                              </thead>
+                              <tbody>
+                               <tr>
+                                <td class="header-col">
+                                 x-fapi-interaction-id
+                                </td>
+                                <td class="header-col">
+                                </td>
+                                <td class="header-col">
+                                 <!-- react-text: 717 -->
+                                 string
+                                 <!-- /react-text -->
+                                 <!-- react-text: 718 -->
+                                 <!-- /react-text -->
+                                </td>
+                               </tr>
+                              </tbody>
+                             </table>
+                            </div>
+                           </td>
+                           <td class="response-col_links">
+                            <i>
+                             No links
+                            </i>
+                           </td>
+                          </tr>
+                          <tr class="response" data-code="404">
+                           <td class="response-col_status">
+                            404
+                           </td>
+                           <td class="response-col_description">
+                            <div class="response-col_description__inner">
+                             <div class="renderedMarkdown">
+                              <p>
+                               Not Found
+                              </p>
+                             </div>
+                            </div>
+                            <div class="headers-wrapper">
+                             <h4 class="headers__title">
+                              Headers:
+                             </h4>
+                             <table class="headers">
+                              <thead>
+                               <tr class="header-row">
+                                <th class="header-col">
+                                 Name
+                                </th>
+                                <th class="header-col">
+                                 Description
+                                </th>
+                                <th class="header-col">
+                                 Type
+                                </th>
+                               </tr>
+                              </thead>
+                              <tbody>
+                               <tr>
+                                <td class="header-col">
+                                 x-fapi-interaction-id
+                                </td>
+                                <td class="header-col">
+                                </td>
+                                <td class="header-col">
+                                 <!-- react-text: 739 -->
+                                 string
+                                 <!-- /react-text -->
+                                 <!-- react-text: 740 -->
+                                 <!-- /react-text -->
+                                </td>
+                               </tr>
+                              </tbody>
+                             </table>
+                            </div>
+                           </td>
+                           <td class="response-col_links">
+                            <i>
+                             No links
+                            </i>
+                           </td>
+                          </tr>
+                          <tr class="response" data-code="429">
+                           <td class="response-col_status">
+                            429
+                           </td>
+                           <td class="response-col_description">
+                            <div class="response-col_description__inner">
+                             <div class="renderedMarkdown">
+                              <p>
+                               Too Many Requests
+                              </p>
+                             </div>
+                            </div>
+                            <div class="headers-wrapper">
+                             <h4 class="headers__title">
+                              Headers:
+                             </h4>
+                             <table class="headers">
+                              <thead>
+                               <tr class="header-row">
+                                <th class="header-col">
+                                 Name
+                                </th>
+                                <th class="header-col">
+                                 Description
+                                </th>
+                                <th class="header-col">
+                                 Type
+                                </th>
+                               </tr>
+                              </thead>
+                              <tbody>
+                               <tr>
+                                <td class="header-col">
+                                 x-fapi-interaction-id
+                                </td>
+                                <td class="header-col">
+                                </td>
+                                <td class="header-col">
+                                 <!-- react-text: 761 -->
+                                 string
+                                 <!-- /react-text -->
+                                 <!-- react-text: 762 -->
+                                 <!-- /react-text -->
+                                </td>
+                               </tr>
+                              </tbody>
+                             </table>
+                            </div>
+                           </td>
+                           <td class="response-col_links">
+                            <i>
+                             No links
+                            </i>
+                           </td>
+                          </tr>
+                          <tr class="response" data-code="500">
+                           <td class="response-col_status">
+                            500
+                           </td>
+                           <td class="response-col_description">
+                            <div class="response-col_description__inner">
+                             <div class="renderedMarkdown">
+                              <p>
+                               Internal Server Error
+                              </p>
+                             </div>
+                            </div>
+                            <section class="response-controls">
+                             <div class="response-control-media-type">
+                              <small class="response-control-media-type__title">
+                               Media type
+                              </small>
+                              <div class="content-type-wrapper">
+                               <select aria-label="Media Type" class="content-type">
+                                <option value="application/json">
+                                 application/json
+                                </option>
+                               </select>
+                              </div>
+                             </div>
+                            </section>
+                            <div class="model-example">
+                             <ul class="tab">
+                              <li class="tabitem active">
+                               <a class="tablinks" data-name="example">
+                                Example Value
+                               </a>
+                              </li>
+                              <li class="tabitem">
+                               <a class="tablinks" data-name="model">
+                                Schema
+                               </a>
+                              </li>
+                             </ul>
+                             <div>
+                              <div>
+                               <div class="highlight-code">
+                                <pre class="example microlight" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(51, 51, 51); color: white;"><code style="white-space: pre;"><span><!-- react-text: 788 -->{
+<!-- /react-text --></span><span><!-- react-text: 790 -->  <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 792 -->"status"<!-- /react-text --></span><span><!-- react-text: 794 -->: <!-- /react-text --></span><span style="color: rgb(211, 99, 99);"><!-- react-text: 796 -->0<!-- /react-text --></span><span><!-- react-text: 798 -->,
+<!-- /react-text --></span><span><!-- react-text: 800 -->  <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 802 -->"title"<!-- /react-text --></span><span><!-- react-text: 804 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 806 -->"string"<!-- /react-text --></span><span><!-- react-text: 808 -->,
+<!-- /react-text --></span><span><!-- react-text: 810 -->  <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 812 -->"description"<!-- /react-text --></span><span><!-- react-text: 814 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 816 -->"string"<!-- /react-text --></span><span><!-- react-text: 818 -->,
+<!-- /react-text --></span><span><!-- react-text: 820 -->  <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 822 -->"errors"<!-- /react-text --></span><span><!-- react-text: 824 -->: [
+<!-- /react-text --></span><!-- react-text: 825 -->    {
+<!-- /react-text --><span><!-- react-text: 827 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 829 -->"title"<!-- /react-text --></span><span><!-- react-text: 831 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 833 -->"string"<!-- /react-text --></span><span><!-- react-text: 835 -->,
+<!-- /react-text --></span><span><!-- react-text: 837 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 839 -->"description"<!-- /react-text --></span><span><!-- react-text: 841 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 843 -->"string"<!-- /react-text --></span><span><!-- react-text: 845 -->,
+<!-- /react-text --></span><span><!-- react-text: 847 -->      <!-- /react-text --></span><span class="hljs-attr"><!-- react-text: 849 -->"path"<!-- /react-text --></span><span><!-- react-text: 851 -->: <!-- /react-text --></span><span style="color: rgb(162, 252, 162);"><!-- react-text: 853 -->"string"<!-- /react-text --></span><span><!-- react-text: 855 -->
+<!-- /react-text --></span><!-- react-text: 856 -->    }
+<!-- /react-text --><!-- react-text: 857 -->  ]
+<!-- /react-text --><!-- react-text: 858 -->}
+<!-- /react-text --></code></pre>
+                               </div>
+                              </div>
+                             </div>
+                            </div>
+                            <div class="headers-wrapper">
+                             <h4 class="headers__title">
+                              Headers:
+                             </h4>
+                             <table class="headers">
+                              <thead>
+                               <tr class="header-row">
+                                <th class="header-col">
+                                 Name
+                                </th>
+                                <th class="header-col">
+                                 Description
+                                </th>
+                                <th class="header-col">
+                                 Type
+                                </th>
+                               </tr>
+                              </thead>
+                              <tbody>
+                               <tr>
+                                <td class="header-col">
+                                 x-fapi-interaction-id
+                                </td>
+                                <td class="header-col">
+                                </td>
+                                <td class="header-col">
+                                 <!-- react-text: 872 -->
+                                 string
+                                 <!-- /react-text -->
+                                 <!-- react-text: 873 -->
+                                 <!-- /react-text -->
+                                </td>
+                               </tr>
+                              </tbody>
+                             </table>
+                            </div>
+                           </td>
+                           <td class="response-col_links">
+                            <i>
+                             No links
+                            </i>
+                           </td>
+                          </tr>
+                         </tbody>
+                        </table>
+                       </div>
+                      </div>
+                     </div>
+                     <!-- react-text: 190 -->
+                     <!-- /react-text -->
+                    </div>
+                   </div>
+                  </span>
+                 </div>
+                 <!-- react-text: 114 -->
+                 <!-- /react-text -->
+                </div>
+               </div>
+              </span>
+             </div>
+            </section>
+           </div>
+           <div class="wrapper">
+            <section class="block col-12 block-desktop col-12-desktop">
+             <section class="models is-open">
+              <h4>
+               <span>
+                Schemas
+               </span>
+               <svg height="20" width="20">
+                <use xlink:href="#large-arrow-down">
+                </use>
+               </svg>
+              </h4>
+              <div class="no-margin">
+               <!-- react-text: 123 -->
+               <!-- /react-text -->
+               <div class="model-container" data-name="GetCheckoutResponse" id="model-GetCheckoutResponse">
+                <span class="models-jump-to-path">
+                 <!-- react-empty: 126 -->
+                </span>
+                <span class="model-box">
+                 <span class="pointer">
+                  <span class="model-box">
+                   <span class="model model-title">
+                    GetCheckoutResponse
+                   </span>
+                  </span>
+                 </span>
+                 <span class="pointer">
+                  <span class="model-toggle collapsed">
+                  </span>
+                 </span>
+                 <span class="pointer">
+                 </span>
+                </span>
+               </div>
+               <div class="model-container" data-name="name" id="model-name">
+                <span class="models-jump-to-path">
+                 <!-- react-empty: 136 -->
+                </span>
+                <span class="model-box">
+                 <span class="pointer">
+                  <span class="model-box">
+                   <span class="model model-title">
+                    name
+                   </span>
+                  </span>
+                 </span>
+                 <span class="pointer">
+                  <span class="model-toggle collapsed">
+                  </span>
+                 </span>
+                 <span class="pointer">
+                 </span>
+                </span>
+               </div>
+               <div class="model-container" data-name="address" id="model-address">
+                <span class="models-jump-to-path">
+                 <!-- react-empty: 146 -->
+                </span>
+                <span class="model-box">
+                 <span class="pointer">
+                  <span class="model-box">
+                   <span class="model model-title">
+                    address
+                   </span>
+                  </span>
+                 </span>
+                 <span class="pointer">
+                  <span class="model-toggle collapsed">
+                  </span>
+                 </span>
+                 <span class="pointer">
+                 </span>
+                </span>
+               </div>
+               <div class="model-container" data-name="contact_details" id="model-contact_details">
+                <span class="models-jump-to-path">
+                 <!-- react-empty: 156 -->
+                </span>
+                <span class="model-box">
+                 <span class="pointer">
+                  <span class="model-box">
+                   <span class="model model-title">
+                    contact_details
+                   </span>
+                  </span>
+                 </span>
+                 <span class="pointer">
+                  <span class="model-toggle collapsed">
+                  </span>
+                 </span>
+                 <span class="pointer">
+                 </span>
+                </span>
+               </div>
+               <div class="model-container" data-name="address_format" id="model-address_format">
+                <span class="models-jump-to-path">
+                 <!-- react-empty: 166 -->
+                </span>
+                <span class="model-box">
+                 <span class="pointer">
+                  <span class="model-box">
+                   <span class="model model-title">
+                    address format
+                   </span>
+                  </span>
+                 </span>
+                 <span class="pointer">
+                  <span class="model-toggle collapsed">
+                  </span>
+                 </span>
+                 <span class="pointer">
+                 </span>
+                </span>
+               </div>
+               <div class="model-container" data-name="ErrorResponse" id="model-ErrorResponse">
+                <span class="models-jump-to-path">
+                 <!-- react-empty: 176 -->
+                </span>
+                <span class="model-box">
+                 <span class="pointer">
+                  <span class="model-box">
+                   <span class="model model-title">
+                    ErrorResponse
+                   </span>
+                  </span>
+                 </span>
+                 <span class="pointer">
+                  <span class="model-toggle collapsed">
+                  </span>
+                 </span>
+                 <span class="pointer">
+                 </span>
+                </span>
+               </div>
+               <!-- react-text: 184 -->
+               <!-- /react-text -->
+              </div>
+             </section>
+            </section>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer>
+     <div class="container">
+      <div class="row">
+       <div class="column">
+        <h6>
+         Account
+        </h6>
+        <nav>
+         <a href="/dashboard">
+          Dashboard
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Developer Tools
+        </h6>
+        <nav>
+         <a aria-current="page" class="active" href="/api-catalog">
+          API Catalogue
+         </a>
+         <a href="/documentation">
+          Documentation
+         </a>
+         <a href="https://natwest-bankofapi-servicemanagement.atlassian.net/servicedesk/customer/portals" target="_blank">
+          Service Desk
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Company
+        </h6>
+        <nav>
+         <a href="/terms">
+          Terms &amp; Conditions
+         </a>
+         <a href="/privacy-policy">
+          Privacy Policy
+         </a>
+        </nav>
+       </div>
+       <div class="col-sm">
+       </div>
+      </div>
+     </div>
+    </footer>
+    <button class="scrolltop-button">
+    </button>
+    <div class="powered-by">
+     Powered by
+     <em>
+      Oolys
+     </em>
+    </div>
+   </div>
+   <div id="side-panel">
+   </div>
+   <div class="modal fade out session-popup" id="">
+    <div class="modal-dialog">
+     <div class="modal-header">
+      <h6>
+       Your session is about to expire
+      </h6>
+     </div>
+     <div class="modal-body">
+      <span class="expiration-warning">
+       You will be automatically logged out in
+       <em>
+        59
+       </em>
+       seconds.
+       <br/>
+       Do you want to extend your session?
+      </span>
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-primary" type="button">
+       Continue
+      </button>
+      <button class="btn btn-default" type="button">
+       Logout
+      </button>
+     </div>
+    </div>
+   </div>
+  </main>
+  <script>
+   var loadHasBeenTriggered = false;
+      window.onUsersnapCXLoad = function(api) {
+        api.init({
+            user: {
+              userId: infoUsername,
+              email: infoEmail
+            },
+            custom: {
+                userId: infoUsername,
+                brand : infoBrand,
+                env : infoEnv
+            }
+          });
+      }
+      window.loadUserFeedbackWidget = function() {
+        if ( (!loadHasBeenTriggered) && infoUsername && infoBrand) {
+            loadHasBeenTriggered = true;
+            var script = document.createElement('script');
+            script.defer = 1;
+            script.src = 'https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad';
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      }
+  </script>
+  <script src="/febc265fb2cc455e1b85.js">
+  </script>
+  <script src="/7dbd7cfa6c7cb6d881a7.js">
+  </script>
+  <script src="/1a5f01ff47d07a377494.js">
+  </script>
+  <script src="/2daa0d06a67874f682c5.js">
+  </script>
+  <script src="/c617fa727da6d416f6a5.js">
+  </script>
+  <script src="/07424fde184376e24dea.js">
+  </script>
+  <script src="/ee4e265cb3dc3d500780.js">
+  </script>
+  <script src="/04a6b9711f1d30cdc1a2.js">
+  </script>
+  <script src="/03632d2692dbb192bc9c.js">
+  </script>
+  <script src="/991cb5d14add34ec9369.js">
+  </script>
+  <script src="/cd81143e09bd4a3ddd06.js">
+  </script>
+  <script src="/ad40893dba0f0cc010ca.js">
+  </script>
+  <script src="/86e32b4ca44cc47a79a5.js">
+  </script>
+  <script src="/e4687322f7bb906a2df7.js">
+  </script>
+  <script src="/27eb4f97929598ad3286.js">
+  </script>
+  <script src="/27861e3fa2db86dca27a.js">
+  </script>
+  <script src="/447e8d2fec5adde36e43.js">
+  </script>
+  <script src="/9f29fe08232107e5b5a2.js">
+  </script>
+  <script src="/9d72a8e94d97ca62f07e.js">
+  </script>
+  <script src="/1e1d6def47d88d1b6578.js">
+  </script>
+  <script src="/20d2c1b54999365fe1c3.js">
+  </script>
+  <script src="/d17eb693468fac87de9d.js">
+  </script>
+  <script src="/ace96842f9fdef10da09.js">
+  </script>
+  <script src="/e10dbcadb20790400bd2.js">
+  </script>
+  <script src="/ec5fb73bff01905d82cd.js">
+  </script>
+  <!--uspssb-->
+  <iframe name="us-entrypoint-globalSetup" style="display: none; height: 0px; width: 0px; z-index: 2147483647; color-scheme: normal;" title="Usersnap Feedback">
+  </iframe>
+  <!--uspsse-->
+  <us-button style="user-select: all;">
+  </us-button>
+ </body>
+</html>
+
+
+<!-- Iframe 1 Content -->
+<html>
+ <head>
+  <title>
+   Usersnap Feedback
+  </title>
+  <script>
+   <br>  window.nonce = "";<br>  window.publicPath = "https://resources.usersnap.com/";<br>
+  </script>
+  <script src="https://resources.usersnap.com/widget-assets/js/entries/globalSetup/b263c0f1171ea4606316.js">
+  </script>
+  <style>
+   html, body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+  </style>
+ </head>
+ <body>
+  <div>
+  </div>
+ </body>
+</html>

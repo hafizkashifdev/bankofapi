@@ -1,0 +1,695 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   NatWest – Developer Portal – Open Banking Sandbox
+  </title>
+  <meta content="index, follow" name="robots"/>
+  <meta content="Thanks to the comprehensive step-by-step documentation of our Sandbox Developer Portal, you can consume Open Banking APIs in less than 5 minutes." name="description"/>
+  <script>
+   var iVersion="2.6.6-build-108-03c3b2a";
+  </script>
+  <script>
+   var infoEnv;
+  </script>
+  <script>
+   var infoBrand;
+  </script>
+  <script>
+   var infoUsername;
+  </script>
+  <script>
+   var infoEmail;
+  </script>
+  <link href="/natwest-icon.png" rel="icon"/>
+  <link href="/febc265fb2cc455e1b85.css" rel="stylesheet"/>
+  <link href="/ec5fb73bff01905d82cd.css" rel="stylesheet"/>
+  <script defer="" src="https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body>
+  <main id="app">
+   <div id="page">
+    <div class="notification">
+     <button type="button">
+      <span class="icon refuse-icon">
+      </span>
+     </button>
+     <p>
+      We have performed a brief maintenance operation this Thursday evening. During that time, some users may have experienced difficulties logging in and certain API endpoints may have been unavailable. Thank you for your patience and understanding.
+     </p>
+    </div>
+    <div class="cookienotification notification fixed">
+     <div>
+      We use cookies and similar technologies on our websites and mobile applications to help provide you with the best online experience.
+      <br/>
+      By using our sites and apps, you agree that we may store and access cookies and similar technologies on your device.
+      <br/>
+      You can
+      <a href="/api-catalog/3574477/privacy-policy">
+       <u>
+        find out more and set your preferences here
+       </u>
+      </a>
+      .
+     </div>
+     <br/>
+     <a class="btn btn-small btn-primary">
+      I accept
+     </a>
+    </div>
+    <header>
+     <nav class="navbar inverted">
+      <div class="container">
+       <div class="navbar-container">
+        <div class="menubar">
+         <a href="/">
+          <span class="logo">
+          </span>
+         </a>
+         <button class="menu-toggle" type="button">
+          <span class="icon menu-icon">
+          </span>
+          Menu
+         </button>
+        </div>
+        <div class="menu closed">
+         <ul>
+          <li>
+           <a href="/dashboard" scope="secure">
+            Dashboard
+           </a>
+          </li>
+          <li>
+           <a aria-current="page" class="active" href="/api-catalog" scope="all">
+            API Catalogue
+           </a>
+          </li>
+          <li>
+           <a href="/help" scope="all">
+            Help
+           </a>
+          </li>
+         </ul>
+         <div class="menu-right">
+          <div class="user-menu">
+           <a class="user">
+            <span class="icon user-icon">
+            </span>
+            Azam
+           </a>
+           <ul class="menu-links">
+            <li>
+             <a href="#">
+              My Profile
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              About
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              Logout
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="modal fade out" id="">
+           <div class="modal-dialog">
+            <button class="close-button" type="button">
+             <span class="icon close-icon">
+             </span>
+            </button>
+            <div class="modal-header">
+             <h6>
+              API Banking Accelerator
+             </h6>
+            </div>
+            <div class="modal-body">
+             <div class="about">
+              Oolys is a comprehensive multi-bank API Banking Sandbox.
+              <dl>
+               <dt>
+                Version
+               </dt>
+               <dd>
+                2.6.6-build-108-03c3b2a
+               </dd>
+              </dl>
+             </div>
+            </div>
+            <div class="modal-footer">
+             <small>
+              Copyright 2018-2021 UseInfinite
+             </small>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </nav>
+    </header>
+    <div class="page-content">
+     <div class="data-provider">
+      <div class="mdContent">
+       <div class="docpane">
+        <div class="toc">
+         <div class="return-link">
+          <a aria-current="page" class="active" href="/api-catalog">
+           <span class="icon arrow-back">
+           </span>
+           Back
+          </a>
+         </div>
+         <div>
+          <ul>
+           <li>
+            <a class="h1" href="https://developer.sandbox.natwest.com/api-catalog/3574477/getting-started/getting-started-make-a-payment-api" id="#getting-started-make-a-payment-api">
+             Getting Started - make-a-payment API
+            </a>
+            <ul>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3574477/getting-started/using-the-make-a-payment-api-from-an-application" id="#using-the-make-a-payment-api-from-an-application">
+               Using the make-a-payment API from an application
+              </a>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3574477/getting-started/postman" id="#postman">
+               Postman
+              </a>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3574477/getting-started/assumptions" id="#assumptions">
+               Assumptions
+              </a>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3574477/getting-started/steps" id="#steps">
+               Steps
+              </a>
+              <ul>
+               <li>
+                <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3574477/getting-started/1-retrieve-access-token" id="#1-retrieve-access-token">
+                 1. Retrieve access token
+                </a>
+               </li>
+               <li>
+                <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3574477/getting-started/2-invoke-relayprototype-endpoints-of-make-a-payment-100-by-commercial-paymentsorg" id="#2-invoke-relayprototype-endpoints-of-make-a-payment-100-by-commercial-paymentsorg">
+                 2. Invoke relay/prototype endpoints of make-a-payment (1.0.0) by commercial-payments.org
+                </a>
+               </li>
+              </ul>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3574477/getting-started/api-endpoints" id="#api-endpoints">
+               API Endpoints
+              </a>
+             </li>
+            </ul>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="doc">
+         <h1 id="getting-started-make-a-payment-api">
+          Getting Started - make-a-payment API
+         </h1>
+         <h2 id="using-the-make-a-payment-api-from-an-application">
+          Using the make-a-payment API from an application
+         </h2>
+         <div>
+          This section aims at giving you a comprehensive step by step tutorial to guide you through the process 
+of configuring the usage and executing the API make-a-payment (1.0.0) by commercial-payments.org
+         </div>
+         <h2 id="postman">
+          Postman
+         </h2>
+         <div>
+          If you are a Postman user, you can easily explore and run the steps of this tutorial using our predefined collection and environment files:
+         </div>
+         <blockquote>
+          <blockquote>
+           <div>
+            Note that in Postman you have to go in
+            <code>
+             Preferences or Settings &gt; General
+            </code>
+            menu
+           </div>
+           <ul>
+            <li>
+             in
+             <code>
+              REQUEST
+             </code>
+             column, make sure that
+             <code>
+              Ssl certificate verification
+             </code>
+             is set to
+             <code>
+              OFF
+             </code>
+             (or make sure that the OpenBanking Pre-Production Issuing CA is in your trusted store)
+            </li>
+           </ul>
+           <ul>
+            <li>
+             in
+             <code>
+              HEADERS
+             </code>
+             column, make sure that
+             <code>
+              Automatically follow redirects
+             </code>
+             is set to
+             <code>
+              ON
+             </code>
+            </li>
+           </ul>
+          </blockquote>
+         </blockquote>
+         <br/>
+         <div>
+          Download and import in Postman
+         </div>
+         <ul>
+          <li>
+           Download your commercial-payments.org/make-a-payment
+           <a href="#">
+            Postman collection
+           </a>
+          </li>
+          <li>
+           <div>
+            Download your Postman environment files per Application below:
+           </div>
+           <ul>
+            <li>
+             <a href="#">
+              demo-app-3c216362-f073-42f2-8985-af4031365d94
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+         <h2 id="assumptions">
+          Assumptions
+         </h2>
+         <ul>
+          <li>
+           You have already registered an App in your Team
+          </li>
+          <li>
+           Or you use the demo one
+          </li>
+         </ul>
+         <h2 id="steps">
+          Steps
+         </h2>
+         <h4 id="1-retrieve-access-token">
+          1. Retrieve access token
+         </h4>
+         <div>
+          To invoke the api commercial-payments.org/make-a-payment, you'll need to pass an access-token identifying your App: simply replace
+          <code>
+           CLIENT_ID
+          </code>
+          and
+          <code>
+           CLIENT_SECRET
+          </code>
+          in the curl below to retrieve a valid one:
+         </div>
+         <br/>
+         <br/>
+         <div>
+          Request:
+         </div>
+         <pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> -k -X POST \
+  https://ob.sandbox.natwest.com/token \
+  -H <span class="token string">'Content-Type: application/x-www-form-urlencoded'</span> \
+  -d <span class="token string">'grant_type=client_credentials&amp;client_id=CLIENT_ID&amp;client_secret=CLIENT_SECRET'</span></code></pre>
+         <div>
+          Response:
+         </div>
+         <pre class="language-bash"><code class="language-bash">HTTP/1.1 200
+status: 200
+content-type: application/json<span class="token punctuation">;</span> charset<span class="token operator">=</span>utf-8
+ 
+<span class="token punctuation">{</span>
+    <span class="token string">"token_type"</span><span class="token keyword">:</span> <span class="token string">"Bearer"</span>,
+    <span class="token string">"access_token"</span><span class="token keyword">:</span> <span class="token string">"Ci5A6huK2OD0d6...kVwLE9FuHwHGCf6xo5"</span>,
+    <span class="token string">"expires_in"</span><span class="token keyword">:</span> 300000
+<span class="token punctuation">}</span></code></pre>
+         <br/>
+         <br/>
+         <div>
+          Your access-token is the value of the
+          <code>
+           access_token
+          </code>
+          attribute in the Response.
+         </div>
+         <blockquote>
+          <div>
+           in the example above it would be
+           <code>
+            Ci5A6huK2OD0d6...kVwLE9FuHwHGCf6xo5
+           </code>
+          </div>
+         </blockquote>
+         <br/>
+         <br/>
+         <h4 id="2-invoke-relayprototype-endpoints-of-make-a-payment-100-by-commercial-paymentsorg">
+          2. Invoke relay/prototype endpoints of make-a-payment (1.0.0) by commercial-payments.org
+         </h4>
+         <div>
+          Finally you can perform api calls for which the user approved the consent. You can invoke the relay/prototype api commercial-payments.org/make-a-payment/1.0.0 by replacing the
+          <code>
+           ACCESS_TOKEN
+          </code>
+          and using the documented methods/resources in the curl below:
+         </div>
+         <br/>
+         <div>
+          Request:
+         </div>
+         <pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> -k -X <span class="token operator">&lt;</span>available method<span class="token operator">&gt;</span> \
+  https://ob.sandbox.natwest.com/zerocode/commercial-payments.org/make-a-payment/1.0.0/<span class="token operator">&lt;</span>resource exposed by the api<span class="token operator">&gt;</span> \
+  -H <span class="token string">'Authorization: Bearer ACCESS_TOKEN'</span> \
+  -H <span class="token string">'Accept: application/json'</span></code></pre>
+         <ul>
+          <li>
+           Make sure the
+           <code>
+            Accept
+           </code>
+           header value matches the one advertised by the configured API specification.
+          </li>
+          <li>
+           The response will be the response from the configured API backend and will vary for different APIs.
+          </li>
+         </ul>
+         <br/>
+         <h2 id="api-endpoints">
+          API Endpoints
+         </h2>
+         <div class="md_apirules">
+          <h4 id="get">
+           <strong>
+            GET
+           </strong>
+           /
+          </h4>
+          <ul>
+           <li>
+            If the 'foo' query parameter has a 'bar' value, a 200 response will be returned.
+           </li>
+          </ul>
+          <h5 id="example-request">
+           Example Request
+          </h5>
+          <pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> -k -X GET   
+  https://ob.sandbox.natwest.com/zerocode/commercial-payments.org/make-a-payment/1.0.0/?foo<span class="token operator">=</span>bar   
+  -H <span class="token string">"Authorization: ACCESS_TOKEN"</span>  </code></pre>
+          <h4 id="get-payment-status">
+           <strong>
+            GET
+           </strong>
+           /payment-status
+          </h4>
+          <ul>
+           <li>
+            If the 'transactionId' query parameter has a 'INS000A10' value, a 200 response will be returned.
+           </li>
+           <li>
+            If the 'transactionId' query parameter is not present, a 400 response will be returned.
+           </li>
+           <li>
+            If the 'transactionId' query parameter has a 'INS000A8' value, a 400 response will be returned.
+           </li>
+           <li>
+            If the 'transactionId' query parameter has a 'INS00A12' value, a 400 response will be returned.
+           </li>
+           <li>
+            If the 'transactionId' query parameter has a '123456789012345678901234567890123456' value, a 400 response will be returned.
+           </li>
+          </ul>
+          <h5 id="example-request1">
+           Example Request
+          </h5>
+          <pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> -k -X GET   
+  https://ob.sandbox.natwest.com/zerocode/commercial-payments.org/make-a-payment/1.0.0/payment-status?transactionId<span class="token operator">=</span>INS000A10   
+  -H <span class="token string">"Authorization: ACCESS_TOKEN"</span>  </code></pre>
+          <h4 id="get-payment-statustransactionid">
+           <strong>
+            GET
+           </strong>
+           /payment-status/{transactionId}
+          </h4>
+          <ul>
+           <li>
+            If the 'transactionId' path variable has a 'INS000A10' value, a 200 response will be returned.
+           </li>
+           <li>
+            If the 'transactionId' path variable has a 'INS000A8' value, a 400 response will be returned.
+           </li>
+           <li>
+            If the 'transactionId' path variable has a 'INS00A12' value, a 400 response will be returned.
+           </li>
+           <li>
+            If the 'transactionId' path variable has a '123456789012345678901234567890123456' value, a 400 response will be returned.
+           </li>
+          </ul>
+          <h5 id="example-request1">
+           Example Request
+          </h5>
+          <pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> -k -X GET   
+  https://ob.sandbox.natwest.com/zerocode/commercial-payments.org/make-a-payment/1.0.0/payment-status/INS000A10   
+  -H <span class="token string">"Authorization: ACCESS_TOKEN"</span>  </code></pre>
+          <h4 id="post-validatepain113">
+           <strong>
+            POST
+           </strong>
+           /validatepain113
+          </h4>
+          <h5 id="example-request1">
+           Example Request
+          </h5>
+          <pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> -k -X POST   
+  https://ob.sandbox.natwest.com/zerocode/commercial-payments.org/make-a-payment/1.0.0/validatepain113   
+  -H <span class="token string">"Authorization: ACCESS_TOKEN"</span>  </code></pre>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer>
+     <div class="container">
+      <div class="row">
+       <div class="column">
+        <h6>
+         Account
+        </h6>
+        <nav>
+         <a href="/dashboard">
+          Dashboard
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Developer Tools
+        </h6>
+        <nav>
+         <a aria-current="page" class="active" href="/api-catalog">
+          API Catalogue
+         </a>
+         <a href="/documentation">
+          Documentation
+         </a>
+         <a href="https://natwest-bankofapi-servicemanagement.atlassian.net/servicedesk/customer/portals" target="_blank">
+          Service Desk
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Company
+        </h6>
+        <nav>
+         <a href="/terms">
+          Terms &amp; Conditions
+         </a>
+         <a href="/privacy-policy">
+          Privacy Policy
+         </a>
+        </nav>
+       </div>
+       <div class="col-sm">
+       </div>
+      </div>
+     </div>
+    </footer>
+    <button class="scrolltop-button">
+    </button>
+    <div class="powered-by">
+     Powered by
+     <em>
+      Oolys
+     </em>
+    </div>
+   </div>
+   <div id="side-panel">
+   </div>
+   <div class="modal fade out session-popup" id="">
+    <div class="modal-dialog">
+     <div class="modal-header">
+      <h6>
+       Your session is about to expire
+      </h6>
+     </div>
+     <div class="modal-body">
+      <span class="expiration-warning">
+       You will be automatically logged out in
+       <em>
+        59
+       </em>
+       seconds.
+       <br/>
+       Do you want to extend your session?
+      </span>
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-primary" type="button">
+       Continue
+      </button>
+      <button class="btn btn-default" type="button">
+       Logout
+      </button>
+     </div>
+    </div>
+   </div>
+  </main>
+  <script>
+   var loadHasBeenTriggered = false;
+      window.onUsersnapCXLoad = function(api) {
+        api.init({
+            user: {
+              userId: infoUsername,
+              email: infoEmail
+            },
+            custom: {
+                userId: infoUsername,
+                brand : infoBrand,
+                env : infoEnv
+            }
+          });
+      }
+      window.loadUserFeedbackWidget = function() {
+        if ( (!loadHasBeenTriggered) && infoUsername && infoBrand) {
+            loadHasBeenTriggered = true;
+            var script = document.createElement('script');
+            script.defer = 1;
+            script.src = 'https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad';
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      }
+  </script>
+  <script src="/febc265fb2cc455e1b85.js">
+  </script>
+  <script src="/7dbd7cfa6c7cb6d881a7.js">
+  </script>
+  <script src="/1a5f01ff47d07a377494.js">
+  </script>
+  <script src="/2daa0d06a67874f682c5.js">
+  </script>
+  <script src="/c617fa727da6d416f6a5.js">
+  </script>
+  <script src="/07424fde184376e24dea.js">
+  </script>
+  <script src="/ee4e265cb3dc3d500780.js">
+  </script>
+  <script src="/04a6b9711f1d30cdc1a2.js">
+  </script>
+  <script src="/03632d2692dbb192bc9c.js">
+  </script>
+  <script src="/991cb5d14add34ec9369.js">
+  </script>
+  <script src="/cd81143e09bd4a3ddd06.js">
+  </script>
+  <script src="/ad40893dba0f0cc010ca.js">
+  </script>
+  <script src="/86e32b4ca44cc47a79a5.js">
+  </script>
+  <script src="/e4687322f7bb906a2df7.js">
+  </script>
+  <script src="/27eb4f97929598ad3286.js">
+  </script>
+  <script src="/27861e3fa2db86dca27a.js">
+  </script>
+  <script src="/447e8d2fec5adde36e43.js">
+  </script>
+  <script src="/9f29fe08232107e5b5a2.js">
+  </script>
+  <script src="/9d72a8e94d97ca62f07e.js">
+  </script>
+  <script src="/1e1d6def47d88d1b6578.js">
+  </script>
+  <script src="/20d2c1b54999365fe1c3.js">
+  </script>
+  <script src="/d17eb693468fac87de9d.js">
+  </script>
+  <script src="/ace96842f9fdef10da09.js">
+  </script>
+  <script src="/e10dbcadb20790400bd2.js">
+  </script>
+  <script src="/ec5fb73bff01905d82cd.js">
+  </script>
+  <!--uspssb-->
+  <iframe name="us-entrypoint-globalSetup" style="display: none; height: 0px; width: 0px; z-index: 2147483647; color-scheme: normal;" title="Usersnap Feedback">
+  </iframe>
+  <!--uspsse-->
+  <us-button style="user-select: all;">
+  </us-button>
+ </body>
+</html>
+
+
+<!-- Iframe 1 Content -->
+<html>
+ <head>
+  <title>
+   Usersnap Feedback
+  </title>
+  <script>
+   <br>  window.nonce = "";<br>  window.publicPath = "https://resources.usersnap.com/";<br>
+  </script>
+  <script src="https://resources.usersnap.com/widget-assets/js/entries/globalSetup/b263c0f1171ea4606316.js">
+  </script>
+  <style>
+   html, body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+  </style>
+ </head>
+ <body>
+  <div>
+  </div>
+ </body>
+</html>

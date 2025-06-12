@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@api/triodos": "file:TRIODOS BANK UK LIMITED/.api/apis/triodos",
+    "axios": "^1.9.0",
+    "cheerio": "^1.0.0",
+    "node-xlsx": "^0.24.0",
+    "puppeteer": "^24.8.2",
+    "sanitize-filename": "^1.6.3",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3"
+  }
+}

@@ -1,0 +1,878 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   NatWest – Developer Portal – Open Banking Sandbox
+  </title>
+  <meta content="index, follow" name="robots"/>
+  <meta content="Thanks to the comprehensive step-by-step documentation of our Sandbox Developer Portal, you can consume Open Banking APIs in less than 5 minutes." name="description"/>
+  <script>
+   var iVersion="2.6.6-build-108-03c3b2a";
+  </script>
+  <script>
+   var infoEnv;
+  </script>
+  <script>
+   var infoBrand;
+  </script>
+  <script>
+   var infoUsername;
+  </script>
+  <script>
+   var infoEmail;
+  </script>
+  <link href="/natwest-icon.png" rel="icon"/>
+  <link href="/febc265fb2cc455e1b85.css" rel="stylesheet"/>
+  <link href="/ec5fb73bff01905d82cd.css" rel="stylesheet"/>
+  <script defer="" src="https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body>
+  <main id="app">
+   <div id="page">
+    <div class="notification">
+     <button type="button">
+      <span class="icon refuse-icon">
+      </span>
+     </button>
+     <p>
+      We have performed a brief maintenance operation this Thursday evening. During that time, some users may have experienced difficulties logging in and certain API endpoints may have been unavailable. Thank you for your patience and understanding.
+     </p>
+    </div>
+    <div class="cookienotification notification fixed">
+     <div>
+      We use cookies and similar technologies on our websites and mobile applications to help provide you with the best online experience.
+      <br/>
+      By using our sites and apps, you agree that we may store and access cookies and similar technologies on your device.
+      <br/>
+      You can
+      <a href="/api-catalog/3713276/privacy-policy">
+       <u>
+        find out more and set your preferences here
+       </u>
+      </a>
+      .
+     </div>
+     <br/>
+     <a class="btn btn-small btn-primary">
+      I accept
+     </a>
+    </div>
+    <header>
+     <nav class="navbar inverted">
+      <div class="container">
+       <div class="navbar-container">
+        <div class="menubar">
+         <a href="/">
+          <span class="logo">
+          </span>
+         </a>
+         <button class="menu-toggle" type="button">
+          <span class="icon menu-icon">
+          </span>
+          Menu
+         </button>
+        </div>
+        <div class="menu closed">
+         <ul>
+          <li>
+           <a href="/dashboard" scope="secure">
+            Dashboard
+           </a>
+          </li>
+          <li>
+           <a aria-current="page" class="active" href="/api-catalog" scope="all">
+            API Catalogue
+           </a>
+          </li>
+          <li>
+           <a href="/help" scope="all">
+            Help
+           </a>
+          </li>
+         </ul>
+         <div class="menu-right">
+          <div class="user-menu">
+           <a class="user">
+            <span class="icon user-icon">
+            </span>
+            Azam
+           </a>
+           <ul class="menu-links">
+            <li>
+             <a href="#">
+              My Profile
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              About
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              Logout
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="modal fade out" id="">
+           <div class="modal-dialog">
+            <button class="close-button" type="button">
+             <span class="icon close-icon">
+             </span>
+            </button>
+            <div class="modal-header">
+             <h6>
+              API Banking Accelerator
+             </h6>
+            </div>
+            <div class="modal-body">
+             <div class="about">
+              Oolys is a comprehensive multi-bank API Banking Sandbox.
+              <dl>
+               <dt>
+                Version
+               </dt>
+               <dd>
+                2.6.6-build-108-03c3b2a
+               </dd>
+              </dl>
+             </div>
+            </div>
+            <div class="modal-footer">
+             <small>
+              Copyright 2018-2021 UseInfinite
+             </small>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </nav>
+    </header>
+    <div class="page-content">
+     <div class="data-provider">
+      <div class="mdContent">
+       <div class="docpane">
+        <div class="toc">
+         <div class="return-link">
+          <a aria-current="page" class="active" href="/api-catalog">
+           <span class="icon arrow-back">
+           </span>
+           Back
+          </a>
+         </div>
+         <div>
+          <ul>
+           <li>
+            <a class="h1" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/getting-started-balance-reporting-webhooks" id="#getting-started-balance-reporting-webhooks">
+             Getting Started - Balance Reporting Webhooks
+            </a>
+            <ul>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/key-sandbox-endpoints" id="#key-sandbox-endpoints">
+               Key Sandbox Endpoints
+              </a>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/assumptions" id="#assumptions">
+               Assumptions
+              </a>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/postman" id="#postman">
+               Postman
+              </a>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/receiving-event-notifications" id="#receiving-event-notifications">
+               Receiving Event Notifications
+              </a>
+              <ul>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/retrieve-access-token" id="#retrieve-access-token">
+                 Retrieve access token
+                </a>
+                <ul>
+                 <li>
+                  <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/request" id="#request">
+                   Request
+                  </a>
+                 </li>
+                 <li>
+                  <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/response" id="#response">
+                   Response
+                  </a>
+                 </li>
+                </ul>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/create-event-subscription" id="#create-event-subscription">
+                 Create Event Subscription
+                </a>
+                <ul>
+                 <li>
+                  <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/request1" id="#request1">
+                   Request
+                  </a>
+                 </li>
+                 <li>
+                  <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/response1" id="#response1">
+                   Response
+                  </a>
+                 </li>
+                </ul>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/trigger-an-event" id="#trigger-an-event">
+                 Trigger An Event
+                </a>
+                <ul>
+                 <li>
+                  <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/request1" id="#request1">
+                   Request
+                  </a>
+                 </li>
+                </ul>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/polling-events" id="#polling-events">
+                 Polling Events
+                </a>
+                <ul>
+                 <li>
+                  <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/request1" id="#request1">
+                   Request
+                  </a>
+                 </li>
+                 <li>
+                  <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/response1" id="#response1">
+                   Response
+                  </a>
+                 </li>
+                </ul>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/resend-events" id="#resend-events">
+                 Resend Events
+                </a>
+                <ul>
+                 <li>
+                  <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/request1" id="#request1">
+                   Request
+                  </a>
+                 </li>
+                 <li>
+                  <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3713276/getting-started/response1" id="#response1">
+                   Response
+                  </a>
+                 </li>
+                </ul>
+               </li>
+              </ul>
+             </li>
+            </ul>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="doc">
+         <h1 id="getting-started-balance-reporting-webhooks">
+          Getting Started - Balance Reporting Webhooks
+         </h1>
+         <h2 id="key-sandbox-endpoints">
+          Key Sandbox Endpoints
+         </h2>
+         <ul>
+          <li>
+           Well-known:
+           <a href="https://api.sandbox.natwest.com/.well-known/openid-configuration">
+            https://api.sandbox.natwest.com/.well-known/openid-configuration
+           </a>
+          </li>
+          <li>
+           Token:
+           <a href="https://ob.sandbox.natwest.com/token">
+            https://ob.sandbox.natwest.com/token
+           </a>
+          </li>
+          <li>
+           Resource:
+           <ul>
+            <li>
+             <a href="https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions">
+              https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions
+             </a>
+            </li>
+            <li>
+             <a href="https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions/{subscriptionId}">
+              https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions/{subscriptionId}
+             </a>
+            </li>
+            <li>
+             <a href="https://ob.sandbox.natwest.com/open-banking/v3.1/events">
+              https://ob.sandbox.natwest.com/open-banking/v3.1/events
+             </a>
+            </li>
+            <li>
+             <a href="https://ob.sandbox.natwest.com/zerocode/bankofapis.com/balance-reporting/1.0.0/">
+              https://ob.sandbox.natwest.com/zerocode/bankofapis.com/balance-reporting/1.0.0/
+             </a>
+            </li>
+            <li>
+             <a href="https://ob.sandbox.natwest.com/zerocode/bankofapis.com/balance-reporting/1.0.0/resend">
+              https://ob.sandbox.natwest.com/zerocode/bankofapis.com/balance-reporting/1.0.0/resend
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+         <h2 id="assumptions">
+          Assumptions
+         </h2>
+         <ul>
+          <li>
+           You have already registered an App in your Team
+          </li>
+          <li>
+           Or you use the demo one
+          </li>
+         </ul>
+         <h2 id="postman">
+          Postman
+         </h2>
+         <div>
+          If you are a Postman user, you can easily explore and run the steps of this tutorial using our predefined collection and environment files:
+         </div>
+         <blockquote>
+          <blockquote>
+           <div>
+            Note that in Postman you have to go in
+            <code>
+             Preferences or Settings &gt; General
+            </code>
+            menu
+           </div>
+           <ul>
+            <li>
+             in
+             <code>
+              REQUEST
+             </code>
+             column, make sure that
+             <code>
+              Ssl certificate verification
+             </code>
+             is set to
+             <code>
+              OFF
+             </code>
+             (or make sure that the OpenBanking Pre-Production Issuing CA is in your trusted store)
+            </li>
+           </ul>
+           <ul>
+            <li>
+             in
+             <code>
+              HEADERS
+             </code>
+             column, make sure that
+             <code>
+              Automatically follow redirects
+             </code>
+             is set to
+             <code>
+              ON
+             </code>
+            </li>
+           </ul>
+          </blockquote>
+         </blockquote>
+         <br/>
+         <div>
+          Download and import in Postman
+         </div>
+         <ul>
+          <li>
+           Download your bankofapis.com/balance-reporting
+           <a href="#">
+            Postman collection
+           </a>
+          </li>
+          <li>
+           <div>
+            Download your Postman environment files per Application below:
+           </div>
+           <ul>
+            <li>
+             <a href="#">
+              demo-app-3c216362-f073-42f2-8985-af4031365d94
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+         <div>
+          A personal
+          <code>
+           callbackUrl
+          </code>
+          will need to be added to the environment file you use. This will need to be owned by you and capable of receiving HTTP POST requests.
+         </div>
+         <h2 id="receiving-event-notifications">
+          Receiving Event Notifications
+         </h2>
+         <div>
+          Events are made available via webhooks which will post them to a specified url.  They can also be retrieved using aggregated polling.
+         </div>
+         <div>
+          Before you can receive events, you must first set up your event subscription.
+         </div>
+         <blockquote>
+          <div>
+           Sandbox limitations:
+          </div>
+          <ul>
+           <li>
+            The only event type supported in Sandbox is Discretionary.BalanceReport:OBIE.
+           </li>
+           <li>
+            Hard-coded example events are used - repeated triggering of events will create duplicate events.
+           </li>
+           <li>
+            The
+            <code>
+             resend-correlation-id
+            </code>
+            would normally be added as a header on resent events but this is not possible in Sandbox.
+           </li>
+           <li>
+            <code>
+             Payload.SourceData.ConsentIds
+            </code>
+            would normally be required in the data body of balance-reporting subscriptions request but these are not returned in the Sandbox response.
+           </li>
+          </ul>
+         </blockquote>
+         <h3 id="retrieve-access-token">
+          Retrieve access token
+         </h3>
+         <div>
+          To make a call to sandbox, you'll need to pass an access-token identifying your App: simply replace CLIENT_ID and CLIENT_SECRET in the curl below to retrieve a valid one:
+         </div>
+         <h4 id="request">
+          Request
+         </h4>
+         <pre class="language-http"><code class="language-http">curl -k -X POST \
+  https://ob.sandbox.natwest.com/token \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'grant_type=client_credentials&amp;client_id=CLIENT_ID&amp;client_secret=CLIENT_SECRET&amp;scope=accounts'</code></pre>
+         <h4 id="response">
+          Response
+         </h4>
+         <pre class="language-http"><code class="language-http">HTTP/1.1 200
+status: 200
+content-type: application/json; charset=utf-8
+ 
+{
+    "token_type": "Bearer",
+    "access_token": "iMVB9i7ZChEe9GV...XeOOCD1opOA2IAULQ",
+    "expires_in": 7200,
+    "scope": "accounts"
+}</code></pre>
+         <div>
+          Your access-token is the value of the
+          <code>
+           access_token
+          </code>
+          attribute in the Response.
+         </div>
+         <blockquote>
+          <div>
+           in the example above it would be iMVB9i7ZChEe9GV...XeOOCD1opOA2IAULQ
+          </div>
+         </blockquote>
+         <h3 id="create-event-subscription">
+          Create Event Subscription
+         </h3>
+         <div>
+          Now you can create a subscription by replacing the ACCESS_TOKEN in the curl below.
+          <br/>
+          You also need to replace the CALLBACK_URL with a URL of your choice or remove that line.
+          <br/>
+          You do not need to include the Payload object but this would be required in actual balance-reporting subscriptions.
+         </div>
+         <h4 id="request1">
+          Request
+         </h4>
+         <pre class="language-http"><code class="language-http">curl -k -X POST \
+  https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions \
+  -H 'Authorization: Bearer ACCESS_TOKEN' \
+  -H 'Content-Type: application/json' \
+  -H 'x-jws-signature: DUMMY_SIG' \
+  -d '{
+  "Data": {
+    "Version": "3.1",
+    "CallbackUrl": CALLBACK_URL,
+    "EventTypes": [
+      "Discretionary.BalanceReport:OBIE"
+    ],
+    "Payload": {
+      "SourceData": {
+          "ConsentIds": [
+              "CONSENT_ID"
+          ]
+        } 
+      }
+    }
+  }</code></pre>
+         <h4 id="response1">
+          Response
+         </h4>
+         <pre class="language-http"><code class="language-http">HTTP/1.1 201
+status: 201
+content-type: application/json;charset=utf-8
+
+{
+    "Data": {
+        "EventSubscriptionId": "224f1617-9209-4c3a-94d4-94e5629f45ba",
+        "Version": "3.1",
+        "CallbackUrl": "https://my-domain:1234/callback",
+        "EventTypes": [
+            "Discretionary.BalanceReport:OBIE"
+        ]
+    },
+    "Links": {
+        "Self": "https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions/224f1617-9209-4c3a-94d4-94e5629f45ba"
+    }
+}</code></pre>
+         <h3 id="trigger-an-event">
+          Trigger An Event
+         </h3>
+         <div>
+          To simulate a balance change and trigger a balance reporting event, just replace the ACCESS_TOKEN in the curl below.
+         </div>
+         <div>
+          If your subscription has a callback url specified, the event will automatically be posted to the specified callback url.
+         </div>
+         <blockquote>
+          <div>
+           Notes:
+          </div>
+          <ul>
+           <li>
+            You must have a service running to accept the events. They will be sent as HTTP POST requests.
+           </li>
+           <li>
+            Each request will trigger a single event. Repeated requests will trigger a new event containing the same stub data.
+           </li>
+           <li>
+            The request will contain a 'x-fapi-interaction-id' header with a unique randomly generated value.
+           </li>
+           <li>
+            Event notifications must be acknowledged with a 2xx (Success) HTTP response.
+           </li>
+          </ul>
+         </blockquote>
+         <h4 id="request1">
+          Request
+         </h4>
+         <pre class="language-http"><code class="language-http">curl -k -X GET \
+  
+https://ob.sandbox.natwest.com/zerocode/bankofapis.com/balance-reporting/1.0.0/ \
+  -H 'Authorization: Bearer ACCESS_TOKEN' </code></pre>
+         <h3 id="polling-events">
+          Polling Events
+         </h3>
+         <div>
+          If a subscription is created without a
+          <code>
+           CallbackUrl
+          </code>
+          value, events will be stored and can be consumed using aggregated polling by replacing the ACCESS_TOKEN in the curl below:
+         </div>
+         <blockquote>
+          <div>
+           Notes:
+          </div>
+          <ul>
+           <li>
+            maxEvents: max value is 100 (default)
+           </li>
+           <li>
+            returnImmediately: only 'true' (default) is supported
+           </li>
+          </ul>
+         </blockquote>
+         <h4 id="request1">
+          Request
+         </h4>
+         <pre class="language-http"><code class="language-http">curl -k -X POST \
+  https://ob.sandbox.natwest.com/open-banking/v3.1/events \
+  -H 'Authorization: Bearer ACCESS_TOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "maxEvents": 100,
+  "returnImmediately": true
+}</code></pre>
+         <h4 id="response1">
+          Response
+         </h4>
+         <pre class="language-http"><code class="language-http">HTTP/1.1 200
+status: 200
+content-type: application/json;charset=utf-8
+
+{
+    "moreAvailable": false,
+    "sets": {
+        "77f88e43-c575-423b-8046-a66191e82e2b": "eyJhbG...NEysZ4",
+        "0849fc04-bc4c-463f-805d-0813587c4e94": "eyJhbG...Qssw5c",
+        "c5948e79-3004-461f-b7b7-ebf8a406b686": "eyJhbG...9kogfI"
+    }
+}</code></pre>
+         <h3 id="resend-events">
+          Resend Events
+         </h3>
+         <div>
+          If a subscription is created with a
+          <code>
+           CallbackUrl
+          </code>
+          value, but the event fails to send, the event will be stored. The sending process for any failed event can be retried using the resend endpoint.
+This can be simulated by replacing the ACCESS_TOKEN in the curl below:
+         </div>
+         <h4 id="request1">
+          Request
+         </h4>
+         <pre class="language-http"><code class="language-http">curl -k -X POST \
+  https://ob.sandbox.natwest.com/zerocode/bankofapis.com/balance-reporting/1.0.0/resend \
+  -H 'Authorization: Bearer ACCESS_TOKEN' \</code></pre>
+         <h4 id="response1">
+          Response
+         </h4>
+         <pre class="language-http"><code class="language-http">HTTP/1.1 200
+status: 200
+content-type: application/json;charset=utf-8
+
+{
+    "count": 1,
+    "resend-correlation-id": "1aa8bedf-ca02-4e96-9699-36e5948b5429"
+}</code></pre>
+         <blockquote>
+          <div>
+           Note: In production the
+           <code>
+            resend-correlation-id
+           </code>
+           will be added as a header on outgoing resent webhook events.
+          </div>
+         </blockquote>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer>
+     <div class="container">
+      <div class="row">
+       <div class="column">
+        <h6>
+         Account
+        </h6>
+        <nav>
+         <a href="/dashboard">
+          Dashboard
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Developer Tools
+        </h6>
+        <nav>
+         <a aria-current="page" class="active" href="/api-catalog">
+          API Catalogue
+         </a>
+         <a href="/documentation">
+          Documentation
+         </a>
+         <a href="https://natwest-bankofapi-servicemanagement.atlassian.net/servicedesk/customer/portals" target="_blank">
+          Service Desk
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Company
+        </h6>
+        <nav>
+         <a href="/terms">
+          Terms &amp; Conditions
+         </a>
+         <a href="/privacy-policy">
+          Privacy Policy
+         </a>
+        </nav>
+       </div>
+       <div class="col-sm">
+       </div>
+      </div>
+     </div>
+    </footer>
+    <button class="scrolltop-button">
+    </button>
+    <div class="powered-by">
+     Powered by
+     <em>
+      Oolys
+     </em>
+    </div>
+   </div>
+   <div id="side-panel">
+   </div>
+   <div class="modal fade out session-popup" id="">
+    <div class="modal-dialog">
+     <div class="modal-header">
+      <h6>
+       Your session is about to expire
+      </h6>
+     </div>
+     <div class="modal-body">
+      <span class="expiration-warning">
+       You will be automatically logged out in
+       <em>
+        59
+       </em>
+       seconds.
+       <br/>
+       Do you want to extend your session?
+      </span>
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-primary" type="button">
+       Continue
+      </button>
+      <button class="btn btn-default" type="button">
+       Logout
+      </button>
+     </div>
+    </div>
+   </div>
+  </main>
+  <script>
+   var loadHasBeenTriggered = false;
+      window.onUsersnapCXLoad = function(api) {
+        api.init({
+            user: {
+              userId: infoUsername,
+              email: infoEmail
+            },
+            custom: {
+                userId: infoUsername,
+                brand : infoBrand,
+                env : infoEnv
+            }
+          });
+      }
+      window.loadUserFeedbackWidget = function() {
+        if ( (!loadHasBeenTriggered) && infoUsername && infoBrand) {
+            loadHasBeenTriggered = true;
+            var script = document.createElement('script');
+            script.defer = 1;
+            script.src = 'https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad';
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      }
+  </script>
+  <script src="/febc265fb2cc455e1b85.js">
+  </script>
+  <script src="/7dbd7cfa6c7cb6d881a7.js">
+  </script>
+  <script src="/1a5f01ff47d07a377494.js">
+  </script>
+  <script src="/2daa0d06a67874f682c5.js">
+  </script>
+  <script src="/c617fa727da6d416f6a5.js">
+  </script>
+  <script src="/07424fde184376e24dea.js">
+  </script>
+  <script src="/ee4e265cb3dc3d500780.js">
+  </script>
+  <script src="/04a6b9711f1d30cdc1a2.js">
+  </script>
+  <script src="/03632d2692dbb192bc9c.js">
+  </script>
+  <script src="/991cb5d14add34ec9369.js">
+  </script>
+  <script src="/cd81143e09bd4a3ddd06.js">
+  </script>
+  <script src="/ad40893dba0f0cc010ca.js">
+  </script>
+  <script src="/86e32b4ca44cc47a79a5.js">
+  </script>
+  <script src="/e4687322f7bb906a2df7.js">
+  </script>
+  <script src="/27eb4f97929598ad3286.js">
+  </script>
+  <script src="/27861e3fa2db86dca27a.js">
+  </script>
+  <script src="/447e8d2fec5adde36e43.js">
+  </script>
+  <script src="/9f29fe08232107e5b5a2.js">
+  </script>
+  <script src="/9d72a8e94d97ca62f07e.js">
+  </script>
+  <script src="/1e1d6def47d88d1b6578.js">
+  </script>
+  <script src="/20d2c1b54999365fe1c3.js">
+  </script>
+  <script src="/d17eb693468fac87de9d.js">
+  </script>
+  <script src="/ace96842f9fdef10da09.js">
+  </script>
+  <script src="/e10dbcadb20790400bd2.js">
+  </script>
+  <script src="/ec5fb73bff01905d82cd.js">
+  </script>
+  <!--uspssb-->
+  <iframe name="us-entrypoint-globalSetup" style="display: none; height: 0px; width: 0px; z-index: 2147483647; color-scheme: normal;" title="Usersnap Feedback">
+  </iframe>
+  <!--uspsse-->
+  <us-button style="user-select: all;">
+  </us-button>
+ </body>
+</html>
+
+
+<!-- Iframe 1 Content -->
+<html>
+ <head>
+  <title>
+   Usersnap Feedback
+  </title>
+  <script>
+   <br>  window.nonce = "";<br>  window.publicPath = "https://resources.usersnap.com/";<br>
+  </script>
+  <script src="https://resources.usersnap.com/widget-assets/js/entries/globalSetup/b263c0f1171ea4606316.js">
+  </script>
+  <style>
+   html, body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+  </style>
+ </head>
+ <body>
+  <div>
+  </div>
+ </body>
+</html>

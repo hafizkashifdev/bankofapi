@@ -1,0 +1,614 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   NatWest – Developer Portal – Open Banking Sandbox
+  </title>
+  <meta content="index, follow" name="robots"/>
+  <meta content="Thanks to the comprehensive step-by-step documentation of our Sandbox Developer Portal, you can consume Open Banking APIs in less than 5 minutes." name="description"/>
+  <script>
+   var iVersion="2.6.6-build-108-03c3b2a";
+  </script>
+  <script>
+   var infoEnv;
+  </script>
+  <script>
+   var infoBrand;
+  </script>
+  <script>
+   var infoUsername;
+  </script>
+  <script>
+   var infoEmail;
+  </script>
+  <link href="/natwest-icon.png" rel="icon"/>
+  <link href="/febc265fb2cc455e1b85.css" rel="stylesheet"/>
+  <link href="/ec5fb73bff01905d82cd.css" rel="stylesheet"/>
+  <script defer="" src="https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body>
+  <main id="app">
+   <div id="page">
+    <div class="notification">
+     <button type="button">
+      <span class="icon refuse-icon">
+      </span>
+     </button>
+     <p>
+      We have performed a brief maintenance operation this Thursday evening. During that time, some users may have experienced difficulties logging in and certain API endpoints may have been unavailable. Thank you for your patience and understanding.
+     </p>
+    </div>
+    <div class="cookienotification notification fixed">
+     <div>
+      We use cookies and similar technologies on our websites and mobile applications to help provide you with the best online experience.
+      <br/>
+      By using our sites and apps, you agree that we may store and access cookies and similar technologies on your device.
+      <br/>
+      You can
+      <a href="/privacy-policy">
+       <u>
+        find out more and set your preferences here
+       </u>
+      </a>
+      .
+     </div>
+     <br/>
+     <a class="btn btn-small btn-primary">
+      I accept
+     </a>
+    </div>
+    <header>
+     <nav class="navbar inverted">
+      <div class="container">
+       <div class="navbar-container">
+        <div class="menubar">
+         <a href="/">
+          <span class="logo">
+          </span>
+         </a>
+         <button class="menu-toggle" type="button">
+          <span class="icon menu-icon">
+          </span>
+          Menu
+         </button>
+        </div>
+        <div class="menu closed">
+         <ul>
+          <li>
+           <a href="/dashboard" scope="secure">
+            Dashboard
+           </a>
+          </li>
+          <li>
+           <a href="/api-catalog" scope="all">
+            API Catalogue
+           </a>
+          </li>
+          <li>
+           <a href="/help" scope="all">
+            Help
+           </a>
+          </li>
+         </ul>
+         <div class="menu-right">
+          <div class="user-menu">
+           <a class="user">
+            <span class="icon user-icon">
+            </span>
+            Azam
+           </a>
+           <ul class="menu-links">
+            <li>
+             <a href="#">
+              My Profile
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              About
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              Logout
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="modal fade out" id="">
+           <div class="modal-dialog">
+            <button class="close-button" type="button">
+             <span class="icon close-icon">
+             </span>
+            </button>
+            <div class="modal-header">
+             <h6>
+              API Banking Accelerator
+             </h6>
+            </div>
+            <div class="modal-body">
+             <div class="about">
+              Oolys is a comprehensive multi-bank API Banking Sandbox.
+              <dl>
+               <dt>
+                Version
+               </dt>
+               <dd>
+                2.6.6-build-108-03c3b2a
+               </dd>
+              </dl>
+             </div>
+            </div>
+            <div class="modal-footer">
+             <small>
+              Copyright 2018-2021 UseInfinite
+             </small>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </nav>
+    </header>
+    <div class="page-content">
+     <div class="data-provider">
+      <div class="container">
+       <div class="container mdContent mdtermsmd">
+        <div>
+         <h1>
+          Terms of use
+         </h1>
+         <h2>
+          IMPORTANT NOTICE: PLEASE READ CAREFULLY BEFORE ACCEPTING.
+         </h2>
+         <p>
+          The following terms of use (“Terms of Use”) is a legal agreement between you (“You” or “Your”) and National Westminster Bank Plc (“We”, “Us” or “Our”) for the use of the developer testing environment platform (the “Sandbox”).
+          <br/>
+          By accepting these Terms of Use, either by clicking on “Accept” or by using or accessing the Sandbox or by registering as a user of the Sandbox, You acknowledge that you have read, understood and agree to be bound to these Terms of Use.
+          <br/>
+          IF YOU DO NOT AGREE TO THESE TERMS OF USE, YOU MAY NOT ACCESS OR USE THE SANDBOX.
+         </p>
+         <h2>
+          AGREED TERMS
+         </h2>
+         <ol>
+          <li>
+           <strong>
+            GRANT OF LICENCE AND SCOPE OF USE
+           </strong>
+           <ol>
+            <li>
+             In consideration of You agreeing to abide by these Terms of Use We grant You a non-exclusive, non-sub licensable, non-transferable revocable right to access and use the Sandbox for internal purposes only for functional testing, security proving, developing and evaluating Your applications and/or services relating to account information and /or payment initiation services.  .   You may develop, test and evaluate the functionalities and features of your applications and/or services by using the test data and data field structures made available to You by Us.
+            </li>
+            <li>
+             You acknowledge that in using the Sandbox You will only have access to synthetic test data and will not have access to any live or real customer or bank data.
+            </li>
+            <li>
+             Please note, that Your access to the Sandbox may be terminated without notice and We reserve the right to discontinue the availability of the Sandbox at any time.
+            </li>
+           </ol>
+          </li>
+          <li>
+           <strong>
+            ACCESSING THE SANDBOX
+           </strong>
+           <br/>
+           The Sandbox is accessed via individual user accounts that are password protected (“User Account”). Your User Account is personal to You and may only be used by You to access the Sandbox. You must keep your password confidential and secure.  You are solely responsible and liable for any activities that occur under Your User Account and for any harm caused to the Sandbox as a result of use under Your User Account.
+          </li>
+          <li>
+           <strong>
+            PROHIBITED USES
+           </strong>
+           <ol>
+            <li>
+             You agree to comply with all third party licence terms and conditions made known to You by Us.
+            </li>
+            <li>
+             You are not permitted to use the Sandbox for any purpose not expressly specified in these Terms of Use.  Without limiting the foregoing, You must not:
+             <ul>
+              <li>
+               use the Sandbox in any unlawful manner, for any unlawful purpose, or in any manner inconsistent with these Terms of Use, or act fraudulently or maliciously, for example, by inserting malicious code, including viruses, worms, Trojan horses, defects or harmful data into the Sandbox;
+              </li>
+              <li>
+               use the Sandbox in a way that could damage, disable, overburden, impair or compromise Our systems or security or those any other third party or interfere with other users;
+              </li>
+              <li>
+               use the Sandbox to harm, threaten or harass another person or organization;
+              </li>
+              <li>
+               collect or harvest any information or data from the Sandbox;
+              </li>
+              <li>
+               generate unnecessary or excessive calls or volumes of activity on or through the Sandbox;
+              </li>
+              <li>
+               remove any copyright, trademark, logos and marks or any proprietary rights notices contained in or on the Sandbox;
+              </li>
+              <li>
+               use the Sandbox to provide a service to third parties as a service bureau or to launch a production application or service using the Sandbox;
+              </li>
+              <li>
+               create User Accounts by automated means or under false or fraudulent pretenses;
+              </li>
+              <li>
+               decompile, disassemble, reverse engineer or attempt to reconstruct, identify or discover any source code, underlying ideas, underlying user interface techniques or algorithms of the Sandbox by any means whatsoever, or disclose any of the foregoing;
+              </li>
+              <li>
+               sell, lease, commercialize, rent, display,  license, sublicense, transfer, provide, disclose, or otherwise make available to, or permit the use of, or access to, the Sandbox or its contents in whole or in part, to any third party, except as expressly permitted in this Agreement;
+              </li>
+              <li>
+               use the Sandbox as a performance test or load test environment; and
+              </li>
+              <li>
+               re-identify the data within the Sandbox (either through reversing the pseudonymised/ masked/deindentfied status of the data within the Sandbox or otherwise) in breach of section 171 of the Data Protection Act 2018.
+              </li>
+             </ul>
+            </li>
+           </ol>
+          </li>
+          <li>
+           <strong>
+            PARTICIPATING IN A TEAM
+           </strong>
+           <br/>
+           You may invite other registered users to participate in the Sandbox as a team.  It is Your responsibility to invite only other registered users of the Sandbox to form a team.  As a registered User, You acknowledge and agree that You may receive an invitation from another user to join a team.  We are not responsible for any invitations You send out or You receive from other registered users.  We are not responsible for the activities of any User who participates in a team in relation to the Sandbox.  We are not responsible for, and will not assist in, resolving any dispute between team members.
+          </li>
+          <li>
+           <strong>
+            USING THE SANDBOX
+           </strong>
+           <ol>
+            <li>
+             You may add material into the Sandbox.  You must not insert, upload, post or transmit or otherwise make available:
+             <ul>
+              <li>
+               any material that infringes any patent, trademark, copyright, trade secret or other proprietary right of Us or any third party, or use the Sandbox in a manner which infringes Our intellectual property rights, confidentiality or privacy or those of any third party;
+              </li>
+              <li>
+               any confidential information or real personal data (such as name, address, email address or contact number) to the Sandbox, regardless of whether You have obtained the relevant individual’s consent or not. Should You do so, We reserve the right to terminate these Terms of Use and immediately cease Your access to the Sandbox without notice to You; and
+              </li>
+              <li>
+               any inappropriate, objectionable, defamatory, offensive, abusive, obscene or unlawful material or information.
+              </li>
+             </ul>
+            </li>
+            <li>
+             You are solely responsible for the quality and integrity of the material You add to the Sandbox.
+            </li>
+            <li>
+             We have no responsibility to You in relation to the material which You or any other user uploads, posts, transmit, or otherwise make available in the Sandbox.
+            </li>
+            <li>
+             You may modify, delete and/or augment some or all of the test data which We make available to You in the Sandbox.  You may download the test data on to Your own computer or other device.
+            </li>
+            <li>
+             You acknowledge and agree that any material which You insert, upload, post or transmit or otherwise make available in the Sandbox, and any changes you make to the test data will be accessible to:
+             <ul>
+              <li>
+               any users which are part of a team which You have joined; and
+              </li>
+              <li>
+               the licensor of the Sandbox.
+              </li>
+             </ul>
+            </li>
+           </ol>
+          </li>
+          <li>
+           <strong>
+            OWNERSHIP OF THE SANDBOX
+           </strong>
+           <ol>
+            <li>
+             You acknowledge that the Sandbox is licensed to Us.  You shall not by virtue of gaining access to the Sandbox acquire any right, title or interest in and to the Sandbox or any of its contents.
+            </li>
+            <li>
+             Other than material which You or another user has uploaded, posted, transmitted or otherwise made available in the Sandbox, You acknowledges that all rights, title, interest and intellectual property rights in the Sandbox and its content, (including test data, data field structure, trademarks, marks and logos) are either owned by Us or another member of The Royal Bank of Scotland Group Plc or are licensed to Us or another member of The Royal Bank of Scotland Group Plc.
+            </li>
+           </ol>
+          </li>
+          <li>
+           <strong>
+            TERM, SUSPENSION AND TERMINATION
+           </strong>
+           <ol>
+            <li>
+             These Terms of Use shall commence on the date You accept these Terms of Use and remain in full force and effect until terminated as provided below.
+            </li>
+            <li>
+             We may suspend or terminate Your access to the Sandbox if You breach any of the terms in these Terms of Use, or if in our opinion, We have a legitimate concern about Your access to the Sandbox.
+            </li>
+            <li>
+             Without prejudice to clause 7.2, We reserve the right to terminate these Terms of Use and Your access to all or part of the Sandbox at any time without cause and without notice.
+            </li>
+            <li>
+             On termination all rights granted to You under these Terms of Use shall cease and You must immediately cease all activities authorized by these Terms of Use, including Your access to and use of the Sandbox.
+            </li>
+           </ol>
+          </li>
+          <li>
+           <strong>
+            NO WARRANTIES
+           </strong>
+           <ol>
+            <li>
+             YOU ACKNOWLEDGE THAT THE SANDBOX AND ITS CONTENT IS PROVIDED ON AN "AS IS" BASIS AND NO WARRANTIES ARE GIVEN IN RESPECT OF THE FUNCTIONALITY, PERFORMANCE OR AVAILABILITY OF THE SANDBOX OR ITS CONTENT.  TO THE FULLEST EXTENT PERMITTED BY LAW, AND UNLESS EXPRESSLY SET OUT IN THESE TERMS OF USE, ALL WARRANTIES AND TERMS WHICH WOULD OTHERWISE BE IMPLED BY LAW, CUSTOM OR USAGE ARE EXCLUDED FROM THESE TERMS OF USE.
+            </li>
+            <li>
+             YOU ARE SOLELY RESPONSIBLE FOR DETERMINING THE APPROPRIATENESS OF USING THE SANDBOX.  ANY ACTIVITIES THAT YOU PERFORM USING OR ACCESSING THE SANDBOX ARE AT YOUR OWN RISK. YOU ARE RESPONSIBLE FOR BACKING UP, TO YOUR OWN COMPUTER OR OTHER DEVICE, ANY DATA THAT YOU STORE OR ACCESS VIA THE SANDBOX.  WE DO NOT MAKE ANY GUARANTEE, CLAIM OR WARRANTY THAT ACCESS TO AND USE OF THE SANDBOX WILL BE UNINTERRUPTED OR ERROR-FREE.
+            </li>
+           </ol>
+          </li>
+          <li>
+           <strong>
+            LIMITATION OF LIABILITY
+           </strong>
+           <ol>
+            <li>
+             EXCEPT AS EXPRESSLY STATED IN CLAUSE 9.3, WE SHALL NOT BE LIABLE TO YOU, WHETHER IN CONTRACT, TORT (INCLUDING NEGLIGENCE), BREACH OF STATUTORY DUTY, OR OTHERWISE, ARISING UNDER OR IN CONNECTION WITH THESE TERMS OF USE FOR ANY OF THE FOLLOWING: LOSS OF PROFITS OR REVENUE; LOSS OF BUSINESS OPPORTUNITY; LOSS OR CORRUPTION OF DATA; OR ANY INDIRECT OR ANY CONSEQUENTIAL LOSS OR DAMAGE.
+            </li>
+            <li>
+             IF, NOTWITHSTANDING THE OTHER PROVISIONS OF THESE TERMS OF USE, WE ARE FOUND TO BE LIABLE TO YOU FOR ANY DAMAGE OR LOSS WHICH ARISES OUT OF OR IN ANY WAY CONNECTED WITH YOUR USE OF THE SANDBOX OR ANY CONTENT, OUR TOTAL AGGREGATE LIABILITY, WHETHER IN CONTRACT, TORT (INCLUDING NEGLIGENCE AND BREACH OF STATUTORY DUTY), MISREPRESENTATION OR RESTITUTION THAT WE MAY HAVE TO YOU FOR ANY LOSS ARISING OUT OF OR IN CONNECTION WITH THESE TERMS OF USE SHALL IN NO CIRCUMSTANCES EXCEED £100 (ONE HUNDRED POUNDS).
+            </li>
+            <li>
+             NOTHING IN THESE TERMS OF USE SHALL OPERATE TO LIMIT OR EXCLUDE ANY LIABILITY FOR DEATH OR PERSONAL INJURY ARISING FROM OUR NEGLIGENCE; LOSS CAUSED BY FRAUD; AND ANY OTHER LOSS WHICH BY LAW CANNOT BE EXCLUDED OR LIMITED.
+            </li>
+           </ol>
+          </li>
+          <li>
+           <strong>
+            CHANGES TO THE SANDBOX
+           </strong>
+           We reserve the right to modify the Sandbox (or any part thereof), either temporarily or permanently, at any time without prior notice to You. You agree that We shall not be liable to you or any third party for any modification, suspension or termination of the Sandbox.
+          </li>
+          <li>
+           <strong>
+            CONTACT
+           </strong>
+           You can contact us at ~APIServiceDesk@rbs.com.  If We have to contact You or give You notice We will do so by e-mail.
+          </li>
+          <li>
+           <strong>
+            GENERAL
+           </strong>
+           <ol>
+            <li>
+             We reserve the right to change, modify add or remove portions of these Terms of Use at any time without notice. Your continued use of the Sandbox following the postings of changes will mean that You accept and agree to the revised Terms of Use.
+            </li>
+            <li>
+             Each of the terms of these Terms of Use operate separately. If any court or competent authority decides that any of them are unlawful or unenforceable, the remaining terms will remain in full force and effect.
+            </li>
+            <li>
+             These Terms of Use contain all of the terms of the agreement between us relating to the matters covered in these Terms of Use.
+            </li>
+            <li>
+             The Sandbox is not intended for use by minors.
+            </li>
+            <li>
+             These Terms of Use shall be governed by English law. You agree to the exclusive jurisdiction of the courts of England and Wales.
+            </li>
+           </ol>
+          </li>
+          <li>
+           <strong>
+            PRIVACY
+           </strong>
+           <ol>
+            <li>
+             For direct communication with You regarding Your use of the Sandbox as a developer and for authentication purposes, We shall engage a third party, Use Infinite Ltd, to store the following Personal Data about you: First Name, Last Name and Email Address. Neither We nor Use Infinite Ltd will use this information for any other purpose.
+            </li>
+            <li>
+             Neither We nor Use Infinite Ltd will share Your Personal Data with any other party.
+            </li>
+           </ol>
+          </li>
+         </ol>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer>
+     <div class="container">
+      <div class="row">
+       <div class="column">
+        <h6>
+         Account
+        </h6>
+        <nav>
+         <a href="/dashboard">
+          Dashboard
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Developer Tools
+        </h6>
+        <nav>
+         <a href="/api-catalog">
+          API Catalogue
+         </a>
+         <a href="/documentation">
+          Documentation
+         </a>
+         <a href="https://natwest-bankofapi-servicemanagement.atlassian.net/servicedesk/customer/portals" target="_blank">
+          Service Desk
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Company
+        </h6>
+        <nav>
+         <a aria-current="page" class="active" href="/terms">
+          Terms &amp; Conditions
+         </a>
+         <a href="/privacy-policy">
+          Privacy Policy
+         </a>
+        </nav>
+       </div>
+       <div class="col-sm">
+       </div>
+      </div>
+     </div>
+    </footer>
+    <button class="scrolltop-button">
+    </button>
+    <div class="powered-by">
+     Powered by
+     <em>
+      Oolys
+     </em>
+    </div>
+   </div>
+   <div id="side-panel">
+   </div>
+   <div class="modal fade out session-popup" id="">
+    <div class="modal-dialog">
+     <div class="modal-header">
+      <h6>
+       Your session is about to expire
+      </h6>
+     </div>
+     <div class="modal-body">
+      <span class="expiration-warning">
+       You will be automatically logged out in
+       <em>
+        59
+       </em>
+       seconds.
+       <br/>
+       Do you want to extend your session?
+      </span>
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-primary" type="button">
+       Continue
+      </button>
+      <button class="btn btn-default" type="button">
+       Logout
+      </button>
+     </div>
+    </div>
+   </div>
+  </main>
+  <script>
+   var loadHasBeenTriggered = false;
+      window.onUsersnapCXLoad = function(api) {
+        api.init({
+            user: {
+              userId: infoUsername,
+              email: infoEmail
+            },
+            custom: {
+                userId: infoUsername,
+                brand : infoBrand,
+                env : infoEnv
+            }
+          });
+      }
+      window.loadUserFeedbackWidget = function() {
+        if ( (!loadHasBeenTriggered) && infoUsername && infoBrand) {
+            loadHasBeenTriggered = true;
+            var script = document.createElement('script');
+            script.defer = 1;
+            script.src = 'https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad';
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      }
+  </script>
+  <script src="/febc265fb2cc455e1b85.js">
+  </script>
+  <script src="/7dbd7cfa6c7cb6d881a7.js">
+  </script>
+  <script src="/1a5f01ff47d07a377494.js">
+  </script>
+  <script src="/2daa0d06a67874f682c5.js">
+  </script>
+  <script src="/c617fa727da6d416f6a5.js">
+  </script>
+  <script src="/07424fde184376e24dea.js">
+  </script>
+  <script src="/ee4e265cb3dc3d500780.js">
+  </script>
+  <script src="/04a6b9711f1d30cdc1a2.js">
+  </script>
+  <script src="/03632d2692dbb192bc9c.js">
+  </script>
+  <script src="/991cb5d14add34ec9369.js">
+  </script>
+  <script src="/cd81143e09bd4a3ddd06.js">
+  </script>
+  <script src="/ad40893dba0f0cc010ca.js">
+  </script>
+  <script src="/86e32b4ca44cc47a79a5.js">
+  </script>
+  <script src="/e4687322f7bb906a2df7.js">
+  </script>
+  <script src="/27eb4f97929598ad3286.js">
+  </script>
+  <script src="/27861e3fa2db86dca27a.js">
+  </script>
+  <script src="/447e8d2fec5adde36e43.js">
+  </script>
+  <script src="/9f29fe08232107e5b5a2.js">
+  </script>
+  <script src="/9d72a8e94d97ca62f07e.js">
+  </script>
+  <script src="/1e1d6def47d88d1b6578.js">
+  </script>
+  <script src="/20d2c1b54999365fe1c3.js">
+  </script>
+  <script src="/d17eb693468fac87de9d.js">
+  </script>
+  <script src="/ace96842f9fdef10da09.js">
+  </script>
+  <script src="/e10dbcadb20790400bd2.js">
+  </script>
+  <script src="/ec5fb73bff01905d82cd.js">
+  </script>
+  <!--uspssb-->
+  <iframe name="us-entrypoint-globalSetup" style="display: none; height: 0px; width: 0px; z-index: 2147483647; color-scheme: normal;" title="Usersnap Feedback">
+  </iframe>
+  <!--uspsse-->
+  <us-button style="user-select: all;">
+  </us-button>
+ </body>
+</html>
+
+
+<!-- Iframe 1 Content -->
+<html>
+ <head>
+  <title>
+   Usersnap Feedback
+  </title>
+  <script>
+   <br>  window.nonce = "";<br>  window.publicPath = "https://resources.usersnap.com/";<br>
+  </script>
+  <script src="https://resources.usersnap.com/widget-assets/js/entries/globalSetup/b263c0f1171ea4606316.js">
+  </script>
+  <style>
+   html, body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+  </style>
+ </head>
+ <body>
+  <div>
+  </div>
+ </body>
+</html>

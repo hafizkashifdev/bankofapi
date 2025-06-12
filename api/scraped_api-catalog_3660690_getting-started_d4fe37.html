@@ -1,0 +1,2579 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   NatWest – Developer Portal – Open Banking Sandbox
+  </title>
+  <meta content="index, follow" name="robots"/>
+  <meta content="Thanks to the comprehensive step-by-step documentation of our Sandbox Developer Portal, you can consume Open Banking APIs in less than 5 minutes." name="description"/>
+  <script>
+   var iVersion="2.6.6-build-108-03c3b2a";
+  </script>
+  <script>
+   var infoEnv;
+  </script>
+  <script>
+   var infoBrand;
+  </script>
+  <script>
+   var infoUsername;
+  </script>
+  <script>
+   var infoEmail;
+  </script>
+  <link href="/natwest-icon.png" rel="icon"/>
+  <link href="/febc265fb2cc455e1b85.css" rel="stylesheet"/>
+  <link href="/ec5fb73bff01905d82cd.css" rel="stylesheet"/>
+  <script defer="" src="https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body>
+  <main id="app">
+   <div id="page">
+    <div class="notification">
+     <button type="button">
+      <span class="icon refuse-icon">
+      </span>
+     </button>
+     <p>
+      We have performed a brief maintenance operation this Thursday evening. During that time, some users may have experienced difficulties logging in and certain API endpoints may have been unavailable. Thank you for your patience and understanding.
+     </p>
+    </div>
+    <div class="cookienotification notification fixed">
+     <div>
+      We use cookies and similar technologies on our websites and mobile applications to help provide you with the best online experience.
+      <br/>
+      By using our sites and apps, you agree that we may store and access cookies and similar technologies on your device.
+      <br/>
+      You can
+      <a href="/api-catalog/3660690/privacy-policy">
+       <u>
+        find out more and set your preferences here
+       </u>
+      </a>
+      .
+     </div>
+     <br/>
+     <a class="btn btn-small btn-primary">
+      I accept
+     </a>
+    </div>
+    <header>
+     <nav class="navbar inverted">
+      <div class="container">
+       <div class="navbar-container">
+        <div class="menubar">
+         <a href="/">
+          <span class="logo">
+          </span>
+         </a>
+         <button class="menu-toggle" type="button">
+          <span class="icon menu-icon">
+          </span>
+          Menu
+         </button>
+        </div>
+        <div class="menu closed">
+         <ul>
+          <li>
+           <a href="/dashboard" scope="secure">
+            Dashboard
+           </a>
+          </li>
+          <li>
+           <a aria-current="page" class="active" href="/api-catalog" scope="all">
+            API Catalogue
+           </a>
+          </li>
+          <li>
+           <a href="/help" scope="all">
+            Help
+           </a>
+          </li>
+         </ul>
+         <div class="menu-right">
+          <div class="user-menu">
+           <a class="user">
+            <span class="icon user-icon">
+            </span>
+            Azam
+           </a>
+           <ul class="menu-links">
+            <li>
+             <a href="#">
+              My Profile
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              About
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              Logout
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="modal fade out" id="">
+           <div class="modal-dialog">
+            <button class="close-button" type="button">
+             <span class="icon close-icon">
+             </span>
+            </button>
+            <div class="modal-header">
+             <h6>
+              API Banking Accelerator
+             </h6>
+            </div>
+            <div class="modal-body">
+             <div class="about">
+              Oolys is a comprehensive multi-bank API Banking Sandbox.
+              <dl>
+               <dt>
+                Version
+               </dt>
+               <dd>
+                2.6.6-build-108-03c3b2a
+               </dd>
+              </dl>
+             </div>
+            </div>
+            <div class="modal-footer">
+             <small>
+              Copyright 2018-2021 UseInfinite
+             </small>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </nav>
+    </header>
+    <div class="page-content">
+     <div class="data-provider">
+      <div class="mdContent">
+       <div class="docpane">
+        <div class="toc">
+         <div class="return-link">
+          <a aria-current="page" class="active" href="/api-catalog">
+           <span class="icon arrow-back">
+           </span>
+           Back
+          </a>
+         </div>
+         <div>
+          <ul>
+           <li>
+            <a class="h1" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/indirect-access-payments-notifications" id="#indirect-access-payments-notifications">
+             Indirect Access Payments &amp; Notifications
+            </a>
+            <ul>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/summary" id="#summary">
+               Summary
+              </a>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/getting-started-with-sandbox" id="#getting-started-with-sandbox">
+               Getting Started with Sandbox
+              </a>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/api-invocation-tool" id="#api-invocation-tool">
+               API Invocation tool
+              </a>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/sandbox-configurations" id="#sandbox-configurations">
+               Sandbox - Configurations
+              </a>
+              <ul>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/endpoints" id="#endpoints">
+                 Endpoints
+                </a>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/source-ip-address" id="#source-ip-address">
+                 Source-IP address
+                </a>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/natwests-server-certificates-for-tls" id="#natwests-server-certificates-for-tls">
+                 NatWest's server certificates for TLS
+                </a>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/payload-signature-public-certificate" id="#payload-signature-public-certificate">
+                 Payload Signature Public certificate
+                </a>
+               </li>
+              </ul>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/endpoints-overview" id="#endpoints-overview">
+               Endpoints Overview
+              </a>
+              <ul>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/1-retrieve-access-bearer-token" id="#1-retrieve-access-bearer-token">
+                 1. Retrieve access-bearer token.
+                </a>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/2-webhooks-events-subscription" id="#2-webhooks-events-subscription">
+                 2. Webhooks / Events Subscription
+                </a>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/3-health-check" id="#3-health-check">
+                 3. Health Check
+                </a>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/4-make-domestic-payment-receive-psn" id="#4-make-domestic-payment-receive-psn">
+                 4. Make Domestic Payment &amp; Receive PSN
+                </a>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/5-enquire-payment-status" id="#5-enquire-payment-status">
+                 5. Enquire Payment Status
+                </a>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/6-sandbox-specific-endpoint-trigger-receive-faster-payment" id="#6-sandbox-specific-endpoint-trigger-receive-faster-payment">
+                 6. Sandbox Specific Endpoint - Trigger Receive Faster Payment
+                </a>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/7-enquire-inward-faster-payment" id="#7-enquire-inward-faster-payment">
+                 7. Enquire Inward Faster Payment
+                </a>
+               </li>
+               <li>
+                <a class="h3" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/8-webhook-events-system-retry-and-resend-endpoint" id="#8-webhook-events-system-retry-and-resend-endpoint">
+                 8. Webhook-events system-retry and resend endpoint
+                </a>
+               </li>
+              </ul>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3660690/getting-started/glossary" id="#glossary">
+               Glossary
+              </a>
+             </li>
+            </ul>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="doc">
+         <h1 id="indirect-access-payments-notifications">
+          Indirect Access Payments &amp; Notifications
+         </h1>
+         <h2 id="summary">
+          Summary
+         </h2>
+         <div>
+          The sandbox documentation aims to give a comprehensive step by step guide for executing indirect access payments and notifications APIs in contained environment.
+          <strong>
+           We highly recommend reviewing "
+           <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#api-testing">
+            API Testing
+           </a>
+           " section in Bank of APIs
+          </strong>
+          to understand the features &amp; limitations of sandbox usage. Additionally, we strongly advise executing all the test cases provided in the documentation (or test-suite pack) to ensure all the functional scenarios are covered as part of pre-production testing.
+         </div>
+         <blockquote>
+          <div>
+           While the sandbox environment simulates API responses similar to those in the production system, certain steps and logic may differ to optimize the sandbox user experience. These differences are detailed in the
+           <strong>
+            "Sandbox Specific Behaviour"
+           </strong>
+           section.
+          </div>
+          <div>
+           <strong>
+            Note:
+           </strong>
+           Please note that the Sandbox environment is not intended for performance testing. Users are advised to limit their usage to a
+           <strong>
+            maximum of 2 API calls per minute across endpoints.
+           </strong>
+           Failure to comply with this limit may result in the revocation of API access for the associated module.
+          </div>
+         </blockquote>
+         <h2 id="getting-started-with-sandbox">
+          Getting Started with Sandbox
+         </h2>
+         <ul>
+          <li>
+           <div>
+            If a team already exists for your organisation, register with that team to get the sandbox-application access. Otherwise create a new team and sandbox application referring to
+            <a href="https://openapi.ulsterbank.co.uk/bankofapis/v1.0/dynamic-content/products/88dece34-3bc3-43e9-b25b-2e85653c86a9/indirect-access-payments/IndirectAccessPaymentSandboxInstructions.pdf">
+             sandbox user guide
+            </a>
+            .
+           </div>
+          </li>
+          <li>
+           <div>
+            Make sure access is granted to "bankline-direct-digital.org/indirect-access" API within the sandbox-application. Sandbox would respond with HTTP 403 error  "Message: no API access for this client." if access has not been provided. If the specified API is not visible under the APIs section, please contact your Implementation Manager and provide your sandbox team name to request access.
+           </div>
+           <blockquote>
+            <div>
+             <strong>
+              Sandbox Specific Behaviour :
+             </strong>
+             In production, Implementation manager assists during customer onboarding journey. Kindly note that Team and sandbox-application creation are sandbox specific features.
+            </div>
+           </blockquote>
+          </li>
+         </ul>
+         <h2 id="api-invocation-tool">
+          API Invocation tool
+         </h2>
+         <div>
+          The Sandbox environment serves as a pre-production testing platform, enabling customer applications to simulate API interactions akin to the production environment. Additionally, it facilitates API invocation through tools such as Postman.
+         </div>
+         <h2 id="sandbox-configurations">
+          Sandbox - Configurations
+         </h2>
+         <blockquote>
+          <div>
+           <strong>
+            Summary:
+           </strong>
+           This section highlights all the configuration details of sandbox.
+          </div>
+         </blockquote>
+         <h3 id="endpoints">
+          Endpoints
+         </h3>
+         <table>
+          <thead>
+           <tr>
+            <th style="text-align: left;">
+             Sl
+            </th>
+            <th style="text-align: left;">
+             Details
+            </th>
+            <th style="text-align: left;">
+             HTTP Method
+            </th>
+            <th style="text-align: left;">
+             Sandbox API Endpoint
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td style="text-align: left;">
+             1
+            </td>
+            <td style="text-align: left;">
+             Retrieve Authentication Bearer Token
+            </td>
+            <td style="text-align: left;">
+             POST
+            </td>
+            <td style="text-align: left;">
+             <a href="https://ob.sandbox.natwest.com/token">
+              https://ob.sandbox.natwest.com/token
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             2
+            </td>
+            <td style="text-align: left;">
+             Health Check
+            </td>
+            <td style="text-align: left;">
+             GET
+            </td>
+            <td style="text-align: left;">
+             <a href="https://ob.sandbox.natwest.com/zerocode/bankline-direct-digital.org/indirect-access/v1/health">
+              https://ob.sandbox.natwest.com/zerocode/bankline-direct-digital.org/indirect-access/v1/health
+             </a>
+             or
+             <a href="https://ob.sandbox.natwest.com/zerocode/bankline-direct-digital.org/indirect-access/v1/health?applicationId={application_id}">
+              https://ob.sandbox.natwest.com/zerocode/bankline-direct-digital.org/indirect-access/v1/health?applicationId={application_id}
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             3
+            </td>
+            <td style="text-align: left;">
+             Webhooks / Events Subscription
+            </td>
+            <td style="text-align: left;">
+             POST
+            </td>
+            <td style="text-align: left;">
+             <a href="https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions">
+              https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             4
+            </td>
+            <td style="text-align: left;">
+             Retrieve Configured Events
+            </td>
+            <td style="text-align: left;">
+             GET
+            </td>
+            <td style="text-align: left;">
+             <a href="https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions">
+              https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             5
+            </td>
+            <td style="text-align: left;">
+             Delete configured Webhook
+            </td>
+            <td style="text-align: left;">
+             DELETE
+            </td>
+            <td style="text-align: left;">
+             <a href="https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions/{event_id}">
+              https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions/{event_id}
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             6
+            </td>
+            <td style="text-align: left;">
+             Make outbound Payment
+            </td>
+            <td style="text-align: left;">
+             POST
+            </td>
+            <td style="text-align: left;">
+             <a href="https://ob.sandbox.natwest.com/zerocode/bankline-direct-digital.org/indirect-access/v1/payments">
+              https://ob.sandbox.natwest.com/zerocode/bankline-direct-digital.org/indirect-access/v1/payments
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             7
+            </td>
+            <td style="text-align: left;">
+             Enquire Payment Status
+            </td>
+            <td style="text-align: left;">
+             GET
+            </td>
+            <td style="text-align: left;">
+             <a href="https://ob.sandbox.natwest.com/zerocode/bankline-direct-digital.org/indirect-access/v1/payment-status/{transaction_id}">
+              https://ob.sandbox.natwest.com/zerocode/bankline-direct-digital.org/indirect-access/v1/payment-status/{transaction_id}
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             8
+            </td>
+            <td style="text-align: left;">
+             Trigger Receive Faster Payment or Reversal
+            </td>
+            <td style="text-align: left;">
+             POST
+            </td>
+            <td style="text-align: left;">
+             <a href="https://ob.sandbox.natwest.com/zerocode/bankline-direct-digital.org/indirect-access/v1/sandbox-trigger-inward-payment">
+              https://ob.sandbox.natwest.com/zerocode/bankline-direct-digital.org/indirect-access/v1/sandbox-trigger-inward-payment
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             9
+            </td>
+            <td style="text-align: left;">
+             Enquire Inward Payment
+            </td>
+            <td style="text-align: left;">
+             GET
+            </td>
+            <td style="text-align: left;">
+             <a href="https://ob.sandbox.natwest.com/zerocode/bankline-direct-digital.org/indirect-access/v1/inward-payment?fpid={faster_payment_id}">
+              https://ob.sandbox.natwest.com/zerocode/bankline-direct-digital.org/indirect-access/v1/inward-payment?fpid={faster_payment_id}
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             10
+            </td>
+            <td style="text-align: left;">
+             Resend events
+            </td>
+            <td style="text-align: left;">
+             POST
+            </td>
+            <td style="text-align: left;">
+             <a href="https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions/events/resend">
+              https://ob.sandbox.natwest.com/open-banking/v3.1/event-subscriptions/events/resend
+             </a>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <h3 id="source-ip-address">
+          Source-IP address
+         </h3>
+         <blockquote>
+          <div>
+           If you wish to whitelist the source-IP for webhooks, All the webhook messages posted from NatWest sandbox will be dispatched from the source-IP address :
+           <code>
+            18.203.64.5
+           </code>
+           .
+          </div>
+         </blockquote>
+         <h3 id="natwests-server-certificates-for-tls">
+          NatWest's server certificates for TLS
+         </h3>
+         <div>
+          Here are NatWest's server certificates used for TLS when accessing sandbox endpoints,
+         </div>
+         <pre class="language-bash"><code class="language-bash">-----BEGIN CERTIFICATE-----
+MIIG+TCCBeGgAwIBAgIQHKbSpqbOy8Xrt0u6t44Q4DANBgkqhkiG9w0BAQsFADCB
+ljELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G
+A1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxPDA6BgNV
+BAMTM0NPTU9ETyBSU0EgT3JnYW5pemF0aW9uIFZhbGlkYXRpb24gU2VjdXJlIFNl
+cnZlciBDQTAeFw0yNDA4MTQwMDAwMDBaFw0yNTA4MTQyMzU5NTlaMF8xCzAJBgNV
+BAYTAkdCMRMwEQYDVQQIEwpNaWRsb3RoaWFuMRowGAYDVQQKExFOYXR3ZXN0IEdy
+b3VwIFBsYzEfMB0GA1UEAxMWb2Iuc2FuZGJveC5uYXR3ZXN0LmNvbTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAODTcro+sZt0P33tlAmCpNC4yTzt3htK
+o0YyxQG4/+/w2CZ/gizRvD55LdrkP5NyheG15NxLSF67Tyc5f5eNSB81Ir7xTp2D
+29LBz2lpBKS0nVXAwpOPlmHsNjtQo7qCq2SjPbXKfAZiFufCtEER2ML6UX+6WhBl
+afkGeftgzMPB1034IaNS637lQjvGKqshWu7tqbmPOYSzpruks0QypChtyUkJuPJ3
+zsSPKGMVyopLlMqZxBwX8WBnYokPMaei+aR1BsM08z4heRPLfJ6Jhkrs8LnFd09M
++mEs+Wp4hHc15vXHKOjo+f2H7C3vbx4HJY2jZ3OZZirtMI2pveH2B4UCAwEAAaOC
+A3cwggNzMB8GA1UdIwQYMBaAFJrzK9rPrU+2L7sqSEgqErcbQsEkMB0GA1UdDgQW
+BBQ+i1tHAXjz2igJkrDHCquY9vv61DAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/
+BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwSgYDVR0gBEMwQTA1
+BgwrBgEEAbIxAQIBAwQwJTAjBggrBgEFBQcCARYXaHR0cHM6Ly9zZWN0aWdvLmNv
+bS9DUFMwCAYGZ4EMAQICMFoGA1UdHwRTMFEwT6BNoEuGSWh0dHA6Ly9jcmwuY29t
+b2RvY2EuY29tL0NPTU9ET1JTQU9yZ2FuaXphdGlvblZhbGlkYXRpb25TZWN1cmVT
+ZXJ2ZXJDQS5jcmwwgYsGCCsGAQUFBwEBBH8wfTBVBggrBgEFBQcwAoZJaHR0cDov
+L2NydC5jb21vZG9jYS5jb20vQ09NT0RPUlNBT3JnYW5pemF0aW9uVmFsaWRhdGlv
+blNlY3VyZVNlcnZlckNBLmNydDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuY29t
+b2RvY2EuY29tMD0GA1UdEQQ2MDSCFm9iLnNhbmRib3gubmF0d2VzdC5jb22CGnd3
+dy5vYi5zYW5kYm94Lm5hdHdlc3QuY29tMIIBfQYKKwYBBAHWeQIEAgSCAW0EggFp
+AWcAdgDd3Mo0ldfhFgXnlTL6x5/4PRxQ39sAOhQSdgosrLvIKgAAAZFQSLc7AAAE
+AwBHMEUCIHikuDN/nk1TJOqQsLHn+yZuOxjqjNrDqajfjcijh6GlAiEA2TUqeZI+
+r/f1jmyjf4Pkd3LLLwhSq2A3CbD2BOhkFbYAdQAN4fIwK9MNwUBiEgnqVS78R3R8
+sdfpMO8OQh60fk6qNAAAAZFQSLcaAAAEAwBGMEQCIGvvm5TxEeOfsBmiii7jNEGh
+zTJ0PqaMZuyGkbxKistgAiAfPhRSwtSlc2h9gnVJ/p6DcaGGlFbxXlZaYqYfmC3Y
+BgB2ABLxTjS9U3JMhAYZw48/ehP457Vih4icbTAFhOvlhiY6AAABkVBItxoAAAQD
+AEcwRQIhAKqSlY1ksToS7GmEhyg2XXeEwazIhYvOuwFbkCN/qQ+5AiAi7AUDVAgQ
+spOWpaIwH8KOe1VzMNUMghV1UnQo39ATkTANBgkqhkiG9w0BAQsFAAOCAQEAO7/s
+GAB3WTINqbvCehloa8PQNK4LWfpsWMHNyRyPhkhmxE5/kbcGeEvkH/rfG/znn1/u
+UwFmRANabLZ3Y0stn9NJfuAm4A/knxhIurJjSutNeVLxSyTIrvgqgwYREoJ7WiJv
+hASqUzfjvp0ZDbU6ak9B+1QuFlZa5iFauZ337n/Bnp9jOHqMwRjc8AlLBixyUzXt
+u6TW1cujeAkBMW7VAqBt7F0atBU7AitDeMgcWs68bZsKNivEt9sONdHghqNpstzT
+VPxVxNxt+WJ8Fvg8zfFSAKXddLJEvDhxjomczp5Ev0/1XTiCUZS6ZQufRDc+jFsD
+KGDEhIxhP9F0T7nT8g<span class="token operator">==</span>
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+MIIGDjCCA/agAwIBAgIQNoJef7WkgZN+9tFza7k8pjANBgkqhkiG9w0BAQwFADCB
+hTELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G
+A1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxKzApBgNV
+BAMTIkNPTU9ETyBSU0EgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTQwMjEy
+MDAwMDAwWhcNMjkwMjExMjM1OTU5WjCBljELMAkGA1UEBhMCR0IxGzAZBgNVBAgT
+EkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMR
+Q09NT0RPIENBIExpbWl0ZWQxPDA6BgNVBAMTM0NPTU9ETyBSU0EgT3JnYW5pemF0
+aW9uIFZhbGlkYXRpb24gU2VjdXJlIFNlcnZlciBDQTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBALkU2YXyQURX/zBEHtw8RKMXuG4B+KNfwqkhHc5Z9Ozz
+iKkJMjyxi2OkPic284/5OGYuB5dBj0um3cNfnnM858ogDU98MgXPwS5IZUqF0B9W
+MW2O5cYy1Bu8n32W/JjXT/j0WFb440W+kRiC5Iq+r81SN1GHTx6Xweg6rvn/RuRl
+Pz/DR4MvzLhCXi1+91porl1LwKY1IfWGo8hJi5hjYA3JIUjCkjBlRrKGNQRCJX6t
+p05LEkAAeohoXG+fo6R4ESGuPQsOvkUUI8/rddf2oPG8RWxevKEy7PNYeEIoCzoB
+dvDFoJ7BaXDej0umed/ydrbjDxN8GDuxUWxqIDnOnmkCAwEAAaOCAWUwggFhMB8G
+A1UdIwQYMBaAFLuvfgI9+qbxPISOre44mOzZMjLUMB0GA1UdDgQWBBSa8yvaz61P
+ti+7KkhIKhK3G0LBJDAOBgNVHQ8BAf8EBAMCAYYwEgYDVR0TAQH/BAgwBgEB/wIB
+ADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwGwYDVR0gBBQwEjAGBgRV
+HSAAMAgGBmeBDAECAjBMBgNVHR8ERTBDMEGgP6A9hjtodHRwOi8vY3JsLmNvbW9k
+b2NhLmNvbS9DT01PRE9SU0FDZXJ0aWZpY2F0aW9uQXV0aG9yaXR5LmNybDBxBggr
+BgEFBQcBAQRlMGMwOwYIKwYBBQUHMAKGL2h0dHA6Ly9jcnQuY29tb2RvY2EuY29t
+L0NPTU9ET1JTQUFkZFRydXN0Q0EuY3J0MCQGCCsGAQUFBzABhhhodHRwOi8vb2Nz
+cC5jb21vZG9jYS5jb20wDQYJKoZIhvcNAQEMBQADggIBAGmKNmiaHjtlC+B8z6ar
+cTuvYaQ/5GQBSRDTHY/i1e1n055bl71CHgf50Ltt9zKVWiIpYvgMnFlWJzagIhIR
++kf0UclZeylKpUg1fMWXZuAnJTsVejJ1SpH7pmue4lP6DYwT+yO4CxIsru3bHUeQ
+1dCTaXaROBU01xjqfrxrWN4qOZADRARKVtho5fV8aX6efVRL0NiGq2dmE1deiSoX
+rS2uvUAOZu2K/1S0wQHLqeBHuhFhj62uI0gqxiV5iRxBBJXAEepXK9a0l/qx6RVi
+7Epxd/3zoZza9msAKcUy5/pO6rMqpxiXHFinQjZf7BTP+HsO993MiBWamlzI8SDH
+0YZyoRebrrr+bKgy0QB2SXP3PyeHPLbJLfqqkJDJCgmfyWkfBxmpv966+AuIgkQW
+EH8HwIAiX3+8MN66zQd5ZFbY//NPnDC7bh5RS+bNvRfExb/IP46xH4pGtwZDb2It
+z1GdRcqK6ROLwMeRvlu2+jdKif7wndoTJiIsBpA+ixOYoBnW3dpKSH89D4mdJHJL
+DntE/9Q2toN2I1iLFGy4XfdhbTl27d0SPWuHiJeRvsBGAh52HN22r1xP9QDWnE2p
+4J6ijvyxFnlcIdNFgZoMOWxtKNcl0rcRkND23m9e9Pqki2Z3ci+bkEAsUhJg+f+1
+cC6JmnkJiYEt7Fx4b4GH8fxV
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+MIIF2DCCA8CgAwIBAgIQTKr5yttjb+Af907YWwOGnTANBgkqhkiG9w0BAQwFADCB
+hTELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G
+A1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxKzApBgNV
+BAMTIkNPTU9ETyBSU0EgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTAwMTE5
+MDAwMDAwWhcNMzgwMTE4MjM1OTU5WjCBhTELMAkGA1UEBhMCR0IxGzAZBgNVBAgT
+EkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMR
+Q09NT0RPIENBIExpbWl0ZWQxKzApBgNVBAMTIkNPTU9ETyBSU0EgQ2VydGlmaWNh
+dGlvbiBBdXRob3JpdHkwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCR
+6FSS0gpWsawNJN3Fz0RndJkrN6N9I3AAcbxT38T6KhKPS38QVr2fcHK3YX/JSw8X
+pz3jsARh7v8Rl8f0hj4K+j5c+ZPmNHrZFGvnnLOFoIJ6dq9xkNfs/Q36nGz637CC
+9BR++b7Epi9Pf5l/tfxnQ3K9DADWietrLNPtj5gcFKt+5eNu/Nio5JIk2kNrYrhV
+/erBvGy2i/MOjZrkm2xpmfh4SDBF1a3hDTxFYPwyllEnvGfDyi62a+pGx8cgoLEf
+Zd5ICLqkTqnyg0Y3hOvozIFIQ2dOciqbXL1MGyiKXCJ7tKuY2e7gUYPDCUZObT6Z
++pUX2nwzV0E8jVHtC7ZcryxjGt9XyD+86V3Em69FmeKjWiS0uqlWPc9vqv9JWL7w
+qP/0uK3pN/u6uPQLOvnoQ0IeidiEyxPx2bvhiWC4jChWrBQdnArncevPDt09qZah
+SL0896+1DSJMwBGB7FY79tOi4lu3sgQiUpWAk2nojkxl8ZEDLXB0AuqLZxUpaVIC
+u9ffUGpVRr+goyhhf3DQw6KqLCGqR84onAZFdr+CGCe01a60y1Dma/RMhnEw6abf
+Fobg2P9A3fvQQoh/ozM6LlweQRGBY84YcWsr7KaKtzFcOmpH4MN5WdYgGq/yapiq
+crxXStJLnbsQ/LBMQeXtHT1eKJ2czL+zUdqnR+WEUwIDAQABo0IwQDAdBgNVHQ4E
+FgQUu69+Aj36pvE8hI6t7jiY7NkyMtQwDgYDVR0PAQH/BAQDAgEGMA8GA1UdEwEB
+/wQFMAMBAf8wDQYJKoZIhvcNAQEMBQADggIBAArx1UaEt65Ru2yyTUEUAJNMnMvl
+wFTPoCWOAvn9sKIN9SCYPBMtrFaisNZ+EZLpLrqeLppysb0ZRGxhNaKatBYSaVqM
+4dc+pBroLwP0rmEdEBsqpIt6xf4FpuHA1sj+nq6PK7o9mfjYcwlYRm6mnPTXJ9OV
+2jeDchzTc+CiR5kDOF3VSXkAKRzH7JsgHAckaVd4sjn8OoSgtZx8jb8uk2Intzna
+FxiuvTwJaP+EmzzV1gsD41eeFPfR60/IvYcjt7ZJQ3mFXLrrkguhxuhoqEwWsRqZ
+CuhTLJK7oQkYdQxlqHvLI7cawiiFwxv/0Cti76R7CZGYZ4wUAc1oBmpjIXUDgIiK
+boHGhfKppC3n9KUkEEeDys30jXlYsQab5xoq2Z0B15R97QNKyvDb6KkBPvVWmcke
+jkk9u+UJueBPSZI9FoJAzMxZxuY67RIuaTxslbH9qh17f4a+Hg4yRvv7E491f0yL
+S0Zj/gA0QHDBw7mh3aZw4gSzQbzpgJHqZJx64SIDqZxubw5lT2yHh17zbqD5daWb
+QOhTsiedSrnAdyGN/4fy3ryM7xfft0kL0fJuMAsaDk527RH89elWsn2/x20Kk4yl
+0MC2Hb46TpSi125sC8KKfPog88Tk5c0NqMuRkrF8hey1FGlmDoLnzc7ILaZRfyHB
+NVOFBkpdn627G190
+-----END CERTIFICATE-----</code></pre>
+         <h3 id="payload-signature-public-certificate">
+          Payload Signature Public certificate
+         </h3>
+         <div>
+          All webhooks dispatched from NatWest would be signed and a detached JWT will be populated in a header parameter
+          <code>
+           x-jws-signature
+          </code>
+          of the webhook using elliptic-curve cryptography.
+         </div>
+         <div>
+          <strong>
+           Sandbox-specific NatWest's public certificate for webhook signature-verification:
+          </strong>
+         </div>
+         <pre class="language-bash"><code class="language-bash">-----BEGIN CERTIFICATE-----
+MIICLjCCAdWgAwIBAgIUSXtJzS3j8dc+J+Q9ILLrbuYFOlwwCgYIKoZIzj0EAwIw
+bTELMAkGA1UEBhMCVUsxDTALBgNVBAgMBFRlc3QxDTALBgNVBAcMBFRlc3QxFDAS
+BgNVBAoMC1NhbmRib3hUZXN0MRQwEgYDVQQLDAtTYW5kYm94VGVzdDEUMBIGA1UE
+AwwLU2FuZGJveFRlc3QwHhcNMjUwMzI2MTIwOTA1WhcNMzUwMzI0MTIwOTA1WjBt
+MQswCQYDVQQGEwJVSzENMAsGA1UECAwEVGVzdDENMAsGA1UEBwwEVGVzdDEUMBIG
+A1UECgwLU2FuZGJveFRlc3QxFDASBgNVBAsMC1NhbmRib3hUZXN0MRQwEgYDVQQD
+DAtTYW5kYm94VGVzdDBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABC2d1TjTVuWt
+ZnGHpzAXg02BB8JUD+IAubsNBT1S2ofVCJ/rTyEmIjVHSXAIZClCVAfAv8zxpNQo
++//BDgeIJHSjUzBRMB0GA1UdDgQWBBQ47CzOZNiQ2i/gUG/pdv20HFV0gzAfBgNV
+HSMEGDAWgBQ47CzOZNiQ2i/gUG/pdv20HFV0gzAPBgNVHRMBAf8EBTADAQH/MAoG
+CCqGSM49BAMCA0cAMEQCIAz0oAYWaJyi+T6R2IRwlYdClrYVMxf37+5WSTpBEeBJ
+AiAwQeUbP2ydAA3Je3ALrzkKHmcD3K2UGj7x44aRbaW8OA<span class="token operator">==</span>
+-----END CERTIFICATE-----</code></pre>
+         <blockquote>
+          <div>
+           <strong>
+            Disclaimer
+           </strong>
+           : The above mentioned public key/certificate is only for test purposes and shouldn't be used for anything else than verifying the signature in the sandbox.
+          </div>
+         </blockquote>
+         <h2 id="endpoints-overview">
+          Endpoints Overview
+         </h2>
+         <blockquote>
+          <div>
+           <strong>
+            Summary:
+           </strong>
+           The section highlights on the list of APIs &amp; functional scenarios configured in  sandbox environment.
+          </div>
+         </blockquote>
+         <h3 id="1-retrieve-access-bearer-token">
+          1. Retrieve access-bearer token.
+         </h3>
+         <div>
+          <strong>
+           Documentation Reference:
+          </strong>
+          :
+          <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#obtaining-an-access-token">
+           Bank of APIs - Obtaining an access token
+          </a>
+          .
+         </div>
+         <div>
+          To simulate production authentication and enable API invocation within sandbox environment, it is necessary to generate the authentication bearer token. The input parameters required for the token generation are dependent on the specific authentication method with which the sandbox-application is created. Generate the token by executing the endpoint specified or using application specific requests provided as part of Postman test-suite collection.
+The access-token would be valid only for
+          <code>
+           10 minutes
+          </code>
+          and customer-application / user is expeced to trigger the end point again, in order to avoid "token expired" HTTP 401 error while triggering other endpoints.
+         </div>
+         <h3 id="2-webhooks-events-subscription">
+          2. Webhooks / Events Subscription
+         </h3>
+         <div>
+          <strong>
+           Documentation Reference:
+          </strong>
+          <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#webhooks-alias-events">
+           Bank of APIs - Webhooks / Events
+          </a>
+          and
+          <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#event_subscriptions_v3_1__post">
+           Events API Specification
+          </a>
+          .
+         </div>
+         <blockquote>
+          <div>
+           If you wish to whitelist the source-IP for webhooks, All the webhook messages posted from NatWest sandbox will be dispatched from the source-IP address :
+           <code>
+            18.203.64.5
+           </code>
+           .
+          </div>
+         </blockquote>
+         <div>
+          <strong>
+           Steps to verify &amp; configure webhook events:
+          </strong>
+         </div>
+         <ol>
+          <li>
+           Trigger "Retrieve Configured Events" endpoint to fetch the list of webhook events configured and ensure your custom-endpoint is configured against the event types specified in Bank of APIs.
+          </li>
+          <li>
+           If above request responds with HTTP 400 error with message "Event Subscription is missing for TPP", Configure webhook endpoints for each event type using "Webhooks / Events Subscription" endpoint. Sandbox would assign a unique event subscription id for each event type using the below table,
+          </li>
+          <li>
+           For any webhook event modification, delete the webhook event using "Delete configured webhook" end point by providing the event subscription id. (Event subscription id can be retrieved using "Retrieve Configured Events" endpoint).
+          </li>
+         </ol>
+         <table>
+          <thead>
+           <tr>
+            <th style="text-align: left;">
+             Event Name
+            </th>
+            <th style="text-align: left;">
+             Description
+            </th>
+            <th style="text-align: left;">
+             EventType to subscribe
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td style="text-align: left;">
+             Payment Status Notification
+            </td>
+            <td style="text-align: left;">
+             Status of the Outward payment
+            </td>
+            <td style="text-align: left;">
+             ND.BANKLINEDIRECT.PAYMENT:STATUS:PACS02
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             Inward Faster Payment
+            </td>
+            <td style="text-align: left;">
+             Newly received Inward Faster payment
+            </td>
+            <td style="text-align: left;">
+             ND.BANKLINEDIRECT.PAYMENT:INWARD:PACS08
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             Inward Faster Payment reversal
+            </td>
+            <td style="text-align: left;">
+             Reversal of a previously received inward Faster Payment
+            </td>
+            <td style="text-align: left;">
+             ND.BANKLINEDIRECT.PAYMENT:INWARDREVERSAL:PACS07
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <blockquote>
+          <div>
+           <strong>
+            Sandbox Specific Behaviour :
+           </strong>
+           All sandbox webhook events  are processed in batches every 60 seconds. The maximum wait time for a PSN to be received at the endpoint is 59 seconds.
+           <strong>
+            Note:
+           </strong>
+           Event subscription is a one-time activity in both the Production and Sandbox environments. In the Sandbox environment, users must ensure they subscribe to the correct event types, as the system does not validate for typographical errors or incorrect event names.
+          </div>
+         </blockquote>
+         <h3 id="3-health-check">
+          3. Health Check
+         </h3>
+         <div>
+          <strong>
+           Documentation Reference:
+          </strong>
+          <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#bankline_direct_digital_indirect_access_v1_health__get">
+           Bank of APIs - Health Check
+          </a>
+         </div>
+         <div>
+          <strong>
+           Positive PSN Scenarios (HTTP - 200) covered in Sandbox
+          </strong>
+         </div>
+         <ul>
+          <li>
+           If {applicationId} is not provided in the URL parameter.
+          </li>
+          <li>
+           If one of the valid application Id (MP01/PE01/EIP01) is provided  in {id}.
+          </li>
+         </ul>
+         <div>
+          <strong>
+           Negative PSN Scenarios (HTTP - 200) covered in Sandbox
+          </strong>
+         </div>
+         <ul>
+          <li>
+           HTTP-400: If any value other than valid application Ids (MP01/PE01/EIP01) is provided  in {id}.
+          </li>
+          <li>
+           HTTP-403: If an invalid signed JWT is provided in
+           <code>
+            x-jwt-signature
+           </code>
+           header parameter. Details on signature failure are provided in
+           <strong>
+            sandbox-specific header parameter
+           </strong>
+           in response -
+           <code>
+            x-sandbox-jwt-signature-errMsg
+           </code>
+           .
+          </li>
+         </ul>
+         <blockquote>
+          <div>
+           <strong>
+            Sandbox Specific Behaviour :
+           </strong>
+           <code>
+            x-jwt-signature
+           </code>
+           header parameter is optional even if the sandbox-application is created based on "Transport &amp; signing certificates-Private key JWT" authentication method and may leave it blank. Signature validation would be relaxed if sandbox-application is created via other authentication method.
+          </div>
+         </blockquote>
+         <h3 id="4-make-domestic-payment-receive-psn">
+          4. Make Domestic Payment &amp; Receive PSN
+         </h3>
+         <div>
+          <strong>
+           Documentation Reference:
+          </strong>
+          <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#bankline_direct_digital_indirect_access_v1_payments__post">
+           Bank of APIs - Outbound Payment API specification
+          </a>
+          and
+          <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#outward-payments-pacs-08-json">
+           Sample request payloads
+          </a>
+          .
+         </div>
+         <blockquote>
+          <div>
+           <strong>
+            Summary:
+           </strong>
+           The section highlights on various functional scenarios covered as part of rules configured in sandbox for Make Domestic payment journey.
+          </div>
+          <ul>
+           <li>
+            If User wishes to test payload signature verification, Sandbox performs PACS08-signature verification on the detatched JWS provided in the header parameter
+            <code>
+             x-jws-signature
+            </code>
+            .
+           </li>
+           <li>
+            Rules for negative PSN scenarios are designed either by data of field in payload related to the error or based on preconfigured fractional amount (creditTransferTransactionInformation.interbankSettlementAmount.value).
+           </li>
+           <li>
+            Rules for positive scenarios are configured on the fields in payload.
+           </li>
+          </ul>
+         </blockquote>
+         <div>
+          <strong>
+           How to generate detached JWS
+          </strong>
+          Refer to
+          <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#detached-jws-for-signing-pacs-08-messages">
+           Bank of APIs - Detached JWS for signing PACS08 messages
+          </a>
+          for detailed steps on process to sign PACS08 messages. It is recommended to encode the payload without blank spaces / beautified JSON format.
+         </div>
+         <blockquote>
+          <div>
+           <strong>
+            Sandbox Specific Behaviour :
+           </strong>
+           1. In Production, if Customer wishes to proceed with Signing the PACS08 Payload for Outbound payment, then a different certificate (known as PACS08 signing certificate) would be requested and uploaded as part of onboarding journey. But in case of Sandbox, System utilizes the public certificate &amp; data in the fields
+           <code>
+            Signing Certificate
+           </code>
+           and
+           <code>
+            Signing Certificate Kid
+           </code>
+           during sandbox-application creation to validate the signature provided in detatched JWS. So PACS08 payload signature validation can only be tested when connected with sandbox-application created via "Transport &amp; signing certificates-Private key JWT" authentication method.
+2. In Production, Once the PACS08 signing certificate is configured, System expects the detatched JWS in the header-parameter
+           <code>
+            x-jws-signature
+           </code>
+           . If not provided, System would throw "400" HTTP error with message "Payload Message Signature Verification Failed" error. To relax payload signature verification in the sandbox enviornment, users have the option by omitting the
+           <code>
+            x-jws-signature
+           </code>
+           header parameter in the request.
+          </div>
+         </blockquote>
+         <div>
+          <strong>
+           API Journey
+          </strong>
+         </div>
+         <ol>
+          <li>
+           With PACS08 payload signature verification,
+           <ul>
+            <li>
+             User to provide detatched JWS in the header parameter
+             <code>
+              x-jws-signature
+             </code>
+             and trigger the outward payment endpoint connecting to sandbox-application created via "Transport &amp; signing certificates-Private key JWT" authentication method.
+            </li>
+            <li>
+             System performs Signature validation, If valid signature, then Sandbox proceeds for payload syntax validation, If Invalid Payload signature or data is not sent in the header parameter
+             <code>
+              x-jws-signature
+             </code>
+             , then system would return "403" HTTP response (Digital Signing Token verification failed) error and the details for signature failure are provided in
+             <strong>
+              sandbox-specific response header parameter
+             </strong>
+             <code>
+              x-sandbox-jws-signature-errMsg
+             </code>
+             .
+            </li>
+           </ul>
+          </li>
+          <li>
+           Without PACS08 payload signature verification,
+           <ul>
+            <li>
+             If application is created via "Transport &amp; signing certificates-Private key JWT", User may remove the header parameter
+             <code>
+              x-jws-signature
+             </code>
+             and just send the payload to request.
+            </li>
+            <li>
+             If sandbox-application is created based on "Client ID and Secret" or "Transport and signing certificates - MATLS" authentication method, the signature validation would be relaxed and data in x-jws-signature header parameter will be ignored if provided.
+            </li>
+            <li>
+             Sandbox system proceeds to check syntax verification of request.
+            </li>
+           </ul>
+          </li>
+          <li>
+           If Syntax is valid for all fields, user or customer-application would receive a HTTP 200 successful response with response payload "Message Received". Syntax failures (Refer
+           <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#appendix-b-http-4-xx-response">
+            Bank of APIs - PACS.008.001.07
+           </a>
+           ) would result in
+           <strong>
+            400
+           </strong>
+           HTTP response with error details.
+          </li>
+          <li>
+           Sandbox would then trigger a positive or negative PSN based on the data in payload as per the scenarios preconfigured.
+          </li>
+         </ol>
+         <div>
+          <strong>
+           Positive PSN Scenarios (HTTP - 200) covered in Sandbox
+          </strong>
+         </div>
+         <table>
+          <thead>
+           <tr>
+            <th style="text-align: left;">
+             Sl
+            </th>
+            <th style="text-align: left;">
+             Payment Type
+            </th>
+            <th style="text-align: left;">
+             Expected data in Request payload
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td style="text-align: left;">
+             1
+            </td>
+            <td style="text-align: left;">
+             BG-FPS-Single Immediate Payment
+            </td>
+            <td style="text-align: left;">
+             creditTransferTransactionInformation.paymentTypeInformation.localInstrument.proprietary =10 AND creditTransferTransactionInformation.interbankSettlementDate = today()
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             2
+            </td>
+            <td style="text-align: left;">
+             BG-FPS-Single Immediate Payment (Accept and redirected)
+            </td>
+            <td style="text-align: left;">
+             creditTransferTransactionInformation.paymentTypeInformation.localInstrument.proprietary =10 AND creditTransferTransactionInformation.interbankSettlementDate = today() AND creditTransferTransactionInformation.creditorAccount.identification.other.identification = “40126211111111“ AND creditTransferTransactionInformation.creditorAgent.financialInstitutionIdentification.clearingSystemMemberIdentification.memberIdentification = “401262“
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             3
+            </td>
+            <td style="text-align: left;">
+             BG-FPS- Return Payment
+            </td>
+            <td style="text-align: left;">
+             creditTransferTransactionInformation.paymentTypeInformation.localInstrument.proprietary =20 AND creditTransferTransactionInformation.interbankSettlementDate= today() AND creditTransferTransactionInformation.remittanceInformation.structured.additionalRemittanceInformation
+             <a href="">
+              0
+             </a>
+             ="5813163210278910AB1020200427826160001 " &amp;creditTransferTransactionInformation.remittanceInformation.structured.additionalRemittanceInformation
+             <a href="">
+              1
+             </a>
+             = “00000001“
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             4
+            </td>
+            <td style="text-align: left;">
+             BG-FPS- Return Inward FPOO Payment
+            </td>
+            <td style="text-align: left;">
+             creditTransferTransactionInformation.paymentTypeInformation.localInstrument.proprietary =20 AND creditTransferTransactionInformation.interbankSettlementAmount.value =3.14 AND creditTransferTransactionInformation.creditorAccount.identification.other.identification = 00000000
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             5
+            </td>
+            <td style="text-align: left;">
+             BG-FPS- Standing Order
+            </td>
+            <td style="text-align: left;">
+             creditTransferTransactionInformation.paymentTypeInformation.localInstrument.proprietary =30 AND creditTransferTransactionInformation.interbankSettlementDate= today()
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             6
+            </td>
+            <td style="text-align: left;">
+             BG-FPS- Diarised
+            </td>
+            <td style="text-align: left;">
+             creditTransferTransactionInformation.interbankSettlementDate&gt;today()
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             7
+            </td>
+            <td style="text-align: left;">
+             BG-FPS- Diarised
+            </td>
+            <td style="text-align: left;">
+             creditTransferTransactionInformation.paymentTypeInformation.localInstrument.proprietary =40 AND creditTransferTransactionInformation.interbankSettlementDate= today()
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             8
+            </td>
+            <td style="text-align: left;">
+             BG-CHAPS
+            </td>
+            <td style="text-align: left;">
+             creditTransferTransactionInformation.paymentTypeInformation..serviceLevel.code = "URGP" AND creditTransferTransactionInformation.debtorAgent.financialInstitutionIdentification.bicfi = "BUKBGB22001" AND date &amp; time in groupHeader.creationDateTime are today() and less than 17:30 respectively.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             9
+            </td>
+            <td style="text-align: left;">
+             NBG-CHAPS
+            </td>
+            <td style="text-align: left;">
+             creditTransferTransactionInformation.paymentTypeInformation..serviceLevel.code = "URGP" AND creditTransferTransactionInformation.debtorAgent.financialInstitutionIdentification.bicfi = "NWBKGB2L001" AND date &amp; time in groupHeader.creationDateTime are today() and less than 17:30 respectively.
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <div>
+          <strong>
+           Negative PSN Scenarios (HTTP - 200) covered in Sandbox
+          </strong>
+         </div>
+         <table>
+          <thead>
+           <tr>
+            <th style="text-align: left;">
+             Sl
+            </th>
+            <th style="text-align: left;">
+             Payment Type
+            </th>
+            <th style="text-align: left;">
+             Error Origin
+            </th>
+            <th style="text-align: left;">
+             Scenario Details
+            </th>
+            <th style="text-align: left;">
+             Error Code
+            </th>
+            <th style="text-align: left;">
+             Expected data in Request payload
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td style="text-align: left;">
+             1
+            </td>
+            <td style="text-align: left;">
+             FP
+            </td>
+            <td style="text-align: left;">
+             Receiving FPS Member
+            </td>
+            <td style="text-align: left;">
+             Beneficiary Account Closed
+            </td>
+            <td style="text-align: left;">
+             1160
+            </td>
+            <td style="text-align: left;">
+             interbankSettlementAmount.value = 1.01 OR creditorAccount.identification.other.identification = 99999901
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             2
+            </td>
+            <td style="text-align: left;">
+             FP
+            </td>
+            <td style="text-align: left;">
+             NatWest
+            </td>
+            <td style="text-align: left;">
+             No mandate found for By Order of Account
+            </td>
+            <td style="text-align: left;">
+             GP41
+            </td>
+            <td style="text-align: left;">
+             interbankSettlementAmount.value = 1.02 OR debtorAccount.identification.other.identification = 31238900000001
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             3
+            </td>
+            <td style="text-align: left;">
+             FP
+            </td>
+            <td style="text-align: left;">
+             NatWest
+            </td>
+            <td style="text-align: left;">
+             Rejected for funds failure
+            </td>
+            <td style="text-align: left;">
+             GP40
+            </td>
+            <td style="text-align: left;">
+             interbankSettlementAmount.value = 1.03
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             4
+            </td>
+            <td style="text-align: left;">
+             FP
+            </td>
+            <td style="text-align: left;">
+             NatWest
+            </td>
+            <td style="text-align: left;">
+             Duplicate Payment
+            </td>
+            <td style="text-align: left;">
+             GP22
+            </td>
+            <td style="text-align: left;">
+             interbankSettlementAmount.value = 1.04 OR creditTransferTransactionInformation.paymentIdentification.transactionIdentification = TXID0004DUPLPAYMNT
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             5
+            </td>
+            <td style="text-align: left;">
+             FP-Return
+            </td>
+            <td style="text-align: left;">
+             NatWest
+            </td>
+            <td style="text-align: left;">
+             FPID of original payment must be supplied for a return
+            </td>
+            <td style="text-align: left;">
+             GP79
+            </td>
+            <td style="text-align: left;">
+             interbankSettlementAmount.value = 1.05 OR ( creditTransferTransactionInformation.paymentTypeInformation.localInstrument.proprietary =20 AND creditTransferTransactionInformation.remittanceInformation.structured.additionalRemittanceInformation
+             <a href="">
+              0
+             </a>
+             = "5813163210278910AB1020200427826160005     ")
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             6
+            </td>
+            <td style="text-align: left;">
+             CHAPS
+            </td>
+            <td style="text-align: left;">
+             NatWest
+            </td>
+            <td style="text-align: left;">
+             Received after cut-off time
+            </td>
+            <td style="text-align: left;">
+             R002
+            </td>
+            <td style="text-align: left;">
+             creditTransferTransactionInformation.interbankSettlementAmount.value=1.06 OR ( creditTransferTransactionInformation.paymentTypeInformation..serviceLevel.code = 'URGP'AND creditTransferTransactionInformation.debtorAgent.financialInstitutionIdentification.bicfi = NWBKGB2L AND date &amp; time in groupHeader.creationDateTime are today() &amp; greater than 17:30 respectively)
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             7
+            </td>
+            <td style="text-align: left;">
+             FP
+            </td>
+            <td style="text-align: left;">
+             NatWest
+            </td>
+            <td style="text-align: left;">
+             Payee sort code not valid for Faster Payments
+            </td>
+            <td style="text-align: left;">
+             X001
+            </td>
+            <td style="text-align: left;">
+             interbankSettlementAmount.value = 1.07 OR creditTransferTransactionInformation.creditorAgent.financialInstitutionIdentification.clearingSystemMemberIdentification.memberIdentification =999999
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <blockquote>
+          <div>
+           <strong>
+            Sandbox Specific Behaviour :
+           </strong>
+           In the production system, the time at which the payment is processed is validated for CHAPS payments. However, in the sandbox environment, to assist customers in verifying CHAPS payment during business hours, the cutoff time validation is based on the timestamp provided in groupHeader.creationDateTime. In production, this value will not be used.
+          </div>
+         </blockquote>
+         <div>
+          <strong>
+           Negative HTTP Scenarios (Non-200) covered in Sandbox
+          </strong>
+         </div>
+         <table>
+          <thead>
+           <tr>
+            <th style="text-align: left;">
+             HTTP Response Code
+            </th>
+            <th style="text-align: left;">
+             Error Code
+            </th>
+            <th style="text-align: left;">
+             Error Description
+            </th>
+            <th style="text-align: left;">
+             Expected data in Request payload
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td style="text-align: left;">
+             400
+            </td>
+            <td style="text-align: left;">
+             OPS2002
+            </td>
+            <td style="text-align: left;">
+             Payment validation error-A message with this grpHdr.msgID has already been processed.
+            </td>
+            <td style="text-align: left;">
+             groupHeader.messageIdentification = 899999999299999
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             400
+            </td>
+            <td style="text-align: left;">
+             OPS2003
+            </td>
+            <td style="text-align: left;">
+             Payment validation error-A transaction with this CdtTrfTxInf.PmtId.TxId has already been processed
+            </td>
+            <td style="text-align: left;">
+             creditTransferTransactionInformation.paymentIdentification.transactionIdentification = TXID0019DUPLTXNID
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             400
+            </td>
+            <td style="text-align: left;">
+             OPS2004
+            </td>
+            <td style="text-align: left;">
+             Customer not found/inactive. Please contact Bankline Direct Help desk team for further investigation or "Customer setup issue, Please contact help desk team"
+            </td>
+            <td style="text-align: left;">
+             creditTransferTransactionInformation.debtorAgentAccount.identification.other.identification = 16040099999999
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             403
+            </td>
+            <td style="text-align: left;">
+             OES2002
+            </td>
+            <td style="text-align: left;">
+             Payload Message Signature Verification Failed
+            </td>
+            <td style="text-align: left;">
+             Invalid Payload signature in
+             <code>
+              x-jws-signature
+             </code>
+             for an application created based on 'Transport &amp; Signing Certificate-Private Key JWT'.
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <h3 id="5-enquire-payment-status">
+          5. Enquire Payment Status
+         </h3>
+         <div>
+          <strong>
+           Documentation Reference:
+          </strong>
+          <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#bankline_direct_digital_indirect_access_v1_payment_status_transactionId___get">
+           Bank of APIs - Enquire Payment Status
+          </a>
+         </div>
+         <blockquote>
+          <div>
+           <strong>
+            Sandbox Specific Behaviour :
+           </strong>
+           In the production system, value of Transaction identifier/id from previously submitted outbound payment (creditTransferTransactionInformation.paymentIdentification.transactionIdentification) would be sent  in the URL parameter. However, due to limitations in the sandbox environment, Status would be responded only for the pre-configured transaction identifiers (below mentioned).
+          </div>
+         </blockquote>
+         <div>
+          <strong>
+           Positive HTTP ( 200) covered in Sandbox
+          </strong>
+         </div>
+         <table>
+          <thead>
+           <tr>
+            <th style="text-align: left;">
+             Sl
+            </th>
+            <th style="text-align: left;">
+             Transaction identifier in URL parameter
+            </th>
+            <th style="text-align: left;">
+             Response status code &amp; Scenario Details
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td style="text-align: left;">
+             1
+            </td>
+            <td style="text-align: left;">
+             TXID00001FPSIPACCP
+            </td>
+            <td style="text-align: left;">
+             0000 - Accept.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             2
+            </td>
+            <td style="text-align: left;">
+             TXID0001BENEFACCLS
+            </td>
+            <td style="text-align: left;">
+             1160 - Beneficiary Account closed.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             3
+            </td>
+            <td style="text-align: left;">
+             TXID0002ACMNDNTFND
+            </td>
+            <td style="text-align: left;">
+             GP41 - No mandate found for By Order of Account.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             4
+            </td>
+            <td style="text-align: left;">
+             TXID0003FNDFAILURE
+            </td>
+            <td style="text-align: left;">
+             GP40 - Rejected for funds failure.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             5
+            </td>
+            <td style="text-align: left;">
+             TXID0004DUPLPAYMNT
+            </td>
+            <td style="text-align: left;">
+             GP22 - Duplicate payment
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             6
+            </td>
+            <td style="text-align: left;">
+             TXID0005INVLFPIDN
+            </td>
+            <td style="text-align: left;">
+             GP79 - FPID of original payment must be supplied for a return.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             7
+            </td>
+            <td style="text-align: left;">
+             TXID0006EXCEDCUTOF
+            </td>
+            <td style="text-align: left;">
+             R002 - Received after cut-off for payment type.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             8
+            </td>
+            <td style="text-align: left;">
+             TXID0007INVLSORTCD
+            </td>
+            <td style="text-align: left;">
+             X001 - Payee sort code not valid for Faster Payments
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <div>
+          <strong>
+           Negative HTTP (400) covered in Sandbox
+          </strong>
+         </div>
+         <table>
+          <thead>
+           <tr>
+            <th style="text-align: left;">
+             Sl
+            </th>
+            <th style="text-align: left;">
+             Transaction identifier in URL parameter
+            </th>
+            <th style="text-align: left;">
+             Error message / Scenario Details
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td style="text-align: left;">
+             1
+            </td>
+            <td style="text-align: left;">
+             TXID00001STATNTFND
+            </td>
+            <td style="text-align: left;">
+             Payment with the given transaction id was received but the status is unavailable. Please Contact Help Desk Team.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             2
+            </td>
+            <td style="text-align: left;">
+             {
+             <em>
+              Any other transaction ID
+             </em>
+             }
+            </td>
+            <td style="text-align: left;">
+             Payment with the given transaction id doesn't exist. Please check the transaction id provided.
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <h3 id="6-sandbox-specific-endpoint-trigger-receive-faster-payment">
+          6. Sandbox Specific Endpoint - Trigger Receive Faster Payment
+         </h3>
+         <blockquote>
+          <div>
+           <strong>
+            Sandbox Specific Behaviour :
+           </strong>
+           "Trigger Receive Faster Payment" is a sandbox specific endpoint to enable customers to request test inward payment and reversals to be posted to configured webhook endpoints. In Production, Inward payment webhooks are posted as and when payments are received by NatWest.
+           <strong>
+            The endpoint, sample request payload, validations and request API specification/ mapper provided  in later sections are specific to sandbox environment only
+           </strong>
+           .
+          </div>
+         </blockquote>
+         <div>
+          <strong>
+           Documentation Reference:
+          </strong>
+          <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#your_registered_web_hook_address_for_receiving_inbound_payments__post">
+           Bank of APIs - Receive Faster Payment API specification
+          </a>
+          and
+          <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#inward-faster-payment-pacs-08-json">
+           Sample payloads received as part of webhook
+          </a>
+          .
+         </div>
+         <blockquote>
+          <div>
+           <strong>
+            Sandbox Journey
+           </strong>
+           , Once the Receive inbound payment request is submitted, Sandbox performs maximum length validation on sort code &amp; account number fields, If Valid, user or customer-application would receive a HTTP 200 successful response with response payload "Message Received". Sandbox would then trigger a webhook event based on the data in payload as per the scenarios preconfigured.
+          </div>
+         </blockquote>
+         <div>
+          <strong>
+           Sample API Request Payload
+          </strong>
+         </div>
+         <pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+   <span class="token property">"fasterPaymentSubType"</span><span class="token operator">:</span> <span class="token string">"10"</span><span class="token punctuation">,</span>
+   <span class="token property">"testType"</span><span class="token operator">:</span><span class="token string">"IP"</span><span class="token punctuation">,</span>
+   <span class="token property">"amount"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+   <span class="token property">"ipDate"</span><span class="token operator">:</span> <span class="token string">"2025-03-17"</span><span class="token punctuation">,</span>
+   <span class="token property">"creditorsortcode"</span><span class="token operator">:</span> <span class="token string">"600811"</span><span class="token punctuation">,</span>
+   <span class="token property">"creditoraccount"</span><span class="token operator">:</span> <span class="token string">"51525615"</span><span class="token punctuation">,</span>
+   <span class="token property">"creditoraccountname"</span><span class="token operator">:</span> <span class="token string">"John Tarry"</span><span class="token punctuation">,</span>
+   <span class="token property">"debtorsortcode_bic"</span><span class="token operator">:</span> <span class="token string">"123456"</span><span class="token punctuation">,</span>
+   <span class="token property">"debtoraccount"</span><span class="token operator">:</span> <span class="token string">"12345678"</span><span class="token punctuation">,</span>
+   <span class="token property">"sendingFPSinstitution"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+   <span class="token property">"returnPaymentFpID"</span><span class="token operator">:</span> <span class="token string">"123456789012345678901234567     "</span><span class="token punctuation">,</span>
+   <span class="token property">"returnReason"</span><span class="token operator">:</span><span class="token string">"00000014"</span><span class="token punctuation">,</span>
+   <span class="token property">"fp_rejectioncd_schreturns"</span><span class="token operator">:</span><span class="token string">"1100"</span><span class="token punctuation">,</span>
+   <span class="token property">"postedAfterNWAccCutoff"</span><span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span></code></pre>
+         <div>
+          <strong>
+           Request Payload API Specification
+          </strong>
+         </div>
+         <table>
+          <thead>
+           <tr>
+            <th style="text-align: left;">
+             Field
+            </th>
+            <th style="text-align: left;">
+             Data Type
+            </th>
+            <th style="text-align: left;">
+             Maximum Length
+            </th>
+            <th style="text-align: left;">
+             Allowed Values
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td style="text-align: left;">
+             fasterPaymentSubType
+            </td>
+            <td style="text-align: left;">
+             String
+            </td>
+            <td style="text-align: left;">
+             2
+            </td>
+            <td style="text-align: left;">
+             10,20,25,30,40,50
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             testType
+            </td>
+            <td style="text-align: left;">
+             String
+            </td>
+            <td style="text-align: left;">
+             10
+            </td>
+            <td style="text-align: left;">
+             IP, FPOO, RVSL, DUPL, REGR_PCK
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             amount
+            </td>
+            <td style="text-align: left;">
+             Number
+            </td>
+            <td style="text-align: left;">
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             ipDate
+            </td>
+            <td style="text-align: left;">
+             String
+            </td>
+            <td style="text-align: left;">
+            </td>
+            <td style="text-align: left;">
+             Date should be in "ccyy-mm-dd" format
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             creditorsortcode
+            </td>
+            <td style="text-align: left;">
+             String
+            </td>
+            <td style="text-align: left;">
+             6
+            </td>
+            <td style="text-align: left;">
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             creditoraccount
+            </td>
+            <td style="text-align: left;">
+             String
+            </td>
+            <td style="text-align: left;">
+             8
+            </td>
+            <td style="text-align: left;">
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             debtorsortcode_bic
+            </td>
+            <td style="text-align: left;">
+             String
+            </td>
+            <td style="text-align: left;">
+             8 or 34 based on testType
+            </td>
+            <td style="text-align: left;">
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             sendingFPSinstitution
+            </td>
+            <td style="text-align: left;">
+             String
+            </td>
+            <td style="text-align: left;">
+             6
+            </td>
+            <td style="text-align: left;">
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             returnPaymentFpID
+            </td>
+            <td style="text-align: left;">
+             String
+            </td>
+            <td style="text-align: left;">
+             42
+            </td>
+            <td style="text-align: left;">
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             returnReason
+            </td>
+            <td style="text-align: left;">
+             String
+            </td>
+            <td style="text-align: left;">
+             8
+            </td>
+            <td style="text-align: left;">
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             fp_rejectioncd_schreturns
+            </td>
+            <td style="text-align: left;">
+             String
+            </td>
+            <td style="text-align: left;">
+             4
+            </td>
+            <td style="text-align: left;">
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             postedAfterNWAccCutoff
+            </td>
+            <td style="text-align: left;">
+             Boolean
+            </td>
+            <td style="text-align: left;">
+            </td>
+            <td style="text-align: left;">
+             true, false
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <ol>
+          <li>
+           Details on fasterPaymentSubType field,
+           <ul>
+            <li>
+             This field is used to define the type of inward faster payment subtype. If not provided, system will consider the default value "10".
+            </li>
+            <li>
+             Description of the allowed values
+             <ul>
+              <li>
+               "
+               <strong>
+                10
+               </strong>
+               " refers to "
+               <strong>
+                Single Immediate Payment
+               </strong>
+               " transaction
+              </li>
+              <li>
+               "
+               <strong>
+                20
+               </strong>
+               " refers to "
+               <strong>
+                Return payment Payment
+               </strong>
+               "
+              </li>
+              <li>
+               "
+               <strong>
+                25
+               </strong>
+               " refers to "
+               <strong>
+                Scheme Return Payment
+               </strong>
+               "
+              </li>
+              <li>
+               "
+               <strong>
+                30
+               </strong>
+               " refers to "
+               <strong>
+                Standing Order Payment
+               </strong>
+               "
+              </li>
+              <li>
+               "
+               <strong>
+                40
+               </strong>
+               " refers to "
+               <strong>
+                Forward Dated Payment
+               </strong>
+               "
+              </li>
+              <li>
+               "
+               <strong>
+                50
+               </strong>
+               " refers to "
+               <strong>
+                Corporate Bulk Payment
+               </strong>
+               "
+              </li>
+             </ul>
+            </li>
+            <li>
+             Response Mapper if Inward Payment webhook is triggered  : financialInstitutionToFinancialInstitutionCustomerCreditTransfer.creditTransferTransactionInformation.paymentTypeInformation.localInstrument.proprietary
+            </li>
+           </ul>
+          </li>
+          <li>
+           <div>
+            Details on testType field,
+           </div>
+           <ul>
+            <li>
+             This field is used to define the type of inward payment test case to be triggered to, if not provided, system will consider the default value "IP".
+            </li>
+            <li>
+             Description of the allowed values,
+             <ul>
+              <li>
+               "
+               <strong>
+                IP
+               </strong>
+               ", stands for Inward Payment,
+              </li>
+              <li>
+               "
+               <strong>
+                FPOO
+               </strong>
+               " stands for Faster payment Originating Overseas
+              </li>
+              <li>
+               "
+               <strong>
+                DUPL
+               </strong>
+               " test case to trigger three inward payment webhooks with all requests of same transaction ID and two with same messageIdentifier &amp; another with change in last digit of messageidentifier. In this case- customers are expected to process the first inward payment and ignore the  other two since the fp-id
+              </li>
+              <li>
+               "
+               <strong>
+                RVSL
+               </strong>
+               " to trigger an inward payment webhook and reversal webhook of the same inward payment.
+              </li>
+              <li>
+               "
+               <strong>
+                REGR_PCK
+               </strong>
+               " to trigger webhooks for all the mentioned test cases of inward payment(all six payment subtypes, FPOO of subtype SIP, Duplicate requests of subtype SIP and Reversal)
+              </li>
+              <li>
+               "
+               <strong>
+                FPOORVSL
+               </strong>
+               " to trigger an inward FPOO payment webhook and reversal webhook of the same inward payment.
+              </li>
+             </ul>
+            </li>
+           </ul>
+          </li>
+          <li>
+           Details on amount field,
+           <ul>
+            <li>
+             This field is used to  provide the amount in GBP. If not provided, system will consider the default value "15".
+            </li>
+            <li>
+             Response Mapper if Inward Payment webhook is triggered  : financialInstitutionToFinancialInstitutionCustomerCreditTransfer.creditTransferTransactionInformation.interbankSettlementAmount.value
+            </li>
+           </ul>
+          </li>
+          <li>
+           Details on ipDate field,
+           <ul>
+            <li>
+             Field refers to the inward payment date. System accepts any date for user convenience. If not provided, system will consider the default value of System or Current Date.
+            </li>
+            <li>
+             Response Mapper if Inward Payment webhook is triggered : financialInstitutionToFinancialInstitutionCustomerCreditTransfer.creditTransferTransactionInformation.interbankSettlementDate and financialInstitutionToFinancialInstitutionCustomerCreditTransfer.creditTransferTransactionInformation.acceptanceDateTime
+            </li>
+           </ul>
+          </li>
+          <li>
+           Details on creditorsortcode field,
+           <ul>
+            <li>
+             The field specifies the sort code of receiving bank.If not provided, system will consider the default value "600811".
+            </li>
+            <li>
+             Response Mapper if Inward Payment webhook is triggered : financialInstitutionToFinancialInstitutionCustomerCreditTransfer.creditTransferTransactionInformation.creditorAgent.memberIdentification and first 6-digits of creditorAccount.identification.other.identification
+            </li>
+            <li>
+             Response Mapper if Reversal of Inward payment webhook is triggered: financialInstitutionToFinancialInstitutionCustomerCreditTransfer.transactionInformation.debtorAgent.financialInstitutionIdentification.clearingSystemMemberIdentification.memberIdentification
+            </li>
+           </ul>
+          </li>
+          <li>
+           Details on creditoraccount field,
+           <ul>
+            <li>
+             The field specifies the 8-digit creditor account where funds are being received. If not provided, system will consider the default value "51525615".
+            </li>
+            <li>
+             Response Mapper if Inward Payment webhook is triggered  : last 8-digits of creditorAccount.identification.other.identification
+            </li>
+           </ul>
+          </li>
+          <li>
+           Details on creditoraccountname field,
+           <ul>
+            <li>
+             The field specifies the creditor account name to whom the funds are being received. If not provided, system will consider the default value "John Tarry".
+            </li>
+            <li>
+             Response Mapper if Inward Payment webhook is triggered : creditorAccount.name
+            </li>
+           </ul>
+          </li>
+          <li>
+           Details on debtorsortcode_bic field,
+           <ul>
+            <li>
+             The field specifies the debtor account sort code in case of non-FPOO test Type or debtor account BIC code if FPOO subtype. If not provided, system will consider the default value "167890" for "IP"/ "RVSL" / "DUPL" test Types and "BXYZABCD112" if test type is "FPOO".
+            </li>
+            <li>
+             Response Mapper if Inward Payment webhook is triggered : debtorAgent.memberIdentification and groupHeader.instructingAgent.memberIdentification for  "IP"/ "RVSL" / "DUPL".
+            </li>
+           </ul>
+          </li>
+          <li>
+           Details on debtoraccount field,
+           <ul>
+            <li>
+             The field specifies the 8-digit debtor account number in case of Non-FPOO &amp; Iban number in case of FPOO test type, system will consider the default value "98765432" for "IP"/ "RVSL" / "DUPL" test Types and "BE71096123456768" if test type is "FPOO".
+            </li>
+            <li>
+             Response Mapper if Inward Payment webhook is triggered : debtorAccount.identification.other.identification for  "IP"/ "RVSL" / "DUPL".
+            </li>
+           </ul>
+          </li>
+          <li>
+           Details on sendingFPSinstitution field,
+           <ul>
+            <li>
+             The field will be considered only if the test Type is FPOO and takes the 8-digit UK bank - debtor sort code. If not provided, system will consider the default value "123456".
+            </li>
+            <li>
+             Response Mapper if Inward Payment webhook is triggered : groupHeader.instructingAgent.memberIdentification for "FPOO" test type.
+            </li>
+           </ul>
+          </li>
+          <li>
+           Details on returnPaymentFpID field,
+           <ul>
+            <li>
+             Field data will be considered only if the fasterPaymentSubType is Return (20) or Scheme Return (25), If not provided, system will consider a default value "5813163210278910AB1020250228826160001     ".
+            </li>
+            <li>
+             Response Mapper if Inward Payment webhook is triggered: 
+creditTransferTransactionInformation.remittanceInformation.structured.additionalRemittanceInformation
+             <a href="">
+              3
+             </a>
+             .
+            </li>
+           </ul>
+          </li>
+          <li>
+           Details on returnReason field,
+           <ul>
+            <li>
+             Field data will be considered only if the fasterPaymentSubType is Return (20), If not provided, system will consider a default value "00000014".
+            </li>
+            <li>
+             Response Mapper if Inward Payment webhook is triggered: 
+creditTransferTransactionInformation.remittanceInformation.structured.additionalRemittanceInformation
+             <a href="">
+              2
+             </a>
+             .
+            </li>
+           </ul>
+          </li>
+          <li>
+           Details on fp_rejectioncd_schreturns field,
+           <ul>
+            <li>
+             Field data will be considered only if the fasterPaymentSubType is Scheme Return (25), If not provided, system will consider a default value "1100".
+            </li>
+            <li>
+             Response Mapper if Inward Payment webhook is triggered: 
+creditTransferTransactionInformation.remittanceInformation.structured.additionalRemittanceInformation
+             <a href="">
+              2
+             </a>
+             .
+            </li>
+           </ul>
+          </li>
+          <li>
+           Details on postedAfterNWAccCutoff field,
+           <em>
+            This field to be specified as true to simulate if the request is made after the NatWest Accounting cut off time (18:30), In this case While all the dates corespond to ipDate provided, the account posting date would be next day of ipDate. Default value if not provided is false.
+           </em>
+           Response Mapper if Inward Payment webhook is triggered: 
+      Account posting date in creditTransferTransactionInformation.remittanceInformation.structured.additionalRemittanceInformation.
+          </li>
+         </ol>
+         <h3 id="7-enquire-inward-faster-payment">
+          7. Enquire Inward Faster Payment
+         </h3>
+         <div>
+          <strong>
+           Documentation Reference:
+          </strong>
+          <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#bankline_direct_digital_indirect_access_v1_inward_payment_fpid_identifier___get">
+           Bank of APIs - Enquire Inward Payment Status
+          </a>
+         </div>
+         <blockquote>
+          <div>
+           <strong>
+            Sandbox Specific Behaviour :
+           </strong>
+           In the production system, value of faster payment identifier would be retrieved from the end of day statement and would be sent  in the header parameter. However, due to limitations in the sandbox environment, Status would be responded only for the pre-configured faster payment transaction identifiers (below mentioned).
+          </div>
+         </blockquote>
+         <div>
+          <strong>
+           Scenarioes covered in Sandbox
+          </strong>
+         </div>
+         <table>
+          <thead>
+           <tr>
+            <th style="text-align: left;">
+             Sl
+            </th>
+            <th style="text-align: left;">
+             Transaction identifier in header parameter (fpid)
+            </th>
+            <th style="text-align: left;">
+             HTTP response code
+            </th>
+            <th style="text-align: left;">
+             Status of IP Scenario
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td style="text-align: left;">
+             1
+            </td>
+            <td style="text-align: left;">
+             NW5566778899333AB1020220427826089250
+            </td>
+            <td style="text-align: left;">
+             200- Success
+            </td>
+            <td style="text-align: left;">
+             Inward payment of subtype 10 (SIP).
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             2
+            </td>
+            <td style="text-align: left;">
+             NW5566778899444AB1020220427826089250
+            </td>
+            <td style="text-align: left;">
+             200- Success
+            </td>
+            <td style="text-align: left;">
+             Inward payment of type FPOO.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             3
+            </td>
+            <td style="text-align: left;">
+             JWRSTF0MBMQUT4PYYN1020250311826123456
+            </td>
+            <td style="text-align: left;">
+             200- Success
+            </td>
+            <td style="text-align: left;">
+             Inward Payment of subtype 10 (SIP) &amp; Reversal of same inward payment.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             4
+            </td>
+            <td style="text-align: left;">
+             {
+             <em>
+              Any other fpid value
+             </em>
+             }
+            </td>
+            <td style="text-align: left;">
+             400 - Failure
+            </td>
+            <td style="text-align: left;">
+             Inward payment for the supplied FPID {
+             <em>
+              Provided_fp_id
+             </em>
+             } not found. Please contact Helpdesk team.
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <h3 id="8-webhook-events-system-retry-and-resend-endpoint">
+          8. Webhook-events system-retry and resend endpoint
+         </h3>
+         <div>
+          <strong>
+           Documentation Reference:
+          </strong>
+          <a href="https://www.bankofapis.com/products/bankline-direct/indirect-access-payments/documentation/nwb/2.0#event_subscriptions_v3_1_events_resend__post">
+           Bank of APIs - Events resend
+          </a>
+         </div>
+         <ul>
+          <li>
+           For a dispatched webhook, all non-2xx HTTP codes, will be treated as a failure of hook receipt and sandbox will retry the same message, with backoff, over a period of ~4.5 hours: exponentially starting 2min, 4min, 8min, 16min, 32min, 64min and 128 min.
+          </li>
+          <li>
+           Sandbox offers resend endpoint which lets users to manually trigger receiving the outstanding webhooks which were previously responded with negative http codes (non-200). If responded with non-200 response, retry timer resets and starts exponentially at 2nd min, 4th min, 8th min..exponentially latest webhook.
+          </li>
+         </ul>
+         <h2 id="glossary">
+          Glossary
+         </h2>
+         <table>
+          <thead>
+           <tr>
+            <th style="text-align: left;">
+             Sl
+            </th>
+            <th style="text-align: left;">
+             Term
+            </th>
+            <th style="text-align: left;">
+             Details
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td style="text-align: left;">
+             1
+            </td>
+            <td style="text-align: left;">
+             {id}
+            </td>
+            <td style="text-align: left;">
+             Unique identifier specific to the API.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             2
+            </td>
+            <td style="text-align: left;">
+             BG
+            </td>
+            <td style="text-align: left;">
+             Bank grade where Remitter is an account holder at your institution.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             3
+            </td>
+            <td style="text-align: left;">
+             CHAPS
+            </td>
+            <td style="text-align: left;">
+             Clearing House Automated Payment System (Payment Scheme).
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             4
+            </td>
+            <td style="text-align: left;">
+             Customer-application
+            </td>
+            <td style="text-align: left;">
+             Customer's financial system /application that would connect to bankline direct digital-Indirect access and payments module in production.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             5
+            </td>
+            <td style="text-align: left;">
+             FPS
+            </td>
+            <td style="text-align: left;">
+             Faster Payments System (Payment Scheme).
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             6
+            </td>
+            <td style="text-align: left;">
+             NBG
+            </td>
+            <td style="text-align: left;">
+             Non-bank grade where your institution is the remitter.
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             7
+            </td>
+            <td style="text-align: left;">
+             PSN
+            </td>
+            <td style="text-align: left;">
+             Payment Status Notification (Webhook with status for triggered Outbound payment in PACS.002.001.09 JSON format).
+            </td>
+           </tr>
+           <tr>
+            <td style="text-align: left;">
+             8
+            </td>
+            <td style="text-align: left;">
+             Sandbox-application
+            </td>
+            <td style="text-align: left;">
+             Application(s) created inside "Applications" section.
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer>
+     <div class="container">
+      <div class="row">
+       <div class="column">
+        <h6>
+         Account
+        </h6>
+        <nav>
+         <a href="/dashboard">
+          Dashboard
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Developer Tools
+        </h6>
+        <nav>
+         <a aria-current="page" class="active" href="/api-catalog">
+          API Catalogue
+         </a>
+         <a href="/documentation">
+          Documentation
+         </a>
+         <a href="https://natwest-bankofapi-servicemanagement.atlassian.net/servicedesk/customer/portals" target="_blank">
+          Service Desk
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Company
+        </h6>
+        <nav>
+         <a href="/terms">
+          Terms &amp; Conditions
+         </a>
+         <a href="/privacy-policy">
+          Privacy Policy
+         </a>
+        </nav>
+       </div>
+       <div class="col-sm">
+       </div>
+      </div>
+     </div>
+    </footer>
+    <button class="scrolltop-button">
+    </button>
+    <div class="powered-by">
+     Powered by
+     <em>
+      Oolys
+     </em>
+    </div>
+   </div>
+   <div id="side-panel">
+   </div>
+   <div class="modal fade out session-popup" id="">
+    <div class="modal-dialog">
+     <div class="modal-header">
+      <h6>
+       Your session is about to expire
+      </h6>
+     </div>
+     <div class="modal-body">
+      <span class="expiration-warning">
+       You will be automatically logged out in
+       <em>
+        59
+       </em>
+       seconds.
+       <br/>
+       Do you want to extend your session?
+      </span>
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-primary" type="button">
+       Continue
+      </button>
+      <button class="btn btn-default" type="button">
+       Logout
+      </button>
+     </div>
+    </div>
+   </div>
+  </main>
+  <script>
+   var loadHasBeenTriggered = false;
+      window.onUsersnapCXLoad = function(api) {
+        api.init({
+            user: {
+              userId: infoUsername,
+              email: infoEmail
+            },
+            custom: {
+                userId: infoUsername,
+                brand : infoBrand,
+                env : infoEnv
+            }
+          });
+      }
+      window.loadUserFeedbackWidget = function() {
+        if ( (!loadHasBeenTriggered) && infoUsername && infoBrand) {
+            loadHasBeenTriggered = true;
+            var script = document.createElement('script');
+            script.defer = 1;
+            script.src = 'https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad';
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      }
+  </script>
+  <script src="/febc265fb2cc455e1b85.js">
+  </script>
+  <script src="/7dbd7cfa6c7cb6d881a7.js">
+  </script>
+  <script src="/1a5f01ff47d07a377494.js">
+  </script>
+  <script src="/2daa0d06a67874f682c5.js">
+  </script>
+  <script src="/c617fa727da6d416f6a5.js">
+  </script>
+  <script src="/07424fde184376e24dea.js">
+  </script>
+  <script src="/ee4e265cb3dc3d500780.js">
+  </script>
+  <script src="/04a6b9711f1d30cdc1a2.js">
+  </script>
+  <script src="/03632d2692dbb192bc9c.js">
+  </script>
+  <script src="/991cb5d14add34ec9369.js">
+  </script>
+  <script src="/cd81143e09bd4a3ddd06.js">
+  </script>
+  <script src="/ad40893dba0f0cc010ca.js">
+  </script>
+  <script src="/86e32b4ca44cc47a79a5.js">
+  </script>
+  <script src="/e4687322f7bb906a2df7.js">
+  </script>
+  <script src="/27eb4f97929598ad3286.js">
+  </script>
+  <script src="/27861e3fa2db86dca27a.js">
+  </script>
+  <script src="/447e8d2fec5adde36e43.js">
+  </script>
+  <script src="/9f29fe08232107e5b5a2.js">
+  </script>
+  <script src="/9d72a8e94d97ca62f07e.js">
+  </script>
+  <script src="/1e1d6def47d88d1b6578.js">
+  </script>
+  <script src="/20d2c1b54999365fe1c3.js">
+  </script>
+  <script src="/d17eb693468fac87de9d.js">
+  </script>
+  <script src="/ace96842f9fdef10da09.js">
+  </script>
+  <script src="/e10dbcadb20790400bd2.js">
+  </script>
+  <script src="/ec5fb73bff01905d82cd.js">
+  </script>
+  <!--uspssb-->
+  <iframe name="us-entrypoint-globalSetup" style="display: none; height: 0px; width: 0px; z-index: 2147483647; color-scheme: normal;" title="Usersnap Feedback">
+  </iframe>
+  <!--uspsse-->
+  <us-button style="user-select: all;">
+  </us-button>
+ </body>
+</html>
+
+
+<!-- Iframe 1 Content -->
+<html>
+ <head>
+  <title>
+   Usersnap Feedback
+  </title>
+  <script>
+   <br>  window.nonce = "";<br>  window.publicPath = "https://resources.usersnap.com/";<br>
+  </script>
+  <script src="https://resources.usersnap.com/widget-assets/js/entries/globalSetup/b263c0f1171ea4606316.js">
+  </script>
+  <style>
+   html, body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+  </style>
+ </head>
+ <body>
+  <div>
+  </div>
+ </body>
+</html>

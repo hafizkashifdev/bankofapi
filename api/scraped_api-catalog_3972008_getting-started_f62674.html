@@ -1,0 +1,1579 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   NatWest – Developer Portal – Open Banking Sandbox
+  </title>
+  <meta content="index, follow" name="robots"/>
+  <meta content="Thanks to the comprehensive step-by-step documentation of our Sandbox Developer Portal, you can consume Open Banking APIs in less than 5 minutes." name="description"/>
+  <script>
+   var iVersion="2.6.6-build-108-03c3b2a";
+  </script>
+  <script>
+   var infoEnv;
+  </script>
+  <script>
+   var infoBrand;
+  </script>
+  <script>
+   var infoUsername;
+  </script>
+  <script>
+   var infoEmail;
+  </script>
+  <link href="/natwest-icon.png" rel="icon"/>
+  <link href="/febc265fb2cc455e1b85.css" rel="stylesheet"/>
+  <link href="/ec5fb73bff01905d82cd.css" rel="stylesheet"/>
+  <script defer="" src="https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body>
+  <main id="app">
+   <div id="page">
+    <div class="notification">
+     <button type="button">
+      <span class="icon refuse-icon">
+      </span>
+     </button>
+     <p>
+      We have performed a brief maintenance operation this Thursday evening. During that time, some users may have experienced difficulties logging in and certain API endpoints may have been unavailable. Thank you for your patience and understanding.
+     </p>
+    </div>
+    <div class="cookienotification notification fixed">
+     <div>
+      We use cookies and similar technologies on our websites and mobile applications to help provide you with the best online experience.
+      <br/>
+      By using our sites and apps, you agree that we may store and access cookies and similar technologies on your device.
+      <br/>
+      You can
+      <a href="/api-catalog/3972008/privacy-policy">
+       <u>
+        find out more and set your preferences here
+       </u>
+      </a>
+      .
+     </div>
+     <br/>
+     <a class="btn btn-small btn-primary">
+      I accept
+     </a>
+    </div>
+    <header>
+     <nav class="navbar inverted">
+      <div class="container">
+       <div class="navbar-container">
+        <div class="menubar">
+         <a href="/">
+          <span class="logo">
+          </span>
+         </a>
+         <button class="menu-toggle" type="button">
+          <span class="icon menu-icon">
+          </span>
+          Menu
+         </button>
+        </div>
+        <div class="menu closed">
+         <ul>
+          <li>
+           <a href="/dashboard" scope="secure">
+            Dashboard
+           </a>
+          </li>
+          <li>
+           <a aria-current="page" class="active" href="/api-catalog" scope="all">
+            API Catalogue
+           </a>
+          </li>
+          <li>
+           <a href="/help" scope="all">
+            Help
+           </a>
+          </li>
+         </ul>
+         <div class="menu-right">
+          <div class="user-menu">
+           <a class="user">
+            <span class="icon user-icon">
+            </span>
+            Azam
+           </a>
+           <ul class="menu-links">
+            <li>
+             <a href="#">
+              My Profile
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              About
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              Logout
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="modal fade out" id="">
+           <div class="modal-dialog">
+            <button class="close-button" type="button">
+             <span class="icon close-icon">
+             </span>
+            </button>
+            <div class="modal-header">
+             <h6>
+              API Banking Accelerator
+             </h6>
+            </div>
+            <div class="modal-body">
+             <div class="about">
+              Oolys is a comprehensive multi-bank API Banking Sandbox.
+              <dl>
+               <dt>
+                Version
+               </dt>
+               <dd>
+                2.6.6-build-108-03c3b2a
+               </dd>
+              </dl>
+             </div>
+            </div>
+            <div class="modal-footer">
+             <small>
+              Copyright 2018-2021 UseInfinite
+             </small>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </nav>
+    </header>
+    <div class="page-content">
+     <div class="data-provider">
+      <div class="mdContent">
+       <div class="docpane">
+        <div class="toc">
+         <div class="return-link">
+          <a aria-current="page" class="active" href="/api-catalog">
+           <span class="icon arrow-back">
+           </span>
+           Back
+          </a>
+         </div>
+         <div>
+          <ul>
+           <li>
+            <a class="h1" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/getting-started-direct-access-account-transaction-v31" id="#getting-started-direct-access-account-transaction-v31">
+             Getting Started - Direct Access - Account &amp; Transaction - v3.1
+            </a>
+            <ul>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/pre-requisites" id="#pre-requisites">
+               Pre-requisites
+              </a>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/key-sandbox-endpoints" id="#key-sandbox-endpoints">
+               Key Sandbox endpoints
+              </a>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/testing-in-sandbox" id="#testing-in-sandbox">
+               Testing in Sandbox
+              </a>
+              <ul>
+               <li>
+                <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/1-setup-account-access-consent" id="#1-setup-account-access-consent">
+                 1. Setup account access consent
+                </a>
+                <ul>
+                 <li>
+                  <a class="h5" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/retrieve-access-token" id="#retrieve-access-token">
+                   Retrieve access token
+                  </a>
+                 </li>
+                 <li>
+                  <a class="h5" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/submit-account-access-consent" id="#submit-account-access-consent">
+                   Submit account access consent
+                  </a>
+                 </li>
+                </ul>
+               </li>
+               <li>
+                <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/2-authorize-consent" id="#2-authorize-consent">
+                 2. Authorize consent
+                </a>
+                <ul>
+                 <li>
+                  <a class="h5" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/construct-authorization-request-url" id="#construct-authorization-request-url">
+                   Construct authorization request url
+                  </a>
+                  <ul>
+                   <li>
+                    <a class="h6" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/reduced-security-mode" id="#reduced-security-mode">
+                     "Reduced security" mode
+                    </a>
+                   </li>
+                   <li>
+                    <a class="h6" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/standard-mode" id="#standard-mode">
+                     Standard mode
+                    </a>
+                   </li>
+                  </ul>
+                 </li>
+                 <li>
+                  <a class="h5" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/make-user-approve-it" id="#make-user-approve-it">
+                   Make user approve it
+                  </a>
+                  <ul>
+                   <li>
+                    <a class="h6" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/redirect-the-user-to-use-the-ui-flow" id="#redirect-the-user-to-use-the-ui-flow">
+                     Redirect the user to use the UI flow
+                    </a>
+                   </li>
+                   <li>
+                    <a class="h6" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/programmatically-authorize" id="#programmatically-authorize">
+                     Programmatically authorize
+                    </a>
+                   </li>
+                  </ul>
+                 </li>
+                 <li>
+                  <a class="h5" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/exchange-code-for-access-token" id="#exchange-code-for-access-token">
+                   Exchange code for access token
+                  </a>
+                 </li>
+                </ul>
+               </li>
+               <li>
+                <a class="h4" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/3-request-data" id="#3-request-data">
+                 3. Request data
+                </a>
+               </li>
+              </ul>
+             </li>
+             <li>
+              <a class="h2" href="https://developer.sandbox.natwest.com/api-catalog/3972008/getting-started/common-sandbox-setup-errors" id="#common-sandbox-setup-errors">
+               Common Sandbox setup errors
+              </a>
+             </li>
+            </ul>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="doc">
+         <h1 id="getting-started-direct-access-account-transaction-v31">
+          Getting Started - Direct Access - Account &amp; Transaction - v3.1
+         </h1>
+         <h2 id="pre-requisites">
+          Pre-requisites
+         </h2>
+         <div>
+          This documentation aims to give a comprehensive step by step tutorial to guide you through the process of accessing account information via API. The following set-up steps are required;
+         </div>
+         <ol>
+          <li>
+           <div>
+            You have registered an app in your team
+           </div>
+           <div>
+            When registering your team, note that the default setting is to use test credentials. Once you’ve registered for production and generated your transport and signing certificates, you can configure your demo application to use your certificates to more closely replicate the production environment. 
+More details can be found
+            <a href="/documentation/Developer-Portal/Apps">
+             here
+            </a>
+            .
+           </div>
+          </li>
+          <li>
+           You’ve configured your application with the following settings;
+          </li>
+         </ol>
+         <blockquote>
+          <div>
+           To make sure that you can quickly complete your first end-to-end business flow, the Sandbox provides two specific test features that are obviously not available in Production:
+          </div>
+          <ul>
+           <li>
+            <code>
+             "Allow programmatic authorisation"
+            </code>
+            , allowing you to approve/reject consent on behalf of a test user via API so without the need to go through UI screens. Please note that in Production, you can call the API programmatically, but you will have to complete the consent process via the UI screens in order to authorise access to your accounts.
+           </li>
+           <li>
+            <code>
+             "Allow reduced security"
+            </code>
+            , allowing you to first focus on business and then add the security aspect
+            <ul>
+             <li>
+              the
+              <code>
+               request
+              </code>
+              query param value of the
+              <code>
+               /authorize
+              </code>
+              call can be the raw consent id instead of a jwt. You can also provide a correct jwt but its signature will not be verified
+             </li>
+            </ul>
+           </li>
+          </ul>
+          <div>
+           To go through this tutorial, you need to activate both test features by ticking the
+           <code>
+            "Allow programmatic authorisation"
+           </code>
+           and
+           <code>
+            "Allow reduced security"
+           </code>
+           boxes when you are requesting access to CMA9 account api for an App in the developer portal.
+          </div>
+          <div>
+           Once you are ready to implement the security layer, you must deactivate those test features to get the Production-like behaviour.
+          </div>
+         </blockquote>
+         <ol start="3">
+          <li>
+           If you’re using Postman, you’ve set up Postman as below;
+          </li>
+         </ol>
+         <blockquote>
+          <blockquote>
+           <div>
+            Note that in Postman you have to go in
+            <code>
+             Preferences or Settings &gt; General
+            </code>
+            menu
+           </div>
+           <ul>
+            <li>
+             in
+             <code>
+              REQUEST
+             </code>
+             column, make sure that
+             <code>
+              Ssl certificate verification
+             </code>
+             is set to
+             <code>
+              OFF
+             </code>
+             (or make sure that the OpenBanking Pre-Production Issuing CA is in your trusted store)
+            </li>
+           </ul>
+           <ul>
+            <li>
+             in
+             <code>
+              HEADERS
+             </code>
+             column, make sure that
+             <code>
+              Automatically follow redirects
+             </code>
+             is set to
+             <code>
+              ON
+             </code>
+            </li>
+           </ul>
+          </blockquote>
+         </blockquote>
+         <div>
+          Download and import in Postman
+         </div>
+         <ul>
+          <li>
+           the
+           <a download="" href="/devDoc/media/GettingStarted-CMA9Account_v3.1.10.postman_collection.json">
+            CMA9 Account info collection
+           </a>
+          </li>
+          <li>
+           <div>
+            and the environment config corresponding to the App you want to use (select App name to download the tailor made file):
+           </div>
+           <div>
+            <ol class="row-list">
+             <li>
+              <a href="#">
+               <dl>
+                <dt>
+                 Name
+                </dt>
+                <dd class="name">
+                 demo-app-3c216362-f073-42f2-8985-af4031365d94
+                </dd>
+                <dt>
+                 Description
+                </dt>
+                <dd class="description">
+                </dd>
+               </dl>
+              </a>
+             </li>
+            </ol>
+           </div>
+           <blockquote>
+            <div>
+             By default those generated configuration files use
+             <code>
+              123456789012@YOUR_DOMAIN
+             </code>
+             as test user. To change this just update the value of
+             <code>
+              psuUsername
+             </code>
+             keys. Check section
+             <code>
+              Programmatically authorize
+             </code>
+             below for details.
+            </div>
+           </blockquote>
+          </li>
+         </ul>
+         <h2 id="key-sandbox-endpoints">
+          Key Sandbox endpoints
+         </h2>
+         <ul>
+          <li>
+           Well-known:
+           <a href="https://api.sandbox.natwest.com/.well-known/openid-configuration">
+            https://api.sandbox.natwest.com/.well-known/openid-configuration
+           </a>
+          </li>
+          <li>
+           Token:
+           <a href="https://ob.sandbox.natwest.com/token">
+            https://ob.sandbox.natwest.com/token
+           </a>
+          </li>
+          <li>
+           Authorization:
+           <a href="https://api.sandbox.natwest.com/authorize">
+            https://api.sandbox.natwest.com/authorize
+           </a>
+          </li>
+          <li>
+           Resources:
+           <a href="https://ob.sandbox.natwest.com/open-banking/v3.1/aisp">
+            https://ob.sandbox.natwest.com/open-banking/v3.1/aisp
+           </a>
+           <ul>
+            <li>
+             /account-access-consents
+            </li>
+            <li>
+             /accounts
+            </li>
+            <li>
+             /accounts/{accountId}
+            </li>
+            <li>
+             /accounts/{accountId}/transactions
+            </li>
+            <li>
+             /accounts/{accountId}/beneficiaries
+            </li>
+            <li>
+             /accounts/{accountId}/balances
+            </li>
+            <li>
+             /accounts/{accountId}/direct-debits
+            </li>
+            <li>
+             /accounts/{accountId}/standing-orders
+            </li>
+            <li>
+             /accounts/{accountId}/product
+            </li>
+            <li>
+             /accounts/{accountId}/scheduled-payments
+            </li>
+           </ul>
+          </li>
+         </ul>
+         <h2 id="testing-in-sandbox">
+          Testing in Sandbox
+         </h2>
+         <div>
+          There are two ways you can test the Direct Access API in sandbox.
+         </div>
+         <div>
+          As described above, you can use our Postman collection by importing it into Postman and configuring your environment to correspond to your sandbox App. 
+The collection serves as a step-by-step guide to testing the whole flow from consent to accessing information, as described in our documentation.
+         </div>
+         <div>
+          Alternatively, you can follow the below steps to call each endpoint programmatically;
+         </div>
+         <br/>
+         <br/>
+         <h4 id="1-setup-account-access-consent">
+          1. Setup account access consent
+         </h4>
+         <h5 id="retrieve-access-token">
+          Retrieve access token
+         </h5>
+         <div>
+          To create an account-access-consent, you'll need to pass an access-token identifying your App: simply replace
+          <code>
+           CLIENT_ID
+          </code>
+          and
+          <code>
+           CLIENT_SECRET
+          </code>
+          in the curl below to retrieve a valid one:
+         </div>
+         <br/>
+         <br/>
+         <div>
+          Request:
+         </div>
+         <pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> -k -X POST \
+  https://ob.sandbox.natwest.com/token \
+  -H <span class="token string">'Content-Type: application/x-www-form-urlencoded'</span> \
+  -d <span class="token string">'grant_type=client_credentials&amp;client_id=CLIENT_ID&amp;client_secret=CLIENT_SECRET&amp;scope=accounts'</span></code></pre>
+         <div>
+          Response:
+         </div>
+         <pre class="language-bash"><code class="language-bash">HTTP/1.1 200
+status: 200
+content-type: application/json<span class="token punctuation">;</span> charset<span class="token operator">=</span>utf-8
+ 
+<span class="token punctuation">{</span>
+    <span class="token string">"token_type"</span><span class="token keyword">:</span> <span class="token string">"Bearer"</span>,
+    <span class="token string">"access_token"</span><span class="token keyword">:</span> <span class="token string">"Ci5A6huK2OD0d6...kVwLE9FuHwHGCf6xo5"</span>,
+    <span class="token string">"expires_in"</span><span class="token keyword">:</span> 7200,
+    <span class="token string">"scope"</span><span class="token keyword">:</span> <span class="token string">"accounts"</span>
+<span class="token punctuation">}</span></code></pre>
+         <br/>
+         <br/>
+         <div>
+          Your access-token is the value of the
+          <code>
+           access_token
+          </code>
+          attribute in the Response.
+         </div>
+         <blockquote>
+          <div>
+           in the example above it would be
+           <code>
+            Ci5A6huK2OD0d6...kVwLE9FuHwHGCf6xo5
+           </code>
+          </div>
+         </blockquote>
+         <br/>
+         <br/>
+         <h5 id="submit-account-access-consent">
+          Submit account access consent
+         </h5>
+         <div>
+          Now you can create an account-access-consent by replacing the
+          <code>
+           ACCESS_TOKEN
+          </code>
+          in the curl below:
+         </div>
+         <blockquote>
+          <div>
+           in the example below we ask for the permissions to have detailed access to accounts, balances and (both debit and credit) transactions
+          </div>
+         </blockquote>
+         <br/>
+         <div>
+          Request:
+         </div>
+         <pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> -k -X POST \
+  https://ob.sandbox.natwest.com/open-banking/v3.1/aisp/account-access-consents \
+  -H <span class="token string">'Authorization: Bearer ACCESS_TOKEN'</span> \
+  -H <span class="token string">'Content-Type: application/json'</span> \
+  -d <span class="token string">'{
+  "Data": {
+    "Permissions": [
+      "ReadAccountsDetail",
+      "ReadBalances",
+      "ReadTransactionsCredits",
+      "ReadTransactionsDebits",
+      "ReadTransactionsDetail"
+    ]
+  },
+  "Risk": {}
+}'</span></code></pre>
+         <div>
+          Response:
+         </div>
+         <pre class="language-bash"><code class="language-bash">HTTP/1.1 201
+status: 201
+content-type: application/json<span class="token punctuation">;</span>charset<span class="token operator">=</span>utf-8
+
+<span class="token punctuation">{</span>
+  <span class="token string">"Data"</span><span class="token keyword">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"Permissions"</span><span class="token keyword">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"ReadAccountsDetail"</span>,
+      <span class="token string">"ReadBalances"</span>,
+      <span class="token string">"ReadTransactionsCredits"</span>,
+      <span class="token string">"ReadTransactionsDebits"</span>,
+      <span class="token string">"ReadTransactionsDetail"</span>
+    <span class="token punctuation">]</span>,
+    <span class="token string">"ConsentId"</span><span class="token keyword">:</span> <span class="token string">"69ae997b-fe70-45eb-a00d-c49a1d310b51"</span>,
+    <span class="token string">"CreationDateTime"</span><span class="token keyword">:</span> <span class="token string">"2019-03-06T16:01:17.876Z"</span>,
+    <span class="token string">"Status"</span><span class="token keyword">:</span> <span class="token string">"AwaitingAuthorisation"</span>,
+    <span class="token string">"StatusUpdateDateTime"</span><span class="token keyword">:</span> <span class="token string">"2019-03-06T16:01:17.876Z"</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">"Risk"</span><span class="token keyword">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>,
+  <span class="token string">"Links"</span><span class="token keyword">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"Self"</span><span class="token keyword">:</span> <span class="token string">"https://ob.sandbox.natwest.com/open-banking/v3.1/aisp/account-access-consents/69ae997b-fe70-45eb-a00d-c49a1d310b51"</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">"Meta"</span><span class="token keyword">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+         <br/>
+         <br/>
+         <div>
+          When successful, in the Response you'll find an consent-id identifying your request in the
+          <code>
+           Data.ConsentId
+          </code>
+          attribute that you will have to reference in the next step.
+         </div>
+         <blockquote>
+          <div>
+           in the example above it would be
+           <code>
+            69ae997b-fe70-45eb-a00d-c49a1d310b51
+           </code>
+          </div>
+         </blockquote>
+         <br/>
+         <br/>
+         <h4 id="2-authorize-consent">
+          2. Authorize consent
+         </h4>
+         <div>
+          Once your account-access-consent is created, you need to make the user approve it by redirecting his browser to a customized authorization url.
+         </div>
+         <h5 id="construct-authorization-request-url">
+          Construct authorization request url
+         </h5>
+         <div>
+          Two possibilities for you here:
+         </div>
+         <br/>
+         <h6 id="reduced-security-mode">
+          "Reduced security" mode
+         </h6>
+         <blockquote>
+          <div>
+           You need to activate this mode by ticking the "Allow reduced security" box when you are requesting access to CMA9 account api for an App in the developer portal
+          </div>
+         </blockquote>
+         <div>
+          In this mode, the consent-id identifying the account-access-consent submitted previously is passed as-is in the authorization url. 
+  It can be simply achieved by replacing the
+          <code>
+           CLIENT_ID
+          </code>
+          ,
+          <code>
+           REDIRECT_URI
+          </code>
+          and
+          <code>
+           CONSENT_ID
+          </code>
+          in the curl below:
+         </div>
+         <div>
+          <em>
+           Example is displayed on multiple lines for readability but should obviously be used as a one liner
+          </em>
+         </div>
+         <pre class="language-bash"><code class="language-bash">  https://api.sandbox.natwest.com/authorize
+    ?client_id<span class="token operator">=</span>CLIENT_ID
+    <span class="token operator">&amp;</span>response_type<span class="token operator">=</span>code id_token
+    <span class="token operator">&amp;</span>scope<span class="token operator">=</span>openid accounts
+    <span class="token operator">&amp;</span>redirect_uri<span class="token operator">=</span>REDIRECT_URI
+    <span class="token operator">&amp;</span>request<span class="token operator">=</span>CONSENT_ID</code></pre>
+         <br/>
+         <br/>
+         <h6 id="standard-mode">
+          Standard mode
+         </h6>
+         <br/>
+         <div>
+          Please refer to the extensive documentation of Security Profile for the details on how to construct the request parameter of the authorize call:
+          <a href="https://openbanking.atlassian.net/wiki/spaces/DZ/pages/83919096/Open+Banking+Security+Profile+-+Implementer+s+Draft+v1.1.2#OpenBankingSecurityProfile-Implementer'sDraftv1.1.2-HybridFlowRequestwithIntentId">
+           Hybrid Flow Request documentation
+          </a>
+         </div>
+         <br/>
+         <h5 id="make-user-approve-it">
+          Make user approve it
+         </h5>
+         <div>
+          Two possibilities for you here:
+         </div>
+         <br/>
+         <h6 id="redirect-the-user-to-use-the-ui-flow">
+          Redirect the user to use the UI flow
+         </h6>
+         <div>
+          It's exactly the way the user will experience the flow, using a browser and going through the UI screens.
+Since this step requires end-user interaction, for the purpose of this tutorial you will be temporarily impersonating this user.
+         </div>
+         <ul>
+          <li>
+           <div>
+            Paste the url in a new browser window and type Enter: the login page of the bank is displayed
+           </div>
+           <div>
+            <img alt="Bank login screen" src="/devDoc/media/RbsLogin.png"/>
+           </div>
+           <blockquote>
+            <div>
+             Image for illustration purpose only, the screen you see may differ in layout/colors but the functionality should be equivalent
+            </div>
+           </blockquote>
+          </li>
+          <li>
+           <div>
+            Follow the authentication flow by filling in one of your test user credentials or use the demo one (
+            <code>
+             123456789012
+            </code>
+            as Customer number and simply type the digit above each inputs for pin/password).
+           </div>
+           <blockquote>
+            <div>
+             Be careful not to type in your developer portal credentials instead. Here you are impersonating a bank user so fill in the credentials of one of the test user that was loaded with your test data
+            </div>
+           </blockquote>
+          </li>
+          <li>
+           <div>
+            Credentials are eventually verified and if correct you should be presented with a page displaying the details of the consent to approve
+           </div>
+           <div>
+            <img alt="Consent details screen" src="/devDoc/media/RbsCma9AccountConsentDetails.png"/>
+           </div>
+           <blockquote>
+            <div>
+             Image for illustration purpose only, the screen you see may differ in layout/colors but the functionality should be equivalent
+            </div>
+           </blockquote>
+          </li>
+          <li>
+           <div>
+            Verify the content, select the accounts you want to give access to and click
+            <code>
+             Confirm access
+            </code>
+           </div>
+          </li>
+          <li>
+           <div>
+            Url in the address bar of your browser should now contain an url like this:
+           </div>
+           <pre class="language-bash"><code class="language-bash">  REDIRECT_URI<span class="token comment">#code=nO93oFbrPGvyeMZSIQFq3xLYWODp1Oi5&amp;id_token=...</span>
+  </code></pre>
+           <div>
+            This url contains a fragment parameter
+            <code>
+             code
+            </code>
+            containing the authorization code you must exchange for an access-token in the next step.
+           </div>
+           <blockquote>
+            <div>
+             in the example above it would be
+             <code>
+              nO93oFbrPGvyeMZSIQFq3xLYWODp1Oi5
+             </code>
+            </div>
+           </blockquote>
+          </li>
+         </ul>
+         <br/>
+         <h6 id="programmatically-authorize">
+          Programmatically authorize
+         </h6>
+         <blockquote>
+          <blockquote>
+           <div>
+            Only available in the Sandbox and only to ease automated testing, this allows you to directly process with the flow without the need to go through UI screens. Please note that in Production, you can call the API programmatically, but you will have to complete the consent process via the UI screens in order to authorise access to your accounts.
+           </div>
+          </blockquote>
+         </blockquote>
+         <blockquote>
+          <div>
+           You need to activate this mode by ticking the "Allow programmatic authorisation" box when you are requesting access to CMA9 account api for an App in the developer portal
+          </div>
+         </blockquote>
+         <div>
+          You simply need to augment the authorization request url created above with extra parameters that will describe the behaviour you want to achieve:
+         </div>
+         <ul>
+          <li>
+           authorization_mode=? (mandatory) AUTO or AUTO_POSTMAN to indicate that you want to use the programmatic authorisation for this request. AUTO will end the flow with a redirect to your redirect url, AUTO_POSTMAN will end the flow returning an object containing the redirect url that would have been called
+          </li>
+          <li>
+           authorization_result=? (optional, default: APPROVED) to indicate which result you want: use REFUSED, DECLINED or REJECTED to refuse a consent, anything else will approve it
+          </li>
+          <li>
+           authorization_username=? (mandatory) to indicate which user you want to impersonate (username should look like {test-user-username}@{your-team-domain})
+          </li>
+          <li>
+           authorization_accounts=? (optional, default:
+           <em>
+            ) to indicate which accounts you want to select:
+           </em>
+           select all available or you can specify a comma separated list of the representations
+          </li>
+         </ul>
+         <blockquote>
+          <div>
+           Values for the
+           <code>
+            authorization_username
+           </code>
+           have to be constructed following those rules:
+          </div>
+          <ul>
+           <li>
+            <div>
+             Online banking users - the value of
+             <code>
+              authorization_username
+             </code>
+             has to be
+             <code>
+              customerNumber
+             </code>
+             @
+             <code>
+              your-team-domain
+             </code>
+            </div>
+            <div>
+             For example, if you have provisioned a user with customer number
+             <code>
+              123456789012
+             </code>
+             in a team having domain
+             <code>
+              mydomain.com
+             </code>
+             then the value to use is
+             <code>
+              123456789012@mydomain.com
+             </code>
+            </div>
+           </li>
+           <li>
+            <div>
+             Bankline users - the value of
+             <code>
+              authorization_username
+             </code>
+             has to be
+             <code>
+              customerId|userId
+             </code>
+             @
+             <code>
+              your-team-domain
+             </code>
+            </div>
+            <div>
+             For example, if you have provisioned a user with customer id
+             <code>
+              5555555555
+             </code>
+             and user id
+             <code>
+              9999999999
+             </code>
+             in a team having domain
+             <code>
+              mydomain.com
+             </code>
+             then the value to use is
+             <code>
+              5555555555|9999999999@mydomain.com
+             </code>
+            </div>
+           </li>
+           <li>
+            <div>
+             Cards online users - the value of
+             <code>
+              authorization_username
+             </code>
+             has to be
+             <code>
+              username
+             </code>
+             @
+             <code>
+              your-team-domain
+             </code>
+            </div>
+            <div>
+             For example, if you have provisioned a user with username
+             <code>
+              alice
+             </code>
+             in a team having domain
+             <code>
+              mydomain.com
+             </code>
+             then the value to use is
+             <code>
+              alice@mydomain.com
+             </code>
+            </div>
+           </li>
+           <li>
+            <div>
+             eQ users - the value of
+             <code>
+              authorization_username
+             </code>
+             has to be
+             <code>
+              customerNumber|username
+             </code>
+             @
+             <code>
+              your-team-domain
+             </code>
+            </div>
+            <div>
+             For example, if you have provisioned a user with customer number
+             <code>
+              11111111
+             </code>
+             and username
+             <code>
+              alice
+             </code>
+             in a team having domain
+             <code>
+              mydomain.com
+             </code>
+             then the value to use is
+             <code>
+              11111111|alice@mydomain.com
+             </code>
+            </div>
+           </li>
+          </ul>
+         </blockquote>
+         <div>
+          Call this augmented authorization url programmatically and the flow will occur without UI, replying with a json object containing the redirect url that would have been called in normal flow
+         </div>
+         <div>
+          Request:
+         </div>
+         <pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> --location -X GET \
+  <span class="token string">'https://api.sandbox.natwest.com/authorize
+          ?client_id=CLIENT_ID
+          &amp;response_type=code id_token
+          &amp;scope=openid accounts
+          &amp;redirect_uri=REDIRECT_URI
+          &amp;request=CONSENT_ID
+          &amp;authorization_mode=AUTO_POSTMAN
+          &amp;authorization_result=APPROVED
+          &amp;authorization_username={test-user-username}@{your-team-domain}
+          &amp;authorization_accounts=*'</span></code></pre>
+         <div>
+          Response:
+         </div>
+         <pre class="language-bash"><code class="language-bash">HTTP/1.1 200
+status: 200
+
+<span class="token punctuation">{</span> <span class="token string">"redirectUri"</span><span class="token keyword">:</span> <span class="token string">"REDIRECT_URI#code=nO93oFbrPGvyeMZSIQFq3xLYWODp1Oi5&amp;id_token=..."</span> <span class="token punctuation">}</span></code></pre>
+         <blockquote>
+          <div>
+           If you use the authorization_mode=AUTO the flow will occur without UI, replying as if it would come back from the UI flow:
+          </div>
+          <ul>
+           <li>
+            with a 302 status
+           </li>
+           <li>
+            no body
+           </li>
+           <li>
+            and a location header containing the same structure as in normal flow
+           </li>
+          </ul>
+          <div>
+           Response:
+          </div>
+          <pre class="language-bash"><code class="language-bash">HTTP/1.1 302
+status: 302
+location: REDIRECT_URI<span class="token comment">#code=nO93oFbrPGvyeMZSIQFq3xLYWODp1Oi5&amp;id_token=...</span></code></pre>
+         </blockquote>
+         <br/>
+         <h5 id="exchange-code-for-access-token">
+          Exchange code for access token
+         </h5>
+         <div>
+          Now that you received an authorization code, you need to exchange it for an access token.
+It can be simply achieved by replacing the
+          <code>
+           CLIENT_ID
+          </code>
+          ,
+          <code>
+           CLIENT_SECRET
+          </code>
+          ,
+          <code>
+           REDIRECT_URI
+          </code>
+          and
+          <code>
+           AUTHORIZATION_CODE
+          </code>
+          in the curl below:
+         </div>
+         <br/>
+         <br/>
+         <div>
+          Request:
+         </div>
+         <pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> -k -X POST \
+  https://ob.sandbox.natwest.com/token \
+  -H <span class="token string">'Content-Type: application/x-www-form-urlencoded'</span> \
+  -d <span class="token string">'client_id=CLIENT_ID&amp;client_secret=CLIENT_SECRET&amp;redirect_uri=REDIRECT_URI&amp;grant_type=authorization_code&amp;code=AUTHORIZATION_CODE'</span></code></pre>
+         <div>
+          Response:
+         </div>
+         <pre class="language-bash"><code class="language-bash">HTTP/1.1 200
+status: 200
+content-type: application/json<span class="token punctuation">;</span> charset<span class="token operator">=</span>utf-8
+
+<span class="token punctuation">{</span>
+    <span class="token string">"refresh_token"</span><span class="token keyword">:</span> <span class="token string">"ZzBmtBMhC70Y...95LugYlvyUEyXQLXk34Q"</span>,
+    <span class="token string">"token_type"</span><span class="token keyword">:</span> <span class="token string">"Bearer"</span>,
+    <span class="token string">"access_token"</span><span class="token keyword">:</span> <span class="token string">"tHIYRoTsIL2tb...hwvK29ZKsoJGXFKINzP"</span>,
+    <span class="token string">"id_token"</span><span class="token keyword">:</span> <span class="token string">"eyJhbGciOiJQ...UzI1NiIsInR5cCI6IkpXVCJ"</span>,
+    <span class="token string">"expires_in"</span><span class="token keyword">:</span> 7200,
+    <span class="token string">"scope"</span><span class="token keyword">:</span> <span class="token string">"openid accounts"</span>
+<span class="token punctuation">}</span></code></pre>
+         <br/>
+         <br/>
+         <div>
+          Your access-token is the value of the
+          <code>
+           access_token
+          </code>
+          attribute in the Response.
+         </div>
+         <blockquote>
+          <div>
+           in the example above it would be
+           <code>
+            tHIYRoTsIL2tb...hwvK29ZKsoJGXFKINzP
+           </code>
+          </div>
+         </blockquote>
+         <blockquote>
+          <blockquote>
+           <div>
+            In a real world scenario, the
+            <code>
+             access_token
+            </code>
+            has a very short lifespan so you would need to also carefully store the
+            <code>
+             refresh_token
+            </code>
+            : you need it to retrieve a valid
+            <code>
+             access_token
+            </code>
+            to be used in your future requests related to the consent you just acquired.
+           </div>
+          </blockquote>
+         </blockquote>
+         <br/>
+         <br/>
+         <h4 id="3-request-data">
+          3. Request data
+         </h4>
+         <div>
+          Finally you can perform api calls to retrieve information about the bank accounts for which the user approved the consent.
+         </div>
+         <div>
+          For example you can perform the following call to list all the accounts and their details (since we initially asked for this level of permission in our account-access-consent) by replacing the
+          <code>
+           ACCESS_TOKEN
+          </code>
+          in the curl below:
+         </div>
+         <br/>
+         <br/>
+         <div>
+          Request:
+         </div>
+         <pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> -k -X GET \
+  https://ob.sandbox.natwest.com/open-banking/v3.1/aisp/accounts \
+  -H <span class="token string">'Authorization: Bearer ACCESS_TOKEN'</span></code></pre>
+         <div>
+          Response:
+         </div>
+         <pre class="language-bash"><code class="language-bash">HTTP/1.1 200
+status: 200
+content-type: application/json<span class="token punctuation">;</span>charset<span class="token operator">=</span>utf-8
+
+<span class="token punctuation">{</span>
+    <span class="token string">"Data"</span><span class="token keyword">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"Account"</span><span class="token keyword">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token string">"AccountId"</span><span class="token keyword">:</span> <span class="token string">"06f1c4ea-8d17-4845-a27f-da3922e4e5f2"</span>,
+                <span class="token string">"Currency"</span><span class="token keyword">:</span> <span class="token string">"GBP"</span>,
+                <span class="token string">"AccountType"</span><span class="token keyword">:</span> <span class="token string">"Personal"</span>,
+                <span class="token string">"AccountSubType"</span><span class="token keyword">:</span> <span class="token string">"CurrentAccount"</span>,
+                <span class="token string">"Description"</span><span class="token keyword">:</span> <span class="token string">"Personal"</span>,
+                <span class="token string">"Nickname"</span><span class="token keyword">:</span> <span class="token string">"Debit Account - RBS - Alice"</span>,
+                <span class="token string">"Account"</span><span class="token keyword">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token string">"SchemeName"</span><span class="token keyword">:</span> <span class="token string">"UK.OBIE.SortCodeAccountNumber"</span>,
+                        <span class="token string">"Identification"</span><span class="token keyword">:</span> <span class="token string">"50000020803729"</span>,
+                        <span class="token string">"Name"</span><span class="token keyword">:</span> <span class="token string">"Debit Account - RBS - Alice"</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"AccountId"</span><span class="token keyword">:</span> <span class="token string">"775a26eb-e564-4944-b2e9-a263f50dc419"</span>,
+                <span class="token string">"Currency"</span><span class="token keyword">:</span> <span class="token string">"GBP"</span>,
+                <span class="token string">"AccountType"</span><span class="token keyword">:</span> <span class="token string">"Personal"</span>,
+                <span class="token string">"AccountSubType"</span><span class="token keyword">:</span> <span class="token string">"CurrentAccount"</span>,
+                <span class="token string">"Description"</span><span class="token keyword">:</span> <span class="token string">"Personal"</span>,
+                <span class="token string">"Nickname"</span><span class="token keyword">:</span> <span class="token string">"Savings Account - RBS - Alice"</span>,
+                <span class="token string">"Account"</span><span class="token keyword">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token string">"SchemeName"</span><span class="token keyword">:</span> <span class="token string">"UK.OBIE.SortCodeAccountNumber"</span>,
+                        <span class="token string">"Identification"</span><span class="token keyword">:</span> <span class="token string">"50000020803737"</span>,
+                        <span class="token string">"Name"</span><span class="token keyword">:</span> <span class="token string">"Savings Account - RBS - Alice"</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>,
+    <span class="token string">"Links"</span><span class="token keyword">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"Self"</span><span class="token keyword">:</span> <span class="token string">"https://ob.sandbox.natwest.com/open-banking/v3.1/aisp/accounts"</span>
+    <span class="token punctuation">}</span>,
+    <span class="token string">"Meta"</span><span class="token keyword">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"TotalPages"</span><span class="token keyword">:</span> 1
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+         <br/>
+         <br/>
+         <h2 id="common-sandbox-setup-errors">
+          Common Sandbox setup errors
+         </h2>
+         <blockquote>
+          <div>
+           When I call an API endpoint, I get a
+           <code>
+            403 Forbidden
+           </code>
+           response with a
+           <code>
+            no API access for this client.
+           </code>
+           body
+          </div>
+         </blockquote>
+         <div>
+          Most common reason is you didn’t activate access to the API for your App
+         </div>
+         <ul>
+          <li>
+           Go to the Dashboard screen
+          </li>
+          <li>
+           In the Dashboard, click on the name of your App to display the App details page
+          </li>
+          <li>
+           Scroll down to the APIs section
+          </li>
+          <li>
+           Make sure that the radio button is active in the
+           <code>
+            Activate
+           </code>
+           column for the API you are trying to consume
+          </li>
+         </ul>
+         <blockquote>
+          <div>
+           When I use the
+           <code>
+            auto approval of consent
+           </code>
+           feature, I get an
+           <code>
+            AUTO authorization_mode can only be used if simulation of user consent decision has been enabled
+           </code>
+           error message
+          </div>
+         </blockquote>
+         <div>
+          Most common reason is you didn’t activate the
+          <code>
+           Allow Tpp to programmatically authorise User consents
+          </code>
+          option for that API
+         </div>
+         <ul>
+          <li>
+           Go to the Dashboard screen
+          </li>
+          <li>
+           In the Dashboard, click on the name of your App to display the App details page
+          </li>
+          <li>
+           Scroll down to the APIs section
+          </li>
+          <li>
+           Click on the
+           <code>
+            Configure
+           </code>
+           button in the
+           <code>
+            Configure
+           </code>
+           column for the API you are trying to consume
+          </li>
+          <li>
+           Make sure that the
+           <code>
+            Allow Tpp to programmatically authorise User consents
+           </code>
+           radio button is active
+          </li>
+         </ul>
+         <blockquote>
+          <div>
+           When I use the
+           <code>
+            auto approval of consent
+           </code>
+           feature, I get an
+           <code>
+            Parameter authorization_accounts must be filled with the representation of one or more accounts owned by given user
+           </code>
+           error message
+          </div>
+         </blockquote>
+         <div>
+          Most common reasons are
+         </div>
+         <ul>
+          <li>
+           there is no test data in the team linked to your App
+           <ul>
+            <li>
+             Go to the Dashboard screen
+            </li>
+            <li>
+             In the Dashboard, click on the name your Team to display the Team details page
+            </li>
+            <li>
+             Scroll down to the
+             <code>
+              Test Data
+             </code>
+             section
+            </li>
+            <li>
+             Make sure test data has been loaded. If not, simply click on the
+             <code>
+              Upload data
+             </code>
+             button, retrieve the sample file available for download and load it
+            </li>
+           </ul>
+          </li>
+          <li>
+           you didn’t provide a correct test user username/account. This happens if you uploaded your own test data set and forgot to change the parameters (like authorization_username) of the auto approve call
+          </li>
+         </ul>
+         <blockquote>
+          <div>
+           When I try to approve a consent, I get an
+           <code>
+            Impossible to verify signature of the jwt - JWS Compact Serialization must have exactly 3 parts separated by period ('.') characters
+           </code>
+           error message
+          </div>
+         </blockquote>
+         <div>
+          Most common reasons are
+         </div>
+         <ul>
+          <li>
+           you want to skip the jwt creation/signature for now (to follow the Getting Started steps for example) but you didn’t activate the
+           <code>
+            Allow &lt;reduced&gt; security
+           </code>
+           option for that API
+           <ul>
+            <li>
+             Go to the Dashboard screen
+            </li>
+            <li>
+             In the Dashboard, click on the name of your App to display the App details page
+            </li>
+            <li>
+             Scroll down to the APIs section
+            </li>
+            <li>
+             Click on the
+             <code>
+              Configure
+             </code>
+             button in the
+             <code>
+              Configure
+             </code>
+             column for the API you are trying to consume
+            </li>
+            <li>
+             Make sure that the
+             <code>
+              Allow &lt;reduced&gt; security
+             </code>
+             radio button is active
+            </li>
+           </ul>
+          </li>
+          <li>
+           you want to experience Production security constraint but you forgot to provide the request object as a signed jwt
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer>
+     <div class="container">
+      <div class="row">
+       <div class="column">
+        <h6>
+         Account
+        </h6>
+        <nav>
+         <a href="/dashboard">
+          Dashboard
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Developer Tools
+        </h6>
+        <nav>
+         <a aria-current="page" class="active" href="/api-catalog">
+          API Catalogue
+         </a>
+         <a href="/documentation">
+          Documentation
+         </a>
+         <a href="https://natwest-bankofapi-servicemanagement.atlassian.net/servicedesk/customer/portals" target="_blank">
+          Service Desk
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Company
+        </h6>
+        <nav>
+         <a href="/terms">
+          Terms &amp; Conditions
+         </a>
+         <a href="/privacy-policy">
+          Privacy Policy
+         </a>
+        </nav>
+       </div>
+       <div class="col-sm">
+       </div>
+      </div>
+     </div>
+    </footer>
+    <button class="scrolltop-button">
+    </button>
+    <div class="powered-by">
+     Powered by
+     <em>
+      Oolys
+     </em>
+    </div>
+   </div>
+   <div id="side-panel">
+   </div>
+   <div class="modal fade out session-popup" id="">
+    <div class="modal-dialog">
+     <div class="modal-header">
+      <h6>
+       Your session is about to expire
+      </h6>
+     </div>
+     <div class="modal-body">
+      <span class="expiration-warning">
+       You will be automatically logged out in
+       <em>
+        59
+       </em>
+       seconds.
+       <br/>
+       Do you want to extend your session?
+      </span>
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-primary" type="button">
+       Continue
+      </button>
+      <button class="btn btn-default" type="button">
+       Logout
+      </button>
+     </div>
+    </div>
+   </div>
+  </main>
+  <script>
+   var loadHasBeenTriggered = false;
+      window.onUsersnapCXLoad = function(api) {
+        api.init({
+            user: {
+              userId: infoUsername,
+              email: infoEmail
+            },
+            custom: {
+                userId: infoUsername,
+                brand : infoBrand,
+                env : infoEnv
+            }
+          });
+      }
+      window.loadUserFeedbackWidget = function() {
+        if ( (!loadHasBeenTriggered) && infoUsername && infoBrand) {
+            loadHasBeenTriggered = true;
+            var script = document.createElement('script');
+            script.defer = 1;
+            script.src = 'https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad';
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      }
+  </script>
+  <script src="/febc265fb2cc455e1b85.js">
+  </script>
+  <script src="/7dbd7cfa6c7cb6d881a7.js">
+  </script>
+  <script src="/1a5f01ff47d07a377494.js">
+  </script>
+  <script src="/2daa0d06a67874f682c5.js">
+  </script>
+  <script src="/c617fa727da6d416f6a5.js">
+  </script>
+  <script src="/07424fde184376e24dea.js">
+  </script>
+  <script src="/ee4e265cb3dc3d500780.js">
+  </script>
+  <script src="/04a6b9711f1d30cdc1a2.js">
+  </script>
+  <script src="/03632d2692dbb192bc9c.js">
+  </script>
+  <script src="/991cb5d14add34ec9369.js">
+  </script>
+  <script src="/cd81143e09bd4a3ddd06.js">
+  </script>
+  <script src="/ad40893dba0f0cc010ca.js">
+  </script>
+  <script src="/86e32b4ca44cc47a79a5.js">
+  </script>
+  <script src="/e4687322f7bb906a2df7.js">
+  </script>
+  <script src="/27eb4f97929598ad3286.js">
+  </script>
+  <script src="/27861e3fa2db86dca27a.js">
+  </script>
+  <script src="/447e8d2fec5adde36e43.js">
+  </script>
+  <script src="/9f29fe08232107e5b5a2.js">
+  </script>
+  <script src="/9d72a8e94d97ca62f07e.js">
+  </script>
+  <script src="/1e1d6def47d88d1b6578.js">
+  </script>
+  <script src="/20d2c1b54999365fe1c3.js">
+  </script>
+  <script src="/d17eb693468fac87de9d.js">
+  </script>
+  <script src="/ace96842f9fdef10da09.js">
+  </script>
+  <script src="/e10dbcadb20790400bd2.js">
+  </script>
+  <script src="/ec5fb73bff01905d82cd.js">
+  </script>
+  <!--uspssb-->
+  <iframe name="us-entrypoint-globalSetup" style="display: none; height: 0px; width: 0px; z-index: 2147483647; color-scheme: normal;" title="Usersnap Feedback">
+  </iframe>
+  <!--uspsse-->
+  <us-button style="user-select: all;">
+  </us-button>
+ </body>
+</html>
+
+
+<!-- Iframe 1 Content -->
+<html>
+ <head>
+  <title>
+   Usersnap Feedback
+  </title>
+  <script>
+   <br>  window.nonce = "";<br>  window.publicPath = "https://resources.usersnap.com/";<br>
+  </script>
+  <script src="https://resources.usersnap.com/widget-assets/js/entries/globalSetup/b263c0f1171ea4606316.js">
+  </script>
+  <style>
+   html, body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+  </style>
+ </head>
+ <body>
+  <div>
+  </div>
+ </body>
+</html>

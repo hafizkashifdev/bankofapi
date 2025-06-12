@@ -1,0 +1,515 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   NatWest – Developer Portal – Open Banking Sandbox
+  </title>
+  <meta content="index, follow" name="robots"/>
+  <meta content="Thanks to the comprehensive step-by-step documentation of our Sandbox Developer Portal, you can consume Open Banking APIs in less than 5 minutes." name="description"/>
+  <script>
+   var iVersion="2.6.6-build-108-03c3b2a";
+  </script>
+  <script>
+   var infoEnv;
+  </script>
+  <script>
+   var infoBrand;
+  </script>
+  <script>
+   var infoUsername;
+  </script>
+  <script>
+   var infoEmail;
+  </script>
+  <link href="/natwest-icon.png" rel="icon"/>
+  <link href="/febc265fb2cc455e1b85.css" rel="stylesheet"/>
+  <link href="/ec5fb73bff01905d82cd.css" rel="stylesheet"/>
+  <script defer="" src="https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body>
+  <main id="app">
+   <div id="page">
+    <div class="notification">
+     <button type="button">
+      <span class="icon refuse-icon">
+      </span>
+     </button>
+     <p>
+      We have performed a brief maintenance operation this Thursday evening. During that time, some users may have experienced difficulties logging in and certain API endpoints may have been unavailable. Thank you for your patience and understanding.
+     </p>
+    </div>
+    <div class="cookienotification notification fixed">
+     <div>
+      We use cookies and similar technologies on our websites and mobile applications to help provide you with the best online experience.
+      <br/>
+      By using our sites and apps, you agree that we may store and access cookies and similar technologies on your device.
+      <br/>
+      You can
+      <a aria-current="page" class="active" href="/privacy-policy">
+       <u>
+        find out more and set your preferences here
+       </u>
+      </a>
+      .
+     </div>
+     <br/>
+     <a class="btn btn-small btn-primary">
+      I accept
+     </a>
+    </div>
+    <header>
+     <nav class="navbar inverted fixed">
+      <div class="container">
+       <div class="navbar-container">
+        <div class="menubar">
+         <a href="/">
+          <span class="logo">
+          </span>
+         </a>
+         <button class="menu-toggle" type="button">
+          <span class="icon menu-icon">
+          </span>
+          Menu
+         </button>
+        </div>
+        <div class="menu closed">
+         <ul>
+          <li>
+           <a href="/dashboard" scope="secure">
+            Dashboard
+           </a>
+          </li>
+          <li>
+           <a href="/api-catalog" scope="all">
+            API Catalogue
+           </a>
+          </li>
+          <li>
+           <a href="/help" scope="all">
+            Help
+           </a>
+          </li>
+         </ul>
+         <div class="menu-right">
+          <div class="user-menu">
+           <a class="user">
+            <span class="icon user-icon">
+            </span>
+            Azam
+           </a>
+           <ul class="menu-links">
+            <li>
+             <a href="#">
+              My Profile
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              About
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              Logout
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="modal fade out" id="">
+           <div class="modal-dialog">
+            <button class="close-button" type="button">
+             <span class="icon close-icon">
+             </span>
+            </button>
+            <div class="modal-header">
+             <h6>
+              API Banking Accelerator
+             </h6>
+            </div>
+            <div class="modal-body">
+             <div class="about">
+              Oolys is a comprehensive multi-bank API Banking Sandbox.
+              <dl>
+               <dt>
+                Version
+               </dt>
+               <dd>
+                2.6.6-build-108-03c3b2a
+               </dd>
+              </dl>
+             </div>
+            </div>
+            <div class="modal-footer">
+             <small>
+              Copyright 2018-2021 UseInfinite
+             </small>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </nav>
+    </header>
+    <div class="page-content">
+     <div class="container privacypolicy">
+      <div class="container mdContent mdprivacy-policymd">
+       <div>
+        <h1>
+         Privacy policy
+        </h1>
+        <h2>
+         Your Privacy
+        </h2>
+        <p>
+         We promise to treat any personal information about you securely, fairly and lawfully. 
+We are committed to protecting your privacy.
+         <br/>
+         When we ask you to provide personal information online it will only be in 
+response to you actively applying for or using one of our online products or services.
+        </p>
+        <h2>
+         Cookies – what are they?
+        </h2>
+        <p>
+         A “cookie” is a small text file that’s stored on your computer, 
+ smartphone, tablet, or other device when you visit a website or use an app.
+         <br/>
+         Some cookies are deleted when you close down your browser. 
+ These are known as
+         <strong>
+          session cookies
+         </strong>
+         . Others remain on your device until they expire or you delete 
+ them from your cache. These are known as
+         <strong>
+          persistent cookies
+         </strong>
+         and enable us to remember things about you as a 
+ returning visitor.
+        </p>
+        <h1>
+        </h1>
+        <p>
+         This website uses session and persistent cookies.
+        </p>
+        <h2>
+         How to control and delete cookies
+        </h2>
+        <p>
+         If you want to restrict or block the cookies on our site, you can do this through your browser settings. 
+ The ‘help’ function within your browser should tell you how, or you can find out by visiting:
+         <a href="http://www.allaboutcookies.org/manage-cookies/clear-cookies-installed.html" target="_blank">
+          http://www.allaboutcookies.org/manage-cookies/clear-cookies-installed.html
+         </a>
+         , or search the internet for 
+ other independent information on how to delete cookies. You can set your browser to delete all past cookies and to disallow third-party cookies.
+        </p>
+        <h1>
+        </h1>
+        <p>
+         To find out more about cookies, including how to see what cookies have been set and how to manage and 
+ delete them, visit
+         <a href="http://www.youronlinechoices.com/uk/your-ad-choices" target="_blank">
+          http://www.youronlinechoices.com/uk/your-ad-choices
+         </a>
+         . 
+ Alternatively, you can search the internet for other independent information on cookies.
+        </p>
+        <h2>
+         Cookies – how we use them
+        </h2>
+        <p>
+         If you delete cookies relating to this website we will not remember things about you and you will be treated as a 
+first-time visitor the next time you visit the site/page.
+        </p>
+        <h1>
+        </h1>
+        <p>
+         We use cookies and other similar technologies to:
+        </p>
+        <ul>
+         <li>
+          Provide products and services that you request and to provide a secure online environment
+         </li>
+         <li>
+          Give you a better online experience
+         </li>
+        </ul>
+        <p>
+         Here we explain a bit more about each of these types and how you can control their use.
+        </p>
+        <h2>
+         Essential Cookies
+        </h2>
+        <p>
+         <strong>
+          Cookies that are essential for us to provide a product or service you have requested and to provide a secure online environment
+         </strong>
+        </p>
+        <p>
+         Without these cookies we are unable to provide some products or services that you might request. Other essential cookies keep our website secure. This category of cookies cannot be disabled.
+  Essential cookies are used to deliver interactive services, such as:
+        </p>
+        <ul>
+         <li>
+          Manage user authentication
+         </li>
+         <li>
+          API management and developer portal
+         </li>
+         <li>
+          <p>
+           Mocked webbanking portal
+          </p>
+         </li>
+        </ul>
+        <p>
+         These essential cookies are identified as follows:
+        </p>
+        <ul>
+         <li>
+          auth.natwest.useinfinite.io
+         </li>
+         <li>
+          developer.natwest.useinfinite.io
+         </li>
+         <li>
+          <p>
+           webbanking.natwest.useinfinite.io
+          </p>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="fixeddialog">
+       <div class="container">
+        <h2>
+         Are you happy for us to use cookies?
+        </h2>
+        Some features that are designed to give you a better online experience only work if we use cookies.
+        <br/>
+        You can change your mind at any time but, for now, are you happy for us to store and access cookies on your device for the purposes described?
+        <div class="dialog">
+         <button class="btn">
+          Yes
+         </button>
+         <button class="btn btn-primary">
+          <i class="icon accept-icon">
+          </i>
+          No
+         </button>
+        </div>
+        <div class="info">
+         Your preference: Cookies have not been accepted
+         <b>
+          If you do not change your preference here, your current preference, (as indicated) will continue to apply
+         </b>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer>
+     <div class="container">
+      <div class="row">
+       <div class="column">
+        <h6>
+         Account
+        </h6>
+        <nav>
+         <a href="/dashboard">
+          Dashboard
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Developer Tools
+        </h6>
+        <nav>
+         <a href="/api-catalog">
+          API Catalogue
+         </a>
+         <a href="/documentation">
+          Documentation
+         </a>
+         <a href="https://natwest-bankofapi-servicemanagement.atlassian.net/servicedesk/customer/portals" target="_blank">
+          Service Desk
+         </a>
+        </nav>
+       </div>
+       <div class="column">
+        <h6>
+         Company
+        </h6>
+        <nav>
+         <a href="/terms">
+          Terms &amp; Conditions
+         </a>
+         <a aria-current="page" class="active" href="/privacy-policy">
+          Privacy Policy
+         </a>
+        </nav>
+       </div>
+       <div class="col-sm">
+       </div>
+      </div>
+     </div>
+    </footer>
+    <button class="scrolltop-button visible">
+    </button>
+    <div class="powered-by">
+     Powered by
+     <em>
+      Oolys
+     </em>
+    </div>
+   </div>
+   <div id="side-panel">
+   </div>
+   <div class="modal fade out session-popup" id="">
+    <div class="modal-dialog">
+     <div class="modal-header">
+      <h6>
+       Your session is about to expire
+      </h6>
+     </div>
+     <div class="modal-body">
+      <span class="expiration-warning">
+       You will be automatically logged out in
+       <em>
+        59
+       </em>
+       seconds.
+       <br/>
+       Do you want to extend your session?
+      </span>
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-primary" type="button">
+       Continue
+      </button>
+      <button class="btn btn-default" type="button">
+       Logout
+      </button>
+     </div>
+    </div>
+   </div>
+  </main>
+  <script>
+   var loadHasBeenTriggered = false;
+      window.onUsersnapCXLoad = function(api) {
+        api.init({
+            user: {
+              userId: infoUsername,
+              email: infoEmail
+            },
+            custom: {
+                userId: infoUsername,
+                brand : infoBrand,
+                env : infoEnv
+            }
+          });
+      }
+      window.loadUserFeedbackWidget = function() {
+        if ( (!loadHasBeenTriggered) && infoUsername && infoBrand) {
+            loadHasBeenTriggered = true;
+            var script = document.createElement('script');
+            script.defer = 1;
+            script.src = 'https://widget.usersnap.com/global/load/5aa78e68-87e3-4248-a6ed-dfb7b8eea959?onload=onUsersnapCXLoad';
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      }
+  </script>
+  <script src="/febc265fb2cc455e1b85.js">
+  </script>
+  <script src="/7dbd7cfa6c7cb6d881a7.js">
+  </script>
+  <script src="/1a5f01ff47d07a377494.js">
+  </script>
+  <script src="/2daa0d06a67874f682c5.js">
+  </script>
+  <script src="/c617fa727da6d416f6a5.js">
+  </script>
+  <script src="/07424fde184376e24dea.js">
+  </script>
+  <script src="/ee4e265cb3dc3d500780.js">
+  </script>
+  <script src="/04a6b9711f1d30cdc1a2.js">
+  </script>
+  <script src="/03632d2692dbb192bc9c.js">
+  </script>
+  <script src="/991cb5d14add34ec9369.js">
+  </script>
+  <script src="/cd81143e09bd4a3ddd06.js">
+  </script>
+  <script src="/ad40893dba0f0cc010ca.js">
+  </script>
+  <script src="/86e32b4ca44cc47a79a5.js">
+  </script>
+  <script src="/e4687322f7bb906a2df7.js">
+  </script>
+  <script src="/27eb4f97929598ad3286.js">
+  </script>
+  <script src="/27861e3fa2db86dca27a.js">
+  </script>
+  <script src="/447e8d2fec5adde36e43.js">
+  </script>
+  <script src="/9f29fe08232107e5b5a2.js">
+  </script>
+  <script src="/9d72a8e94d97ca62f07e.js">
+  </script>
+  <script src="/1e1d6def47d88d1b6578.js">
+  </script>
+  <script src="/20d2c1b54999365fe1c3.js">
+  </script>
+  <script src="/d17eb693468fac87de9d.js">
+  </script>
+  <script src="/ace96842f9fdef10da09.js">
+  </script>
+  <script src="/e10dbcadb20790400bd2.js">
+  </script>
+  <script src="/ec5fb73bff01905d82cd.js">
+  </script>
+  <!--uspssb-->
+  <iframe name="us-entrypoint-globalSetup" style="display: none; height: 0px; width: 0px; z-index: 2147483647; color-scheme: normal;" title="Usersnap Feedback">
+  </iframe>
+  <!--uspsse-->
+  <us-button style="user-select: all;">
+  </us-button>
+ </body>
+</html>
+
+
+<!-- Iframe 1 Content -->
+<html>
+ <head>
+  <title>
+   Usersnap Feedback
+  </title>
+  <script>
+   <br>  window.nonce = "";<br>  window.publicPath = "https://resources.usersnap.com/";<br>
+  </script>
+  <script src="https://resources.usersnap.com/widget-assets/js/entries/globalSetup/b263c0f1171ea4606316.js">
+  </script>
+  <style>
+   html, body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+  </style>
+ </head>
+ <body>
+  <div>
+  </div>
+ </body>
+</html>
